@@ -556,9 +556,7 @@
               <span class="item-label">Car Price</span>
               <span id="carPrice">RM 20,000</span>
             </div>
-            <script>
-
-            </script>
+            
             <!-- 2. SERVICES -->
             <div class="section-title">2. SERVICES</div>
             <div class="mt-2 ms-3 me-2">
@@ -911,17 +909,31 @@
 
     <div class="form-step">   
         
-<div class="summary-details">
+<div class="summary-details" >
       <button class="edit-btn"> PRINT &nbsp;<img src="images/print_1.png"></img></button>
       <div id="summaryContainer5"></div>
        <div class="gradient-line-side1 "></div>
       </div>
       <p>Confirm and Submit your details.</p>
-      <button class="btn btn-dark bg-black px-4 w-50"
+      <button class="btn btn-dark bg-black px-4 w-50" id="openBtn"
         onclick="changeStep(1),location.href='bank.html'">Confirm</button>
-  
+  <!-- <button id="openBtn">Open</button> -->
   </div>
  
+  <!-- ========== Start Loan_output Data ========== -->
+    <div class="form-step" >   
+        
+<div class="summary-details" id="summaryContainer_details">
+     <button class="print-btn"> PRINT &nbsp;<img src="images/print_1.png"></img></button>
+      <div id="summaryContainer_output"></div>
+       <div class="gradient-line-side1 "></div>
+      </div>
+  </div>
+  <!-- ========== End Loan_output Data ========== -->
+  
+
+
+
   </div>
 
 

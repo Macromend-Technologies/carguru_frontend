@@ -764,32 +764,87 @@ document.getElementById("nextBtn").addEventListener("click", () => {
     });
     
 
-  document.getElementById('nextBtn').addEventListener('click', () => {
-   
-      const template = document.getElementById('workDetailsSummaryTemplate');
-      const template2=document.getElementById('personalDetailsSummaryTemplate');
-      const template3=document.getElementById('creditDetailsSummaryTemplate');
-      const template4=document.getElementById('loanDetailsSummaryTemplate');
-      const template5=document.getElementById('uploadDetailsSummaryTemplate');
-      const template6=document.getElementById('emergencyDetailsSummaryTemplate');
+ document.getElementById('nextBtn').addEventListener('click', () => {
+  const template = document.getElementById('workDetailsSummaryTemplate');
+  const template2 = document.getElementById('personalDetailsSummaryTemplate');
+  const template3 = document.getElementById('creditDetailsSummaryTemplate');
+  const template4 = document.getElementById('loanDetailsSummaryTemplate');
+  const template5 = document.getElementById('uploadDetailsSummaryTemplate');
+  const template6 = document.getElementById('emergencyDetailsSummaryTemplate');
 
-      const clone = template.content.cloneNode(true);
-      const clone2=template2.content.cloneNode(true);
-      const clone3=template3.content.cloneNode(true);
-       const clone4=template4.content.cloneNode(true);
-       const clone5=template5.content.cloneNode(true);
-       const clone6=template6.content.cloneNode(true);
-      document.getElementById('summaryContainer5').innerHTML = ''; // Clear old summary
-      document.getElementById('summaryContainer5').appendChild(clone2);
-      document.getElementById('summaryContainer5').appendChild(clone);
-      document.getElementById('summaryContainer5').appendChild(clone3);
-      document.getElementById('summaryContainer5').appendChild(clone4);
-      document.getElementById('summaryContainer5').appendChild(clone5);
-      document.getElementById('summaryContainer5').appendChild(clone6);
-      
+  const clone = template.content.cloneNode(true);
+  const clone2 = template2.content.cloneNode(true);
+  const clone3 = template3.content.cloneNode(true);
+  const clone4 = template4.content.cloneNode(true);
+  const clone5 = template5.content.cloneNode(true);
+  const clone6 = template6.content.cloneNode(true);
+
+  const container = document.getElementById('summaryContainer5');
+  container.innerHTML = '';
+  container.appendChild(clone2);
+  container.appendChild(clone);
+  container.appendChild(clone3);
+  container.appendChild(clone4);
+  container.appendChild(clone5);
+  container.appendChild(clone6);
+
   populateEmergencySummary();
-    });
-    
+  // console.log("Summary Container:", container);e
+  // const summary = localStorage.setItem("loanSummary", container.innerHTML);
+
+  // ✅ Redirect to loan_output.html
+  // window.location.href = "loan_output.html";
+});
+// Redirect to loan_output.html
+
+// document.getElementById('openBtn').addEventListener('click', () => {
+//   const container = document.getElementById('summaryContainer_details');
+//   localStorage.setItem("loanSummary", container.innerHTML);
+//   window.location.href = "loan_output.html";
+// });
+
+ document.getElementById('nextBtn').addEventListener('click', () => {
+  const template = document.getElementById('workDetailsSummaryTemplate');
+  const template2 = document.getElementById('personalDetailsSummaryTemplate');
+  // const template3 = document.getElementById('creditDetailsSummaryTemplate');
+  const template4 = document.getElementById('loanDetailsSummaryTemplate');
+  const template5 = document.getElementById('uploadDetailsSummaryTemplate');
+  // const template6 = document.getElementById('emergencyDetailsSummaryTemplate');
+
+  const clone = template.content.cloneNode(true);
+  const clone2 = template2.content.cloneNode(true);
+  // const clone3 = template3.content.cloneNode(true);
+  const clone4 = template4.content.cloneNode(true);
+  const clone5 = template5.content.cloneNode(true);
+  // const clone6 = template6.content.cloneNode(true);
+
+  const container = document.getElementById('summaryContainer_output');
+  container.innerHTML = '';
+  container.appendChild(clone2);
+  container.appendChild(clone);
+  // container.appendChild(clone3);
+  container.appendChild(clone4);
+  container.appendChild(clone5);
+  // container.appendChild(clone6);
+
+  // populateEmergencySummary();
+  // console.log("Summary Container:", container);e
+  // const summary = localStorage.setItem("loanSummary", container.innerHTML);
+
+  // ✅ Redirect to loan_output.html
+  // window.location.href = "loan_output.html";
+});
+// Redirect to loan_output.html
+
+document.getElementById('openBtn').addEventListener('click', () => {
+  const container = document.getElementById('summaryContainer_details');
+  localStorage.setItem("loanSummary", container.innerHTML);
+  // window.location.href = "loan_output.html";
+});
+
+
+
+
 
 
 // Initial call

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Orders</title>
-    <!-- Bootstrap links -->
+    <title>My Appointments</title>
+         <!-- Bootstrap links -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <!-- Bootstrap js links -->
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
@@ -17,9 +17,36 @@
 <!-- CSS filse -->
  <link rel="stylesheet" href="myOrder.css">
  <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="loanflow.css">
+
+ <style>
+    /* Sidebar hidden by default (collapsed) */
+#desktopSidebar {
+  transition: all 0.3s ease;
+  width: 250px;  /* normal width */
+}
+
+#desktopSidebar.collapsed {
+  margin-left: -250px; /* hides it by sliding left */
+}
+  .main-content .heading{
+       max-width: 100%;
+       margin-right: 0% ;
+    }
+    .empty-img {
+        width: 400px;
+        height: 400px;
+    }
+
+     .empty-img img{
+width: 100%;
+     }
+
+
+ </style>
 </head>
 <body>
-    <!-- ========== Start Navigation ========== -->
+            <!-- ========== Start Navigation ========== -->
   <!-- Yellow Info Strip -->
   <div class="yellow-info text-dark text-center">
     <div class="container-fluid px-3 px-md-5">
@@ -74,20 +101,20 @@
          <div class="ms-lg-5 me-4 d-md-block d-none d-sm-block">
           <div class="dropdown">
             <!-- Trigger Button -->
-            <button class="btn btn-yellow   rounded-circle " type="button" id="profileDropdown"
-              data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-yellow   rounded-circle " type="button" 
+              onclick="toggleDesktopSidebar()">
               MW
             </button>
 
             <!-- Dropdown Menu -->
-            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-custom" aria-labelledby="profileDropdown">
+            <!-- <ul class="dropdown-menu dropdown-menu-end dropdown-menu-custom" aria-labelledby="profileDropdown">
               <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-text"></i> Personal Info</a></li>
               <li><a class="dropdown-item" href="#"><i class="bi bi-calendar-event"></i> Appointments</a></li>
               <li><a class="dropdown-item" href="#"><i class="bi bi-cart"></i> Orders</a></li>
               <li><a class="dropdown-item" href="#"><i class="bi bi-bookmark"></i> Saved Cars</a></li>
               <li><a class="dropdown-item" href="#"><i class="bi bi-hammer"></i> Bidding</a></li>
               <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-left"></i> Logout</a></li>
-            </ul>
+            </ul> -->
           </div>
 
         </div>
@@ -130,27 +157,26 @@
     <a href="#"><span><img src="images/message.png" alt=""  width="23" height="23"  class="gray-icon"></span>Message</a>
   </div>
   <!-- ========== End Navigation ========== -->
- 
-    <main >
+   <main >
       
       <div class="container-fluid px-lg-0">
         
         <div class="row">
-            <div class=" col-md-3 col-lg-3 d-none  d-lg-block">
+            <div class=" col-md-3 col-lg-3 d-none  d-lg-block" id="desktopSidebar">
                 <div class="sidebar   " >
                    <div class="mb-2 ">
       <a data-bs-toggle="collapse" href="#accountMenu" role="button" aria-expanded="false" class="d-flex justify-content-between">
        <span> <i class="bi bi-person-fill me-2"></i> My Account </span><span><i class="bi bi-caret-down-fill"></i></span>
       </a>
       <div class="collapse submenu" id="accountMenu">
-        <a href="personalinfo.html"><i class="bi bi-file-earmark-person"></i> Personal Info</a>
+        <a href="personalinfo.html" ><i class="bi bi-file-earmark-person"></i> Personal Info</a>
         <a href="#"><i class="bi bi-book"></i> Viewing History</a>
       </div>
     </div>
 
-    <a href="myappointment.html"><i class="bi bi-calendar-check"></i> My Appointments</a>
+    <a href="myappointment.html" class="active"><i class="bi bi-calendar-check"></i> My Appointments</a>
     <a href="#"> <i class="bi bi-palette2"></i>My Bidding</a>
-    <a href="myOrder.html" class="active"><i class="bi bi-cart"></i> My Orders</a>
+    <a href="#" ><i class="bi bi-cart"></i> My Orders</a>
     <a href="myfavorites.html"><i class="bi bi-heart"></i> My Favorites</a>
 
     <div class="mb-2">
@@ -159,7 +185,7 @@
       </a>
       <div class="collapse show submenu" id="financialMenu">
         <a href="loan_output.html" ><i class="bi bi-piggy-bank" ></i> Loan</a>
-        <a href="#"><i class="bi bi-credit-card"></i> Payment</a>
+        <a href="payment_page.html"><i class="bi bi-credit-card"></i> Payment</a>
         <a href="#"><i class="bi bi-cash-stack"></i> Refund</a>
         <a href="#"><i class="bi bi-cash-stack"></i> Deposit</a>
       </div>
@@ -173,153 +199,22 @@
                 </div>
             </div>
             <div class=" col-12 col-md-12 col-lg-9 main-content">
-<div class="row">
-   <div class="mobile-menu d-flex justify-content-center align-items-center  d-block d-lg-none " onclick="toggleSidebar()">
-        <span><i class="bi bi-grid" ></i></span>
-      </div>
-    <div class="col-12 mt-5 d-flex flex-column align-items-center justify-content-center ">
+<div class="row d-flex flex-column align-items-center">
+    <div class="text-center heading mt-5">
+     <h1 class="">
+       My Payment
+     </h1>
+     <p>Nothing’s going on here.</p>
+
      
-        <div class="heading text-center">
-            <h1 class="fw-semibold mb-4"> My Orders</h1>
-<p class=""> Track your order progress - whether you'r payin with cash or securing a car loan. Everything you need to complte your journey to own a car is right here.</p></div>
-
     </div>
-  
-</div>
-<div class="">
-    
-     <div class="row d-flex justify-content-center">
-   <!-- /Card-1 -->
-      <div class="col-12  ">
-<div class="car-content">
-<div class="card  mt-5" onclick="location.href='myOrder2.html'">
-    <div class="card-head d-md-flex d-sm-flex d-flex justify-content-between align-items-center  px-2">
-        <p class="mt-2">Status: <strong class="">Pending Payment</strong> </p> 
-        <p class="mt-2">Order No. <strong>202524063300033</strong> </p>
+
+    <div class="empty-img ">
+        <img src="images/walletmoney@4x.png" alt="">
     </div>
-    <div class="card-body ">
-      <div class="row">
-        <div class="col-12 col-md-6 col-sm-6">
-   <div class="img-container d-flex align-items-end" 
-       style="background: url('images/car1.jpg') center center / cover no-repeat; height: 95%; border-radius: 5px;">
-    <div class="car-btns d-flex justify-content-between w-100 mb-4 mx-2">
-      <div class="d-flex">
-        <button type="button" class="me-1 media-btn">31 Photos <span><i class="bi bi-camera-fill"></i></span></button>
-        <button type="button" class="media-btn">View Videos <span><i class="bi bi-camera-video-fill"></i></span></button>
-      </div>
-      <div>
-        <button type="button" class="media-btn">View 360 <span><img src="images/view-icon.png" alt="" width="16"></span></button>
-      </div>
-    </div>
-  </div>
-
-</div>
-        <div class="col-12 col-md-6 col-sm-6  pt-2 ">
-       <div class="d-flex justify-content-between align-items-top ">
-      
-        <div class="d-flex flex-column mb-3 text-black">
-            <h3 class=" ">2018 Perodua </h3>
-            <small style="line-height: 1px;">Myvi AV 1.5</small>
-        </div>
-        
-    
-          <div class="mt-1 icons">
-            <span><i class="bi bi-share me-3"></i></span>
-            <span><i class="bi bi-heart"></i></span>
-        </div>   
-    </div>
-    <p class="mt-2 para fs-6">68,242 km | Auto | Puchong</p>
-<p class="para-1">More Car Details <span><i class="bi bi-caret-right-fill"></i></span></p>
-
-<p class="cerfied-logo"><img src="images/certified-2.png" alt=""></p>
-
-<div class="d-flex justify-content-between align-items-center ">
- <div class="mt-2"> <h3 class="fs-3 rate ">
-    <small >Rm</small> 20,000
-  </h3>
-  <p class="para">Rm 450 p.m  4years loan</p></div>
-  <div class="pt-4 para-1">
-  <span class="icons"> <i class="bi bi-search me-2"></i> More About this Car</span>
-</div>
-</div>
 
 
 </div>
-      </div>
-
-
-
-    </div>
-</div>
-</div>
-    </div>
-<!-- /Card-2 -->
-    <div class="col-12  mb-5">
-<div class="car-content">
-<div class="card  mt-5" onclick="location.href='step.html'">
-    <div class="card-head d-md-flex d-sm-flex d-flex justify-content-between align-items-center  px-2">
-        <p class="mt-2">Status: <strong class="">Pending Payment</strong> </p> 
-        <p class="mt-2">Order No. <strong>202524063300033</strong> </p>
-    </div>
-   <div class="card-body ">
-      <div class="row">
-        <div class="col-12 col-md-6 col-sm-6">
-   <div class="img-container d-flex align-items-end" 
-       style="background: url('images/ford.jpg') center center / cover no-repeat; height: 95%; border-radius: 5px;">
-    <div class="car-btns d-flex justify-content-between w-100 mb-4 mx-2">
-      <div class="d-flex">
-        <button type="button" class="me-1 media-btn">31 Photos <span><i class="bi bi-camera-fill"></i></span></button>
-        <button type="button" class="media-btn">View Videos <span><i class="bi bi-camera-video-fill"></i></span></button>
-      </div>
-      <div>
-        <button type="button" class="media-btn">View 360 <span><img src="images/view-icon.png" alt="" width="16"></span></button>
-      </div>
-    </div>
-  </div>
-
-</div>
-        <div class="col-12 col-md-6 col-sm-6 pt-2 ">
-       <div class="d-flex justify-content-between align-items-top ">
-      
-        <div class="d-flex flex-column mb-3 text-black">
-            <h3 class=" ">2018 Perodua </h3>
-            <small style="line-height: 1px;">Myvi AV 1.5</small>
-        </div>
-        
-    
-          <div class="mt-1 icons">
-            <span><i class="bi bi-share me-3"></i></span>
-            <span><i class="bi bi-heart"></i></span>
-        </div>   
-    </div>
-    <p class="mt-2 para fs-6">68,242 km | Auto | Puchong</p>
-<p class="para-1">More Car Details <span><i class="bi bi-caret-right-fill"></i></span></p>
-
-<p class="cerfied-logo"><img src="images/certified-2.png" alt=""></p>
-
-<div class="d-flex justify-content-between align-items-center ">
- <div class="mt-2"> <h3 class="fs-3 rate ">
-    <small >Rm</small> 20,000
-  </h3>
-  <p class="para">Rm 450 p.m  4years loan</p></div>
-  <div class="pt-4 para-1">
-  <span class="icons"> <i class="bi bi-search me-2"></i> More About this Car</span>
-</div>
-</div>
-
-
-</div>
-      </div>
-
-
-
-    </div>
-</div>
-</div>
-    </div>
-</div></div>
-
-            </div>
         </div>
 <!-- Mobile Sidebar (hidden on desktop) -->
 <div class="sidebar offcanvas-sidebar d-lg-none" id="mobileSidebar">
@@ -333,18 +228,18 @@
       </div>
     </div>
 
-    <a href="#"><i class="bi bi-calendar-check"></i> My Appointments</a>
+    <a href="myappointment.html" class="active"><i class="bi bi-calendar-check"></i> My Appointments</a>
     <a href="#"> <i class="bi bi-palette2"></i>My Bidding</a>
-    <a href="#" class="active"><i class="bi bi-cart"></i> My Orders</a>
-    <a href="#"><i class="bi bi-heart"></i> My Favorites</a>
+    <a href="myOrder.html" ><i class="bi bi-cart"></i> My Orders</a>
+    <a href="myfavorites.html"><i class="bi bi-heart"></i> My Favorites</a>
 
     <div class="mb-2">
       <a data-bs-toggle="collapse" href="#financialMenu" role="button" aria-expanded="true">
         <i class="bi bi-cash-coin"></i> My Financials
       </a>
       <div class="collapse show submenu" id="financialMenu">
-        <a href="#" ><i class="bi bi-piggy-bank"></i> Loan</a>
-        <a href="#"><i class="bi bi-credit-card"></i> Payment</a>
+        <a href="loan_output.html" ><i class="bi bi-piggy-bank"></i> Loan</a>
+        <a href="payment_page.html"><i class="bi bi-credit-card"></i> Payment</a>
         <a href="#"><i class="bi bi-cash-stack"></i> Refund</a>
       </div>
     </div>
@@ -365,7 +260,8 @@
       </div>
         
     </main>
-  <!-- ========== Start footer container ========== -->
+
+      <!-- ========== Start footer container ========== -->
  <footer class="footer pt-lg-5 pt-3 fs-6 mt-xl-5">
     <div class="container-fluid px-lg-5 px-3 ">
       <div class="row footer-top-side">
@@ -496,16 +392,63 @@
 
   </footer>
 
-
-<script>
-  function toggleSidebar() {
-    const sidebar = document.getElementById('mobileSidebar');
-    const backdrop = document.getElementById('sidebarBackdrop');
-    sidebar.classList.toggle('open');
-    backdrop.classList.toggle('show');
+  <script>
+  function toggleDesktopSidebar() {
+    document.getElementById("desktopSidebar").classList.toggle("collapsed");
   }
-</script>
 
+document.addEventListener("DOMContentLoaded", () => {
+  const data = JSON.parse(localStorage.getItem("formData") || "{}");
+
+  const emptyImg = document.querySelector(".empty-img");
+  const summaryContainer = document.getElementById("summaryContainer");
+  const personalSummary = document.getElementById("personalSummary");
+  const workSummary = document.getElementById("workSummary");
+  const creditSummary = document.getElementById("creditSummary");
+  const closeBtn = document.getElementById("closeSummary");
+
+  if (!data.personal) {
+    // No data → show image, hide summary
+    emptyImg.style.display = "block";
+    summaryContainer.style.display = "none";
+    return;
+  }
+
+  // Data exists → hide image, show summary
+  emptyImg.style.display = "none";
+  summaryContainer.style.display = "block";
+
+  // Fill summaries
+  const personal = data.personal;
+  personalSummary.innerHTML = `
+    <p>Car: ${personal.year} ${personal.make} ${personal.model}</p>
+    <p>Variant/Engine/Transmission: ${personal.variant} / ${personal.engine} / ${personal.transmission}</p>
+    <p>Mileage/Region: ${personal.mileage} km | ${personal.region}</p>
+    <p>Mobile: ${personal.mobile}</p>
+    <p>Plate Number: ${personal.plate}</p>
+  `;
+
+  const work = data.work;
+  workSummary.innerHTML = `
+    <p>Selected Rate: ${work.selectedRate}</p>
+  `;
+
+  const credit = data.credit;
+  creditSummary.innerHTML = `
+    <p>Inspection Location: ${credit.inspectionLocation}</p>
+    <p>Date: ${credit.inspectionDate}</p>
+    <p>Time: ${credit.inspectionTime}</p>
+  `;
+
+  // Close button → clear data + toggle visibility
+  closeBtn.addEventListener("click", () => {
+    localStorage.removeItem("formData");
+    summaryContainer.style.display = "none";
+    emptyImg.style.display = "block";
+  });
+});
+
+</script>
 
 </body>
 </html>
