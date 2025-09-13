@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Private User Signup</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="loanflow.css">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+   
+    .private-button .btn-danger ,.private-button .btn-warning{
+        font-size: 14px !important;
+        padding: 15px 10px !important;
+        border-radius: 0px !important;
+    }
+    .private-button .btn-danger{
+        background-color: #d10000;
+    }
+   .private-button .btn-warning{
+        background-color: #f5b500;
+    }
+    .list-user{
+        padding-left: 20px;
+    }
+
+.lines.active {
+  background-color: #ffc107;
+}
+
+    .personal {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .subtext {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #666;
+    }
+
+    .stepper {
+      margin-bottom: 30px;
+    }
+
+    .step-group {
+      display: none;
+      gap: 10px;
+      margin-left: 50px !important;
+      align-items: center;
+    }
+
+    .step-group.active {
+      display: flex;
+    }
+
+    .circle {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      /* border: 2px solid #ccc; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: bold;
+      background-color: white;
+      color: #666;
+    }
+
+    .circle.active {
+      border-color: #ffc107;
+      background-color: #ffc107;
+
+    }
+
+    .lines {
+      height: 2px;
+
+      background-color: #ccc;
+      flex-grow: 1;
+    }
+
+    .form-step {
+      display: none;
+    }
+
+    .form-step.active {
+      display: block;
+    }
+
+    .btn-nav {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg bg-lg-white shadow-sm sticky-top  ">
+    <div class="container-fluid px-1 px-md-4 py-1">
+      <!-- Toggle Button -->
+      <button class="btn d-lg-none " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav">
+        <i class="bi bi-list fs-4 text-danger"></i>
+      </button>
+
+      <a class="navbar-brand mx-lg-0 mx-auto " href="#">
+        <img src="images/myorder-2-removebg.png" alt="CAR GURU" class="d-none d-lg-block mx-lg-0 desktop-top-logo">
+        <img src="images/myorder-2-removebg.png" alt="CAR GURU" class="d-lg-none ms-4  mobile-top-logo">
+      </a>
+
+
+
+      <!-- Contact and Icons -->
+      <div class="d-flex contact align-items-center gap-4 ms-auto mt-3 mt-lg-0">
+        <div class="text-start d-none d-lg-block">
+          <small class="d-block fw-bold nav-text mb-1" style="line-height: 0%;">CALL US AT</small>
+          <span class="text-danger fw-bold">
+            <i class="bi bi-telephone-fill  text-dark"></i> +60 13 951 5969
+          </span>
+        </div>
+        <div
+          class="d-none d-flex align-items-center me-lg-2 gap-lg-4 ms-lg-2 gap-2 ms-0 fs-6 fs-lg-0 mb-3 mb-lg-0 me-1 me-lg-0 icons-navbar">
+          <img src="images/search.png" alt="Search" width="15" height="15">
+          <img src="images/grocery-store.png" alt="Cart" width="15" height="15">
+          <img src="images/user.png" alt="User" width="15" height="15" id="loginBtn">
+        </div>
+        <div class="ms-5 d-md-block d-none">
+          <div class="dropdown">
+            <!-- Trigger Button -->
+            <button class="btn btn-yellow   rounded-circle " type="button" id="profileDropdown"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="images/users-login.png" alt="" width="15" height="15" >
+            </button>
+
+            <!-- Dropdown Menu -->
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-custom" aria-labelledby="profileDropdown">
+              <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-text"></i> Personal Info</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-calendar-event"></i> Appointments</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-cart"></i> Orders</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-bookmark"></i> Saved Cars</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-hammer"></i> Bidding</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-left"></i> Logout</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div id="modalContainer"></div>
+  <!-- MOBILE NAV MENU -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNav">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav nav-text pe-5 me-5 me-md-0">
+        <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link " href="bid_overall.html">Bid for Car</a></li>
+        <li class="nav-item"><a class="nav-link active" href="buy_car.html">Buy Car</a></li>
+        <li class="nav-item"><a class="nav-link" href="sellcar.html">Sell Car</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+      </ul>
+      <div class="text-center mt-4">
+        <small class="d-block fw-bold nav-text mb-1" style="line-height: 0%;">CALL US AT</small>
+        <span class="text-danger fw-bold">
+          <i class="bi bi-telephone-fill  text-dark"></i> +60 13 951 5969
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTTOM NAV (Mobile Only) -->
+  <div class="bottom-nav d-lg-none ">
+    <a href="buy_car.html" class="active"><span><img src="images/bit-icon.png" alt="" width="23" height="23"
+          class="gray-icon"></span> Buy</a>
+    <a href="sellcar.html"><span><img src="images/sell-icon.png" alt="" width="23" height="23"
+          class="gray-icon"></span>Sell</a>
+    <a href="bid_overall.html"><i><img src="images/bid-icon.png" alt="" width="23" height="23"
+          class="gray-icon"></i>Bid</a>
+
+    <a href="#"><span><img src="images/service-icon.png" alt="" width="25" height="23"
+          class="gray-icon"></span>Services</a>
+    <a href="#"><span><img src="images/message.png" alt="" width="23" height="23" class="gray-icon"></span>Message</a>
+  </div>
+  <!-- ========== End Navigation ========== -->
+
+  <div class="container-main">
+    <h1 class="personal" id="formTitle">Let’s start with your personal details</h1>
+    <p class="subtext " id="formSubtext">Please complete your registration process before proceeding further. </p>
+
+    <!-- Progress Bar -->
+    <div class="stepper" id="stepper">
+      <div class="d-flex justify-content-between " id="circlelable"  >
+        <p id="cicrleLeft">Personal Details</p>
+        <p id="cicrleRight" class="">Work Info</p>
+      </div>
+      <div class="step-group  active" id="group-0">
+        <div class="circle" id="circle-0">1</div>
+        <div class="lines"></div>
+        <div class="circle" id="circle-1">2</div>
+      </div>
+      <div class="step-group" id="group-1">
+        <div class="circle" id="circle-2">1</div>
+        <div class="lines"></div>
+        <div class="circle" id="circle-3">2</div>
+      </div>
+      <div class="step-group" id="group-2">
+        <div class="circle" id="circle-4">3</div>
+        <div class="lines"></div>
+        <div class="circle" id="circle-5">4</div>
+      </div>
+    </div>
+
+    <!-- Form Steps -->
+
+
+    <div class="form-step active">
+      <form class="form-box" onsubmit="event.preventDefault(); ">
+        <h2>PERSONAL DETAILS</h2>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" id="nameInput" placeholder="Enter Name as per I.C.">
+          </div>
+          <div class="form-group">
+            <label>I.C. Number</label>
+            <input type="text" id="icInput" placeholder="Enter your I.C. Number">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Mobile</label>
+            <input type="text" id="mobileInput" placeholder="Enter your Mobile Number">
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="emailInput" placeholder="Enter your Email Address">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Address</label>
+          <input type="text" id="addressInput" placeholder="Address Line 1">
+          <input type="text" id="addressInput" placeholder="Address Line 2" style="margin-top: 10px;">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>City</label>
+            <select id="city">
+              <option>Select City</option>
+              <option>Chennai</option>
+              <option>Bangalore</option>
+              <option>Mumbai</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>State</label>
+            <select id="state">
+              <option>Select State</option>
+              <option>Tamil Nadu</option>
+              <option>Karnataka</option>
+              <option>Maharashtra</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+             <div class="form-group">
+          <label>Postcode</label>
+          <input type="text" id="postcode" placeholder="Enter Postcode" >
+        </div>
+           <div class="form-group">
+          
+        </div>
+        </div>
+        <hr>
+       <br>
+<!--         
+        <div class="form-group">
+          <label>Do you have a Driving Licence?</label>
+          <div class="license-buttons">
+           
+              <button type="button" class="btn white border-secondary px-4 px-lg-5" id="noBtn"
+  onclick="selectLicense('No'),selectOption(this, 'license')">No</button>
+<button type="button" class="btn white border-secondary px-4 px-lg-5" id="yesBtn"
+  onclick="selectLicense('Yes'),selectOption(this, 'license')">Yes</button>
+
+          </div>
+          <input type="hidden" id="license" value="">
+
+        </div> -->
+<div class="d-flex text-center">
+  
+   <button onclick="location.href='index.html'" class="btn btn1" style="margin-left: 5%;background-color: #fac000;color: #000;">i'll Do it Later</button>
+  <button id="nextBtn" class="btn btn1" onclick="changeStep(1)" style="margin-left: 2%;">Next</button>
+  
+
+</div>
+
+        <!-- <button id="nextBtn" class="btn btn1" onclick="changeStep(1)">Next</button> -->
+
+        <p class="terms">By Continuing, I agree to CARGURU’s <a href="#">Terms</a> & <a href="#">Privacy Policy</a>.</p>
+      </form>
+      <div class="gradient-line-side"></div>
+    </div>
+
+    <!-- step 2 -->
+      <div class="form-step" > 
+       <div class="summary-details">
+      <div id="summaryContainer"></div>
+       <div class="gradient-line-side1"></div>
+      </div>
+       <button class="btn btn-dark bg-black px-5 w-50" onclick="confirmStep()">Confirm</button>
+       <p class="terms">By Continuing, I agree to CARGURU’s <a href="#">Terms</a> & <a href="#">Privacy
+                        Policy</a>.</p>
+    </div>
+        <div class="form-step" > 
+       <div class="summary-details-out">
+      <div id="summaryContainer-out"></div>
+       <div class="gradient-line-side-outer"></div>
+      </div>
+      <div class="container-lg my-5 text-start p-lg-3">
+  <div class="  border-0 ">
+    <h6 class="fw-bold">
+      To enjoy a seamless car buying experience—especially if you're planning to apply for a loan—we recommend completing your full profile.
+    </h6>
+    <p class="mt-3">By providing additional details, you’ll unlock:</p>
+    <ol class="mb-4 list-user">
+      <li>Access to loan pre-approval and financing options tailored to your profile</li>
+      <li>Faster processing when placing bids or purchasing a car</li>
+      <li>Personalised recommendations based on your preferences and eligibility</li>
+    </ol>
+    <p class="fw-medium">
+      Take a minute to complete your profile now and get one step closer to driving your next car!
+    </p>
+
+    <!-- Buttons -->
+    <div class="row text-center mt-4 g-2 private-button">
+      <div class="col-12 col-md-4">
+        <button class="btn btn-warning w-100 fw-bold py-2" onclick="location.href='index.html'">
+          <i class="bi bi-clock me-2"></i> I’LL DO IT LATER
+        </button>
+      </div>
+      <div class="col-12 col-md-4">
+        <button class="btn btn-danger w-100 fw-bold py-2" onclick="location.href='index.html'">
+          <i class="bi bi-cash-stack me-2"></i> BUY WITH CASH
+        </button>
+      </div>
+      <div class="col-12 col-md-4">
+        <button class="btn btn-warning w-100 fw-bold py-2" onclick="removefun()">
+          <img src="images/buy icon 3.png" alt="" class="buy-button me-2  ms-0"> GET LOAN APPROVAL
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+
+    <div class="form-step" >
+      <div class="form-box " id="workFormCard">
+        <h3 class="form-title">WORK INFO</h3>
+
+        <div class="form-group">
+          <label>Monthly Income (gross)</label>
+          <div class="btn-group" id="incomeGroup">
+            <button type="button" onclick="selectOption(this, 'income')">RM2,000–RM3,999</button>
+            <button type="button" onclick="selectOption(this, 'income')">RM4,000–RM5,999</button>
+            <button type="button" onclick="selectOption(this, 'income')" id="showButton">Above RM6,000</button>
+          </div>
+        </div>
+
+        <div class="form-group d-none " id="incomeField">
+          <label>How much is your monthly commitment?</label>
+          <p class="sub-label">
+            Examples; Housing & Car Loan, Credit Card, Student Loan, etc</p>
+          <div class="input-group income_field">
+            <span class="input-group-text border-0 bg-transparent">RM</span>
+            <input type="text" id="monthlyCommitment" class="form-control border-0"
+              placeholder="Enter your monthly commitment">
+          </div>
+
+        </div>
+
+        <div class="form-group">
+          <label>Employment Status</label>
+          <div class="btn-group" id="employmentGroup">
+            <button type="button" class="btn2" onclick="selectOption(this, 'employment')">Full-time Employee</button>
+            <button type="button" class="btn2" onclick="selectOption(this, 'employment')">Self Employed</button>
+            <button type="button" class="btn2" onclick="selectOption(this, 'employment')">Part-time /
+              Freelancing</button>
+            <button type="button" class="btn2" onclick="selectOption(this, 'employment')">Unemployed</button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Duration</label>
+          <div class="btn-group" id="durationGroup">
+            <button type="button" onclick="selectOption(this, 'duration')">Less Than 6 Months</button>
+            <button type="button" onclick="selectOption(this, 'duration')">6 Months – 1 Year</button>
+            <button type="button" onclick="selectOption(this, 'duration')">Over 1 Year</button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Do you have a CTOS Report readily available?</label>
+          <div class="btn-group" id="ctosGroup">
+            <button type="button" onclick="selectOption(this, 'ctos')" id="hideuploadctos">No</button>
+            <button type="button" onclick="selectOption(this, 'ctos')" id="showuploadctos">Yes</button>
+          </div>
+   
+        </div>
+
+
+
+        <div class="container uploaded-ctos-container d-none" id="upload_ctos">
+      
+          <div class="d-flex flex-column">
+            <h6>Upload CTOS Report if available*</h6>
+            <label class="upload-box  upload-section mb-3" id="uploadBox">
+
+              <div class="upload-text">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <strong>Browse File (Front Photo)</strong>
+                <small>Drag & drop files here</small>
+              </div>
+              <input type="file" id="fileInput" accept="application/pdf" hidden>
+
+            </label>
+          </div>
+
+
+          <div class="d-flex flex-column ">
+            <small class="text-danger text-center d-none " id="cto_alert">Example of file uploaded status</small>
+            <div class="preview-box " id="previewBox">
+              <div class="file-icon"><img src="images/upoaded.png" alt=""></div>
+              <div class="file-name" id="fileName"></div>
+              <a class="delete-link" id="deleteFile">Delete File & Re-upload</a>
+            </div>
+          </div>
+
+        </div>
+
+        <button id="nextBtn" class="btn btn1" onclick="changeStep(1)">Next</button>
+      </div>
+
+      <div id="summaryContainer-outer"></div>
+      <div class="gradient-line-side"></div>
+       <!-- <button id="nextBtn" class="btn btn1 d-flex justify-content-center" onclick="changeStep(1)">Next</button> -->
+    </div>
+
+    <!-- step-3 -->
+
+    <div class="form-step" id="step3">
+
+      <div class="form-box">
+        <h3 class="form-title">CREDIT PROFILE</h3>
+
+        <!-- Missed loan payments -->
+        <div class="form-group">
+          <label>Have you missed any loan payments in the last 6 months?</label>
+          <div class="btn-credit-group" id="loanMissedGroup">
+            <button type="button" class="btn-credit" onclick="selectOption(this, 'loanMissed')">No</button>
+            <button type="button" class="btn-credit" onclick="selectOption(this, 'loanMissed')">Maybe 1 or 2</button>
+            <button type="button" class="btn-credit" onclick="selectOption(this, 'loanMissed')">Yes, a few</button>
+          </div>
+          <input type="hidden" id="loanMissedValue">
+        </div>
+
+        <!-- Debt program -->
+        <div class="form-group mt-5">
+          <label>Have you ever been in a debt program like AKPK or PTPTN blacklist?</label>
+          <div class="btn-credit-group" id="debtProgramGroup">
+            <button type="button" class="btn-credit" onclick="selectOption(this, 'debtProgram')">No</button>
+            <button type="button" class="btn-credit" onclick="selectOption(this, 'debtProgram')">Yes, but it's
+              settled</button>
+            <button type="button" class="btn-credit" onclick="selectOption(this, 'debtProgram')">Still active</button>
+          </div>
+          <input type="hidden" id="debtProgramValue">
+        </div>
+
+        <!-- Guarantor -->
+        <div class="form-group  mt-5">
+          <label>Do you have a guarantor if needed?</label>
+          <div class="btn-credit-group" id="guarantorGroup">
+            <button type="button" class="btn-credit1" onclick="selectOption(this, 'guarantor')">No</button>
+            <button type="button" class="btn-credit1" onclick="selectOption(this, 'guarantor')">Yes</button>
+            <button type="button" class="btn-credit1" onclick="selectOption(this, 'guarantor')">Not sure</button>
+          </div>
+          <input type="hidden" id="guarantorValue">
+        </div>
+
+        <!-- Next Button -->
+        <button  class="btn btn1" onclick="changeStep(1)">Next</button>
+        <!-- <button class="btn btn1 mt-3" >Change The Card</button> -->
+        <p class="terms">By Continuing, I agree to CARGURU’s <a href="#">Terms</a> & <a href="#">Privacy Policy</a>.</p>
+      </div>
+      <div class="gradient-line-side "></div>
+
+      <div id="summaryContainer1"></div>
+
+
+  
+
+      <!-- Card 2 -->
+      <div id="cardAdditionalInfo" class="info-card">
+
+        <img src="images/card-3.png" alt="Loan Info" class="card-imgs ">
+        <div class="card-body">
+          <h6 class="text-center mt-2">ADDITIONAL <br> INFORMATION NEEDED</h6>
+          <hr>
+          <p>It looks like your profile doesn’t quite meet the bank loan requirements.</p>
+          <p class="d-flex justify-content-center"><strong class="text-center">WE’LL BE GOING WITH A <br> CREDIT LOAN
+              INSTEAD.</strong></p>
+          <p>No worries — we just need a few more details from you to get things going.</p>
+          <button>Proceed</button>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+
+    <div class="form-step">
+      <div id="step4" class="bg-white">
+        <div class="form-section mx-5 py-3" id="step4container">
+          <h5 class="fw-bold mb-4 text-center pt-3">UPLOAD DOCUMENTS</h5>
+
+          <!-- Upload NRIC -->
+          <div class="section-title">Upload NRIC*</div>
+          <div class="upload-row">
+            <div class="upload-box upload-section" onclick="document.getElementById('nricFront').click()">
+              <div class="upload-text">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <strong>Browse File (Front Photo)</strong>
+                <small>Drag & drop files here</small>
+              </div>
+
+
+              <input type="file" class="file-input d-none" id="nricFront" accept="image/*,.pdf"
+                onchange="handleFileSelect(this)">
+
+              <!-- Show file name -->
+              <!-- <div id="fileNameNricFront" class="mt-2 text-success small text-center"></div> -->
+            </div>
+            <div class="upload-box upload-section" id="nricBackBox"
+              onclick="document.getElementById('nricBack').click()">
+              <div class="upload-text">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <strong>Browse File (Back Photo)</strong>
+                <small>Drag & drop files here</small>
+              </div>
+              <input type="file" class="file-input d-none" id="nricBack" accept="image/*,.pdf"
+                onchange="handleFileSelect(this)">
+              <!-- <div id="fileNameNricBack" class="mt-2 text-success small text-center"></div> -->
+            </div>
+          </div>
+
+          <!-- Upload Driver's Licence -->
+          <div class="section-title">Upload Driver's Licence*</div>
+          <div class="upload-row">
+            <div class="upload-box upload-section" id="licenseFrontBox"
+              onclick="document.getElementById('licenseFront').click()">
+              <div class="upload-text">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <strong>Browse File (Front Photo)</strong>
+                <small>Drag & drop files here</small>
+              </div>
+              <input type="file" class="file-input d-none" id="licenseFront" accept="image/*,.pdf"
+                onchange="handleFileSelect(this)">
+            </div>
+            <div class="upload-box upload-section" id="licenseBackBox"
+              onclick="document.getElementById('licenseBack').click()">
+              <div class="upload-text">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <strong>Browse File (Back Photo)</strong>
+                <small>Drag & drop files here</small>
+              </div>
+              <input type="file" class="file-input d-none" id="licenseBack" accept="image/*,.pdf"
+                onchange="handleFileSelect(this)">
+            </div>
+          </div>
+
+          <!-- Utility & Bank Statement -->
+          <div class="upload-row">
+            <div style="flex: 1; ">
+              <div class="section-title">Upload Water / Electric Bill*</div>
+              <div class="upload-box upload-section" id="utilityBillBox"
+                onclick="document.getElementById('utilityBill').click()">
+                <div class="upload-text">
+                  <i class="fa-solid fa-cloud-arrow-up"></i>
+                  <strong>Browse File (Photo)</strong>
+                  <small>Drag & drop files here</small>
+                </div>
+                <input type="file" class="file-input d-none" id="utilityBill" accept="image/*,.pdf"
+                  onchange="handleFileSelect(this)">
+              </div>
+            </div>
+
+            <div style="flex: 1; ">
+              <div class="section-title">3 Months’ Bank Statement</div>
+              <div class="upload-box upload-section" id="bankStatementBox"
+                onclick="document.getElementById('bankStatement').click()">
+                <div class="upload-text">
+                  <i class="fa-solid fa-cloud-arrow-up"></i>
+                  <strong>Browse File (Photo)</strong>
+                  <small>Drag & drop files here</small>
+                </div>
+                <input type="file" class="file-input d-none" id="bankStatement" accept="image/*,.pdf"
+                  onchange="handleFileSelect(this)">
+              </div>
+            </div>
+            <div>
+              <div class="section-title">3 Months' Pay Slip</div>
+              <div class="upload-box upload-section payslip" id="bankStatementPaySlipBox"
+                onclick="document.getElementById('payslip').click()" style="flex: 1; min-width: 270px ">
+                <div class="upload-text">
+                  <i class="fa-solid fa-cloud-arrow-up"></i>
+                  <strong>Browse File (Photo)</strong>
+                  <small>Drag & drop files here</small>
+                </div>
+                <input type="file" class="file-input d-none" id="payslip" accept="image/*,.pdf"
+                  onchange="handleFileSelect(this)">
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center my-4">
+            <button type="submit" id="nextBtn" class="submit-btn py-2 w-50" onclick="changeStep(1)">Submit</button>
+          </div>
+          <p class="file-note">All file format to be in .pdf / .jpeg / .png</p>
+        </div>
+
+        <!-- Output Section -->
+
+      </div>
+      <div id="summaryContainer2"></div>
+      <div class="gradient-line-side "></div>
+    </div>
+
+
+    <div class="form-step"> 
+       <div class="summary-details">
+      <div id="summaryContainer4"></div>
+       <div class="gradient-line-side1 "></div>
+      </div>
+      <p>Confirm and Submit your details.</p>
+      <button class="btn btn-dark bg-black px-5 w-50" onclick="changeStep(1)">Next</button>
+    
+    </div>
+
+    <div class="form-step">   
+        
+<div class="summary-details">
+      <button class="edit-btn"> PRINT &nbsp;<img src="images/print_1.png"></img></button>
+      <div id="summaryContainer5"></div>
+       <div class="gradient-line-side1 "></div>
+      </div>
+      <!-- <p>Confirm and Submit your details.</p> -->
+      <!-- <button class="btn btn-dark bg-black px-4 w-50"
+        onclick="changeStep(1),location.href='bank.html'">Confirm</button>
+   -->
+  </div>
+ 
+  </div>
+
+
+
+
+  <!-- Navigation -->
+  <div class="btn-nav d-flex justify-content-between d-none">
+    <button id="prevBtn" class="btn btn-secondary " onclick="changeStep(-1)" disabled>Back</button>
+    <button id="nextBtn" class="btn btn-warning" onclick="changeStep(1)">Next</button>
+  </div>
+
+  <!-- Template for Personal Details Summary -->
+  <template id="personalDetailsSummaryTemplate">
+    <div class="summary-card">
+      <div class="summary-body">
+        <button class="edit-btn"> EDIT <i class="bi bi-pencil-square"></i></button>
+        <div class="summary-left">
+          <h4>Personal Details</h4>
+        </div>
+        <div class="summary-right">
+          <div class="summary-item"><strong>Name:</strong> <span id="summaryName"></span></div>
+          <div class="summary-item"><strong>I.C. No:</strong> <span id="summaryIC"></span></div>
+          <div class="summary-item"><strong>Mobile:</strong> <span id="summaryMobile"></span></div>
+          <div class="summary-item"><strong>Email:</strong> <span id="summaryEmail"></span></div>
+          <div class="summary-item"><strong>Address:</strong> <span id="summaryAddress"></span></div>
+<div class="summary-item license">
+  <i  class="summaryLicenseIcon fas fa-check-square"></i>
+  <span class="summaryLicense"></span>
+</div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <!-- Template for Work Info Summary -->
+  <template id="workDetailsSummaryTemplate">
+    <div class="summary-card">
+      <div class="summary-body">
+        <button class="edit-btn"> EDIT <i class="bi bi-pencil-square"></i></button>
+        <div class="summary-left">
+          <h4>Work Info</h4>
+        </div>
+        <div class="summary-right">
+          <div class="summary-item"><strong>Income:</strong> <span id="summaryIncome"></span></div>
+          <div class="summary-item"><strong>Monthly Commitment:</strong> <span id="summaryCommitment"></span></div>
+          <div class="summary-item"><strong>Employment Status:</strong> <span id="summaryEmployment"></span></div>
+          <div class="summary-item"><strong>Employment Duration:</strong> <span id="summaryDuration"></span></div>
+          <div class="summary-item"><strong>CTOS Report:</strong> <span id="summaryCTOS"></span></div>
+          <div class="summary-item " id="cto_file_container">
+            <div class="preview-box-output ">
+              <div class="file-icon text-center"><img src="images/upoaded.png" alt=""></div>
+              <div class="file-name"> <span id="summaryCTOS_file"></span></div>
+            </div>
+
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template id="creditDetailsSummaryTemplate">
+    <div class="summary-card">
+      <div class="summary-body">
+        <button class="edit-btn"> EDIT <i class="bi bi-pencil-square"></i></button>
+        <div class="summary-left">
+          <h4>CREDIT DETAILS</h4>
+        </div>
+        <div class="summary-right">
+          <div class="summary-item"><strong>Miss Any Loan Payment:</strong> <span id="summaryMissedpayment"></span>
+          </div>
+          <div class="summary-item"><strong>In Debit Program :</strong> <span id="summaryDebit"></span></div>
+          <div class="summary-item"><strong>Guarantor Available:</strong> <span id="summaryGuarantor"></span></div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template id="loanDetailsSummaryTemplate">
+    <div class="summary-card">
+      <div class="summary-body">
+        <button class="edit-btn"> EDIT <i class="bi bi-pencil-square"></i></button>
+        <div class="summary-left">
+          <h4>CAR LOAN DETAILS</h4>
+        </div>
+        <div class="summary-right">
+          <div class="summary-item"><strong>Loan Type:</strong> <span id="summaryLoantype"></span></div>
+          <div class="summary-item"><strong>Cash Deposit :</strong> <span id="summaryCash"></span></div>
+          <div class="summary-item"><strong>Car Price:</strong> <span id="summaryCarprice"></span></div>
+          <div class="summary-item"><strong>Final Loan Amount:</strong> <span id="summaryFinalamount"></span></div>
+
+        </div>
+      </div>
+    </div>
+  </template>
+  <template id="uploadDetailsSummaryTemplate">
+    <div class="summary-card">
+      <div class="summary-body">
+        <button class="edit-btn"> EDIT <i class="bi bi-pencil-square"></i></button>
+        <div class="summary-left">
+          <h4>Upload Documents</h4>
+        </div>
+        <div class="summary-right">
+
+          <!-- NRIC -->
+          <div class="summary-item">
+            <p class="text-start">NRIC</p>
+            <div class="d-flex gap-4">
+              <div class="image-box">
+                <img src="" id="summarypreviewNricFront" style="max-width: 100px; display:block;">
+                <p>Front IC</p>
+              </div>
+
+              <div class="image-box">
+
+                <img src="" id="summarypreviewNricBack" style="max-width: 100px; display:block;">
+                <p>Back IC</p>
+              </div>
+            </div>
+
+          </div>
+
+
+          <!-- Driver's Licence -->
+          <div class="summary-item">
+            <p class="text-start">Driver’s Licence</p>
+            <div class="d-flex gap-4">
+              <div class="image-box">
+                <img src="" id="summarypreviewLicenseFront" style="max-width: 100px; display:block;">
+                <p>Front IC</p>
+              </div>
+
+              <div class="image-box">
+
+                <img src="" id="summarypreviewLicenseBack" style="max-width: 100px; display:block;">
+                <p>Back IC</p>
+              </div>
+            </div>
+
+
+          </div>
+
+
+          <!-- Utility Bill & Bank Statement -->
+          <div class="summary-item">
+            <div class="d-flex gap-4">
+              <div>
+                <p>Water/ Electric Bill</p>
+                <div class="image-box">
+                  <img src="" id="summarypreviewUtilityBill" style="max-width: 100px; display:block;">
+                  <p>Front Bill</p>
+                </div>
+              </div>
+              <div>
+                <p>Bank Statement</p>
+                <div class="image-box">
+                  <img src="" id="summarypreviewBankStatement" style="max-width: 100px; display:block;">
+
+                  <p>3 Documents</p>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="summary-item">
+            <p class="text-start">3 Months’ Pay Slip</p>
+            <div class="d-flex">
+              <div class="image-box">
+                <img src="" id="summarypreviewBankPaySlip" style="max-width: 100px; display:block;">
+                <p>3 Documents</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </template>
+
+
+
+  <template id="emergencyDetailsSummaryTemplate">
+    <div class="summary-card">
+      <div class="summary-body">
+        <button class="edit-btn"> EDIT <i class="bi bi-pencil-square"></i></button>
+        <div class="summary-left">
+          <h4>emergency Details</h4>
+        </div>
+        <div class="summary-right">
+          <div class="summary-item"><strong>Name:</strong> <span id="summaryEmergencyName"></span></div>
+          <div class="summary-item"><strong>Relationship:</strong> <span id="summaryEmergencyRelationship"></span></div>
+          <div class="summary-item"><strong>Mobile:</strong> <span id="summaryEmergncyMobile"></span></div>
+          <div class="summary-item"><strong>Email:</strong> <span id="summaryEmergencyEmail"></span></div>
+          <div class="summary-item"><strong>Address:</strong> <span id="summaryEmergencyAddress"></span></div>
+          <div class="summary-item"><strong>Name:</strong> <span id="summaryEmergencyName2"></span></div>
+          <div class="summary-item"><strong>Relationship:</strong> <span id="summaryEmergencyRelationship2"></span>
+          </div>
+          <div class="summary-item"><strong>Mobile:</strong> <span id="summaryEmergncyMobile2"></span></div>
+          <div class="summary-item"><strong>Email:</strong> <span id="summaryEmergencyEmail2"></span></div>
+          <div class="summary-item"><strong>Address:</strong> <span id="summaryEmergencyAddress2"></span></div>
+
+        </div>
+      </div>
+    </div>
+  </template>
+
+
+  <!-- ========== Start footer container ========== -->
+   <footer class="footer pt-lg-5 pt-3 fs-6 mt-xl-5">
+    <div class="container-fluid px-lg-5 px-3 ">
+      <div class="row footer-top-side">
+
+        <!-- About Section -->
+        <div class="col-12 col-lg-4 mb-4 footer-left-side">
+          <p class="fw-semibold">
+            CarGuru is redefining the used car experience through a transparent live bidding platform that
+            connects buyers, sellers, and dealers — all in one seamless ecosystem.
+          </p>
+          <p>
+            Whether you're buying, selling, or just exploring, CarGuru puts you in control of a process
+            that's simple, fair, and rewarding. Your car, your terms.
+          </p>
+          <div class="social-icons mt-5 d-none d-lg-block ">
+            <img src="images/facebook.png" width="24" height="24" alt="Facebook" class="me-5 ">
+            <img src="images/image.png" width="24" height="24" alt="Twitter" class="me-5">
+            <img src="images/instagram.png" width="24" height="24" alt="Instagram" class="me-5">
+            <img src="images/linkedin.png" width="24" height="24" alt="LinkedIn" class="me-5 bg-white rounded-1 ">
+          </div>
+
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-3 col-lg-2 mb-4 ms-lg-0  quick-links d-none d-lg-block d-md-block">
+          <h6 class="text-warning mb-3 fs-6">QUICK LINKS</h6>
+          <ul class="list-unstyled fs-6">
+            <li class="mb-2 mb-xl-3 "><a href="#">Home</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">Sell Car</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">Buy Car</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="col-md-3 col-lg-2 mb-4  d-none d-lg-block d-md-block quick-link ">
+          <h6 class="text-warning mb-3 fs-6">SERVICES</h6>
+          <ul class="list-unstyled fs-6">
+            <li class="mb-2 mb-xl-3"><a href="#">Bidding</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">Car Loans</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">Warranties</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">Body Check</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <!-- ========== Start nav bar for mobile only ========== -->
+        <!-- Wrapper Row -->
+        <div class="d-flex flex-wrap justify-content-between mb-4 d-lg-none d-block d-md-none">
+
+          <!-- Quick Links -->
+          <div class="w-50 pe-2 mb-3 quick-links">
+            <h6 class="text-warning mb-3 fs-6">QUICK LINKS</h6>
+            <ul class="list-unstyled fs-6">
+              <li class="mb-2"><a href="#">Home</a></li>
+              <li class="mb-2"><a href="#">Sell Car</a></li>
+              <li class="mb-2"><a href="#">Buy Car</a></li>
+              <li class="mb-2"><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="w-50 ps-2 mb-3 services">
+            <h6 class="text-warning mb-3 fs-6">SERVICES</h6>
+            <ul class="list-unstyled fs-6">
+              <li class="mb-2"><a href="#">Bidding</a></li>
+              <li class="mb-2"><a href="#">Car Loans</a></li>
+              <li class="mb-2"><a href="#">Warranties</a></li>
+              <li class="mb-2"><a href="#">Body Check</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- ========== End nav bar for mobile only ========== -->
+
+        <!-- Subscribe -->
+        <div class=" col-lg-4 mb-4 subscribe">
+          <h6 class="text-warning mb-3">SUBSCRIBE</h6>
+          <p style="font-size: 14px;">Stay updated with exclusive promos, events, new offers, and useful tips.
+          </p>
+          <form class="subscribe-input d-flex">
+            <input type="email" class="form-control me-2 rounded" placeholder="Your Email Here">
+            <button type="submit" class="btn btn-primary px-3 rounded p-xl-5">
+              <i class="bi bi-caret-right-fill"></i>
+            </button>
+          </form>
+        </div>
+
+        <div class="social-icons mt-lg-5  d-block d-lg-none mt-2 mb-3 d-flex justify-content-around ">
+          <img src="images/facebook.png" width="24" height="24" alt="Facebook" class="">
+          <img src="images/image.png" width="24" height="24" alt="Twitter" class="">
+          <img src="images/instagram.png" width="24" height="24" alt="Instagram" class="">
+          <img src="images/linkedin.png" width="24" height="24" alt="LinkedIn" class="bg-white rounded-1 ">
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="bg-warning border-top border-danger footer-bottom py-2 small px-lg-2 px-0">
+      <div class="container-fluid px-lg-4 px-1 py-lg-0 py-2">
+        <div class="row justify-content-lg-between align-items-lg-center text-center text-md-start">
+
+          <!-- Left -->
+          <div class=" col-lg-4 mb-2 mb-md-0 text-dark ps-lg-4 footer-text text-md-center">
+            © 2025–2026 CARGURU TECHNOLOGY. ALL RIGHTS RESERVED.
+          </div>
+
+          <!-- Center Links -->
+          <div
+            class=" py-md-2 col-lg-5 mb-2 mb-md-0 d-flex justify-content-lg-center justify-content-around flex-wrap gap-lg-4  footer-nav ">
+            <a href="#" class="text-dark text-decoration-none">Privacy Policy</a>
+            <a href="#" class="text-dark text-decoration-none">Terms of Service</a>
+            <a href="#" class="text-dark text-decoration-none">Payment Method</a>
+            <a href="#" class="text-dark text-decoration-none">Cookie Policy</a>
+          </div>
+
+          <!-- Right -->
+          <div class="col-lg-3 text-lg-end text-md-center pe-4 fw-bold text-black footer-text ">
+            CALL US AT +60 13 951 5969
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <script src="user-login.js"></script>
+</body>
+
+</html>

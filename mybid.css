@@ -1,0 +1,988 @@
+.form-section{
+    background: white !important;
+} 
+
+  .carder{
+        max-width: 800px;
+        width: 100%;
+        margin-left: -5%;
+ 
+    }
+    .card{
+        max-width: 880px;
+        width: 100%;
+ 
+    }
+    .card .card-head{
+        background-color: #ffc107;
+    }
+    .card-head p{
+      color: #000;
+      
+    }
+   
+    .card .img-contaniner{
+        width: 370px;
+       position: relative;
+        border-radius: 5px;
+      
+    }
+     /* .card .img-contaniner .img img{
+position: absolute;
+top: 0px;
+     } */
+    .card .s-img{
+      flex-basis: 25%;
+     
+    }
+    .card-body h3{
+     font-weight: 600;
+     font-family: 'Gabarito';
+     font-size: 1.7rem;
+     color: #000; 
+    }
+      .card-body  small{
+      font-size: .90rem;
+    
+     
+     }
+     .card-body .icons i{
+      font-size: 20px;
+      color: #ffc107;
+      font-weight: 700;
+     }
+     .card-body p{
+      color: #000;
+     }
+       .card-body .para{
+        font-size: 0.90rem;
+       }
+       .card-body .Rate{
+background-color: #daffca;
+
+       }
+     .card-body .Rate .bidding p{
+        color: #4eee5b;
+
+       }
+      .card-body .rate{
+        color: red;
+font-weight: 700;
+       }
+       strong{
+        color: #000;
+       }
+       .car-btns{
+        
+        display:flex;
+        justify-content:space-between;
+       }
+      .media-btn {
+      background-color: rgba(0, 0, 0, 0.3); /* translucent black */
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 5px;
+      font-size: 9px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: background-color 0.3s ease;
+    }
+    
+    /* filter-container */
+    .filter-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      width: 100%;
+     
+    }
+
+    .filter-tab {
+      padding: 8px 16px;
+      flex-basis: 48%;
+      background: #fff;
+      border: 1px solid #f1cc8d;
+      border-radius: 6px;
+      font-size: 14px;
+     
+      cursor: pointer;
+      transition: background 0.2s, box-shadow 0.2s;
+      white-space: nowrap;
+    }
+
+    .filter-tab:hover {
+      background-color: #fffaf0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .filter-tab.active {
+      font-weight: bold;
+      color: #444;
+    }
+    /* filter-container */
+      .car-action-btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 20px;
+     
+      border: none;
+      color: white;
+      text-align: center;
+      font-weight: 650;
+      border-radius: 4px;
+      font-size: 1rem;
+      flex-basis: 46%;
+      /* margin-right: 8px; */
+    }
+
+    .book-btn {
+      background-color: #d10000;
+    }
+
+    .test-drive-btn {
+      background-color: #f5b500;
+      color: black;
+    }
+
+    .loan-btn {
+      background-color: #f5b500;
+      color: black;
+    }
+
+    .car-action-btn i {
+      margin-right: 8px;
+      font-size: 16px;
+    }
+
+    .next-content{
+      background-color: #f6f7f8;
+    
+    }
+    /* NAV TAB */
+  .tab-menu {
+  display: flex;
+  gap: 50px;
+  padding: 30px 0;
+  background-color: #f5f5f5;
+}
+
+.tab {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000;
+  position: relative;
+  cursor: pointer;
+  padding-bottom: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.whatsapp-banner {
+  background-color: #f7f9fa;
+  border-radius: 8px;
+  padding: 10px 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  /* font-family: 'Arial', sans-serif; */
+  font-size: 0.80rem;
+  color: #333;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.whatsapp-icon {
+  width: 30px;
+  height: 30px;
+}
+/* Active Tab Styles */
+.tab.active {
+  
+  color: #d0021b;
+}
+
+.tab.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fdce4c;
+}
+
+/* Hover (Preview of Active Style) */
+.tab:hover {
+  color: #d0021b;
+}
+
+.tab:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fdce4c;
+}
+
+     h4{
+color: #000;
+font-family: 'Lexend Deca',sans-serif;
+}
+.black-box{
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    height: 40px;
+}
+
+.black-box p,strong{
+    color: #fff;
+    font-size: .75rem;
+}
+.black-box .btn{
+    background-color: #0ABC38;
+    color: #ffff;
+    font-size: 0.80rem;
+    padding: 2px 5px ;
+
+}
+.timer-box .para {
+font-weight: 200;
+font-size: 15px;
+
+}
+.timer-box .count{
+    font-weight: 800;
+    font-size: 1rem;
+}
+.timer-box .count-red{
+color:#d0021b
+}
+
+.card-custom {
+      max-width: 420px;
+      /* margin: 10px auto; */
+      margin-bottom: 20px;
+      background-color: #f6f7f8;
+      border: none;
+      /* font-family: Arial, sans-serif; */
+    }
+    .card-body { padding: 0;
+ 
+    }
+    .section-header {
+      font-size: 12px;
+      font-weight: 400;
+      color: #6c757d;
+      margin-bottom: 4px;
+    }
+    .latest-price-box {
+      background: #daffca;
+      border-radius: 6px;
+      padding: 8px 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .latest-price-box img {
+      width: 20px;
+      height: 20px;
+    }
+    .latest-price {
+      font-size: 29px;
+      font-weight: 700;
+      color: #e60000;
+    }
+    .top-bidder {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #daffca;
+      font-weight: 600;
+     
+      font-size: 14px;
+    }
+    .badge-increment {
+      background: #ffe073;
+      color: #333;
+      font-size: 11px;
+      font-weight: 600;
+      border-radius: 4px;
+      padding: 2px 6px;
+    }
+    .bidder-row {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 8px 0;
+      font-size: 14px;
+      padding-left: 50px;
+        border-bottom: 1px solid #b3b3b3;
+    }
+    .bidder-row .Gabarito{
+      text-align: end;
+    }
+    .bidder-info {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .bidder-info img {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .see-more {
+      font-size: 13px;
+      color: #000;
+      text-align: center;
+      padding: 8px 0;
+    }
+    .btn-bid {
+      width: 100%;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 10px 0;
+      border-radius: 4px;
+    }
+    .input-group .form-control {
+      font-size: 14px;
+      height: 40px;
+    }
+    .input-text{
+        font-size: 14px;
+    }
+    .form-check-label {
+      font-size: 14px;
+      
+    }
+    .info-icon {
+      font-size: 14px;
+      cursor: pointer;
+      margin-left: 4px;
+      color: #000;
+    }
+
+    .card-section {
+  display: none;
+}
+.img-container{
+  background: url('images/car-main.png')center /cover no-repeat;
+ height: 47vh;
+
+   border-radius: 5px;
+}
+
+.card-section.active {
+  display: flex !important;
+  flex-wrap: wrap;
+}
+
+.latest-container{
+  justify-content: space-around;
+}
+/* End of car card container */
+@media (max-width: 576px) {
+  .black-box{
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    height: 40px !important;
+ 
+
+}
+
+.black-box p,strong{
+    color: #fff;
+     font-size: calc(
+      0.6rem + (07 - 0.6) * ((100vw - 320px) / (576 - 320))
+    ) !important;
+}
+.bidder-row .rater{
+  text-align: right;
+}
+.rater{
+  padding-left: 13px;
+  text-align: right;
+}
+.rater2{
+   padding-left: 12px; 
+}
+.rater3{
+  padding-left: 15px; 
+}
+  .carder {
+    margin-left: 0 !important;
+    padding: 0px;
+  }
+
+  .card-body {
+    padding: 0px !important;
+  }
+
+  .carder .row > .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+.latest-container{
+  justify-content: space-between;
+}
+.latest-price{
+  font-size: 2rem !important;
+}
+  .img-container {
+    height: auto !important;
+    min-height: 260px;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+  .sub-img-container{
+    display: none!important;
+  }
+  .not-mobile{
+    display: none !important;
+  }
+  .mobile-text{
+    font-size: 0.50rem !important;
+  }
+  .car-btns {
+    flex-direction: row;
+    gap: 6px;
+    
+  }
+
+  .media-btn {
+    font-size: 10px;
+    padding: 6px 10px;
+  }
+
+  .s-img img {
+    height: 60px !important;
+  }
+
+  .card-body h3 {
+    /* font-size:1.3rem !important; */
+      font-size: calc(
+      0.9rem + ( 2 - 0.9) * ((100vw - 320px) / (576 - 320))
+    ) !important;
+  }
+  .card-body .icons span{
+    margin-top: -40% !important;
+  }
+  .card-body .icons i{
+  
+    font-size: 0.90rem !important;
+  }
+  .card-body small,
+  .card-body p,
+  .card-body .para {
+    /* font-size: 0.7rem !important; */
+     font-size: calc(
+      0.6rem + ( 1.2 - 0.6) * ((100vw - 320px) / (576 - 320))
+    ) !important;
+  }
+  .whatsapp-banner span {
+    font-size: 0.5rem !important;
+  }
+  .rate {
+    font-size: 1.2rem !important;
+  }
+
+  /* .black-box {
+    flex-direction: column;
+   
+    gap: 6px;
+  } */
+
+  .black-box .btn {
+    font-size: 0.45rem !important;
+   
+  }
+  .timer-box {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .timer-box .count,
+  .timer-box .count-red {
+    font-size: 1rem !important;
+  }
+
+  .card-custom {
+    max-width: 100% !important;
+    margin: 0px ;
+   
+  }
+
+  .section-header {
+    font-size: 0.65rem !important;
+    color: #000;
+    font-weight: 700;
+    width: 100%;
+  }
+
+ .latest-price-box .latest-price {
+    font-size: 1.8rem !important;
+    width: 100%;
+  }
+
+  .top-bidder,
+  .bidder-row {
+    font-size: 0.75rem;
+    padding-left: 0 !important;
+    justify-content: space-between;
+    /* width: 100%; */
+  }
+
+  .bidder-info img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .btn-bid {
+    font-size: 0.8rem;
+    padding: 8px 0;
+  }
+
+  .input-group .form-control,
+  .input-text,
+  .form-check-label {
+    font-size: 0.75rem;
+    height: 36px;
+  }
+
+  .whatsapp-banner {
+    font-size: 0.75rem;
+    padding: 8px 10px;
+    gap: 6px;
+  }
+
+  .whatsapp-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .see-more {
+    font-size: 0.75rem;
+  }
+   .form-check {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .form-check-input {
+    width: 14px;
+    height: 14px;
+    margin-bottom: 5px;
+  }
+
+  .form-check-label {
+    font-size: 11px;
+    margin-bottom: 0;
+  }
+
+  .info-icon {
+    font-size: 1px;
+  }
+
+  .input-group {
+    
+  
+    flex-wrap: nowrap;
+    max-width: 60%;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    height: 36px;
+  }
+  .form-check-label{
+    margin-top: 20px;
+  }
+  .input-group{
+    margin-top:6px !important;
+  }
+  .input-group-text {
+    font-size: 12px !important;
+    padding: 1px 2px;
+    height: 30px !important;
+  }
+
+  .form-control {
+    font-size: 12px !important;
+    padding: 1px 2px;
+    height: 30px !important;
+  }
+
+  .btn-dark {
+    font-size: 12px;
+    padding: 1px 2px;
+  
+    height: 30px !important;
+  }
+
+  .input-text {
+    font-size: 12px;
+    margin-right: 5px;
+    padding-top: 6px;
+  }
+
+  .d-flex.justify-content-center {
+    flex-wrap: nowrap;
+    gap: 8px;
+    align-items: center;
+  }
+  
+}
+
+
+
+
+/* LOGO ROPDOWN */
+    .btn-yellow {
+  background-color: #fac000;
+  color: black;
+  width: 30px !important;
+  height: 30px !important;
+  font-weight: bold;
+  font-size: 10px !important;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dropdown custom styling */
+.dropdown-menu-custom {
+  background-color: #fac000;
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  min-width: 200px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-menu-custom .dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: black;
+  font-weight: 500;
+  padding: 8px 16px;
+}
+
+.dropdown-menu-custom .dropdown-item:hover {
+  background-color: #f5b800;
+  color: black;
+}
+
+@media (min-width:600px) and (max-width:767px){
+      .dropdown .btn-yellow {
+        margin-bottom: 0.5rem !important;
+  background-color: white;
+  color: black;
+  width: 45px !important;
+  height: 45px !important;
+  font-weight: bold;
+  font-size: 12px !important;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+  .img-container {
+    min-height: 180px !important;
+}
+.carbid-container{
+  padding: 0px 0px 0px 25px !important;
+}
+
+.media-btn {
+   font-size: 7px ;
+}
+.bidder-row .Gabarito{
+  margin: 0 !important;
+  padding-right: 1rem !important;
+
+}
+.btn-bid {
+    font-size: 12px;
+    padding: 6px 0; 
+}
+.form-check {
+  padding-left: 0 !important;
+}
+.card-body h3 {
+    font-size: 1.4rem;
+}
+.card-body .icons i {
+  padding-top: 2rem !important;
+    font-size: 18px;
+}
+.para{
+  font-size: 0.8rem !important;
+  margin:0% !important;
+}
+.bid-field{
+  flex-direction: column !important;
+}
+.bid-field  .input-text{
+margin-top: 10px !important;
+margin-right: 5px !important;
+} 
+/* .card-body .Rate .bidding p
+ {
+   font-size: calc(0.5rem + 0.5vw) !important;
+} */
+.card-body .rate {
+    font-size: 20px !important;
+}
+.img-container .img img{
+  height: 14px !important;
+}
+.black-box {
+  padding-top: 20px !important;
+  height: 36px !important;
+}
+.black-box p, strong {
+    color: #fff;
+    font-size: .55rem;
+}
+.timer-box .para {
+    font-size: 10px !important;
+    font-weight: 200;
+    font-size: 15px;
+}
+.bidder-info img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.bidder-row {
+  margin-left: calc(10px + 0.3vw) !important;
+  padding-top: 5px;
+ padding-bottom: 0%;
+  margin-right: -2px !important
+}
+.bidder-info {
+    gap: 14px;
+}
+
+
+}
+@media(min-width:767px) and (max-width:799px){
+.whatsapp-banner{
+  font-size: 0.70rem;
+}
+  .card-body small {
+    font-size: 0.7rem;
+}
+  .card-body .Rate .bidding p{
+font-size: 15px;
+  }
+  .bidder-info img {
+    
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.timer-box .para {
+    font-weight: 200;
+    font-size: 11px;
+}
+  .bidder-info {
+    gap: 14px !important;
+}
+  .bidder-row {
+  margin-left: calc(1px + 0.3vw) !important;
+  padding-top: 5px;
+ padding-bottom: 0%;
+  margin-right: -10px !important
+}
+.dropdown .btn-yellow {
+  margin-bottom: 0.5rem !important;
+  background-color: white;
+  color: black;
+  width: 45px !important;
+  height: 45px !important;
+  font-weight: bold;
+  font-size: 12px !important;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .img-container {
+   height: 215px !important;
+  }
+
+  .carbid-container {
+    padding: 0px 0px 0px 32px !important;
+  }
+}
+
+@media(min-width:800px) and (max-width:1023px){
+  
+    .bidder-info img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+  .bidder-info {
+    gap: 14px !important;
+}
+  .bidder-row {
+  margin-left: calc(1px + 0.3vw) !important;
+  padding-top: 5px;
+ padding-bottom: 0%;
+  margin-right: -10px !important
+}
+      .dropdown .btn-yellow {
+          margin-bottom: 0.5rem !important;
+  background-color: white;
+  color: black;
+  width: 45px !important;
+  height: 45px !important;
+  font-weight: bold;
+  font-size: 12px !important;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  .img-container {
+   height: 240px;
+}
+.carbid-container{
+    padding: 0px 0px 0px 35px !important;
+}
+}
+@media(min-width:1024px) and (max-width:1279px){
+  
+ .carder .img-container{
+    /* height: calc(32vh - 0.50vw) !important; */
+    height: 270px;
+  }
+  .bidder-info {
+    gap: 14px !important;
+}
+  .bidder-row {
+  margin-left: calc(1px + 0.3vw) !important;
+  padding-top: 5px;
+ padding-bottom: 0%;
+  margin-right: -10px !important
+}
+      .dropdown .btn-yellow {
+          margin-bottom: 0.5rem !important;
+  background-color: white;
+  color: black;
+  width: 45px !important;
+  height: 45px !important;
+  font-weight: bold;
+  font-size: 12px !important;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.carbid-container{
+    padding: 0px 0px 0px 35px !important;
+}
+.assurance-item {
+    margin-left: 15px;
+    text-align: center;
+    max-width: 150px;
+}
+}
+@media(min-width:1279px) and (max-width:1400px){
+    
+ .carder .img-container{
+    /* height: calc(30vh + 0.50vw) !important; */
+    height: 250px ;
+  }
+  .bidder-info {
+    gap: 14px !important;
+}
+  .bidder-row {
+  margin-left: calc(1px + 0.3vw) !important;
+  padding-top: 5px;
+ padding-bottom: 0%;
+  margin-right: -10px !important
+}
+      .dropdown .btn-yellow {
+          margin-bottom: 0.5rem !important;
+  background-color: white;
+  color: black;
+  width: 45px !important;
+  height: 45px !important;
+  font-weight: bold;
+  font-size: 12px !important;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.carbid-container{
+    padding: 0px 0px 0px 35px !important;
+}
+.assurance-item {
+    margin-left: 15px;
+    text-align: center;
+    max-width: 150px;
+}
+}
+
+@media(min-width:1401px) and (max-width:1919px){
+    
+ .carder .img-container{
+    height: calc(37vh + 0.50vw) !important;
+  }
+  .bidder-info {
+    gap: 14px !important;
+}
+  .bidder-row {
+  margin-left: calc(1px + 0.3vw) !important;
+  padding-top: 5px;
+ padding-bottom: 0%;
+  margin-right: -10px !important
+}
+      .dropdown .btn-yellow {
+          margin-bottom: 0.5rem !important;
+  background-color: white;
+  color: black;
+  width: 45px !important;
+  height: 45px !important;
+  font-weight: bold;
+  font-size: 12px !important;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.carbid-container{
+    padding: 0px 0px 0px 35px !important;
+}
+.assurance-item {
+    margin-left: 15px;
+    text-align: center;
+    max-width: 150px;
+}
+}
+@media(min-width:2560px){
+   .carder .img-container{
+    height: calc(40vh + 0.50vw) !important;
+    /* min-height: 265px; */
+  }
+}

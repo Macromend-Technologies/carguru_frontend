@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Test Drive</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="appointment.css">
+  <link rel="stylesheet" href="style.css">
+      <!-- Bootstrap js links -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</head>
+<body>
+   <!-- ========== Start Navigation ========== -->
+  <!-- Yellow Info Strip -->
+  <div class="yellow-info text-dark text-center">
+    <div class="container-fluid px-3 px-md-5">
+      <p class="mb-0 small fw-bold">
+        FREE INSPECTION + INSURANCE CLAIM CHECK & WARRANTY <span class="fw-normal">FOR CAR SELLERS FROM NOW TILL 15
+          AUGUST 2025!</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg bg-lg-white shadow-sm sticky-top  ">
+    <div class="container-fluid px-1 px-md-4 py-1">
+      <!-- Toggle Button -->
+      <button class="btn d-lg-none " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav">
+        <i class="bi bi-list fs-4 text-danger"></i>
+      </button>
+
+      <a class="navbar-brand mx-lg-0 mx-auto " href="#">
+        <img src="images/myorder-2-removebg.png" alt="CAR GURU" class="d-none d-lg-block mx-lg-0 desktop-top-logo">
+        <img src="images/myorder-2-removebg.png" alt="CAR GURU" class="d-lg-none ms-4  mobile-top-logo">
+      </a>
+
+
+      <!-- Navbar Menu -->
+
+      <div class="collapse navbar-collapse justify-content-center mt-2 me-5 pe-5 navbar-menu-items" id="navbarContent">
+        <ul class="navbar-nav nav-text pe-5 me-5 me-md-0">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="bid_overall.html">Bid for Car</a></li>
+          <li class="nav-item"><a class="nav-link active" href="buy_car.html">Buy Car</a></li>
+          <li class="nav-item"><a class="nav-link" href="sellcar.html">Sell Car</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact and Icons -->
+      <div class="d-flex contact align-items-center gap-4 ms-auto mt-3 mt-lg-0">
+        <div class="text-start d-none d-lg-block">
+          <small class="d-block fw-bold nav-text mb-1" style="line-height: 0%;">CALL US AT</small>
+          <span class="text-danger fw-bold">
+            <i class="bi bi-telephone-fill  text-dark"></i> +60 13 951 5969
+          </span>
+        </div>
+        <div
+          class="d-lg-none d-none d-flex align-items-center me-lg-2 gap-lg-4 ms-lg-2 gap-2 ms-0 fs-6 fs-lg-0 mb-3 mb-lg-0 me-1 me-lg-0 icons-navbar">
+          <img src="images/search.png" alt="Search" width="15" height="15">
+          <img src="images/grocery-store.png" alt="Cart" width="15" height="15">
+          <img src="images/user.png" alt="User" width="15" height="15" id="loginBtn">
+        </div>
+         <div class="ms-5 d-md-block d-none d-sm-block">
+          <div class="dropdown">
+            <!-- Trigger Button -->
+            <button class="btn btn-yellow   rounded-circle " type="button" id="profileDropdown"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              MW
+            </button>
+
+            <!-- Dropdown Menu -->
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-custom" aria-labelledby="profileDropdown">
+              <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-text"></i> Personal Info</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-calendar-event"></i> Appointments</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-cart"></i> Orders</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-bookmark"></i> Saved Cars</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-hammer"></i> Bidding</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-left"></i> Logout</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div id="modalContainer"></div>
+  <!-- MOBILE NAV MENU -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNav">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+       <ul class="navbar-nav nav-text pe-5 me-5 me-md-0">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="bid_overall.html">Bid for Car</a></li>
+          <li class="nav-item"><a class="nav-link active" href="buy_car.html">Buy Car</a></li>
+          <li class="nav-item"><a class="nav-link" href="sellcar.html">Sell Car</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+        </ul>
+      <div class="text-center mt-4">
+        <small class="d-block fw-bold nav-text mb-1" style="line-height: 0%;">CALL US AT</small>
+        <span class="text-danger fw-bold">
+          <i class="bi bi-telephone-fill  text-dark"></i> +60 13 951 5969
+        </span>
+      </div>
+    </div>
+  </div>
+
+ <!-- BOTTOM NAV (Mobile Only) -->
+  <div class="bottom-nav d-lg-none ">
+    <a href="buy_car.html" class="active"><span><img src="images/bit-icon.png" alt="" width="23" height="23"  class="gray-icon"></span> Buy</a>
+    <a href="sellcar.html"><span><img src="images/sell-icon.png" alt=""  width="23" height="23"  class="gray-icon"></span>Sell</a>
+    <a href="bid_overall.html"><i><img src="images/bid-icon.png" alt="" width="23" height="23"
+          class="gray-icon"></i>Bid</a>
+
+    <a href="#" ><span ><img src="images/service-icon.png" alt=""   width="25" height="23" class="gray-icon"></span>Services</a>
+    <a href="#"><span><img src="images/message.png" alt=""  width="23" height="23"  class="gray-icon"></span>Message</a>
+  </div>
+  <!-- ========== End Navigation ========== -->
+ 
+<div class="container confirmation-wrapper">
+  <div class="text-section text-center ">
+    <h3>Appointment confirmed!</h3>
+    <p>Your appointment details have been sent to you. Kindly arrive at the appointment no later than 10 minutes.</p>
+  </div>
+
+  <div class="row">
+    <!-- Left Card -->
+    <div class="col-md-12 col-lg-9 col-sm-9 d-flex justify-content-end"> 
+     <div class="card main-card ">
+      <div class="card-body">
+        <div class="heading d-flex justify-content-end mb-4 gap-4">
+<span>GET DIRECTION <span><i class="bi bi-geo-alt-fill"></i></span></span>
+<span>ADD TO CALENDER <span><i class="bi bi-calendar-plus-fill"></i></span></span>
+<span>PRINT <span class="mt-2"><i class="bi bi-printer-fill fs-5"></i></span></span>
+        </div>
+
+        <div class="d-md-flex  mb-3 ">
+          <div class="border-end   testhead border-secondary fs-5 d-flex text-end align-items-center me-lg-5 pe-lg-4 me-md-5 pe-md-4  fw-bold borde-black">
+            TEST DRIVE <br class="d-none d-md-block">APPOINTMENT
+          </div>
+          <div>
+            <p class="para ms-4 ms-md-0"><strong class="me-3 me-md-4 pe-md-4">Date:</strong>24 june 2025</p>
+            <p class="para ms-4 ms-md-0"><strong class="me-3 me-md-4 pe-md-4">Time:</strong>10:00-12:00</p>
+            <div class="d-flex">  <p class="me-3 fw-bold">Location:</p> <p class="text-start para"> PT6/1171, Jalan Meranti Jaya,<br>
+            Taman Meranti Jaya, 47120 Puchong, Selangor</p></div>
+          
+          </div>
+        </div>
+        <div class="d-md-flex ms-md-3 ps-md-3">
+          <div class="border-end testhead border-secondary fs-5 d-flex text-end align-items-center me-5 pe-5 me-md-5 pe-md-5 fw-bold borde-black">
+           CAR<br class="d-none d-md-block" >DETAILS
+          </div>
+          <div class="mt-3">
+            <p class="fw-bold" style="line-height: 0%;">2018 PEROUDA</p>
+            <small class="fw-bold"style="line-height: 0%;">Myvi AV 1.5</small>
+         <p class="para fw-semibold">68.242km | Peninsular Malaysia</p>
+         <p class="mt-5">  <strong class="me-md-5 me-3">Price:</strong> <strong>RM40,550</strong></p>
+         <p class="" >  <strong class="me-md-4 me-3 ">Condition:</strong><span class="para">Excellent Condition </span></p>
+          </div>
+        </div>
+      </div>
+     </div>
+   
+
+    </div>
+
+    <!-- Right Highlight Box -->
+    <div class="col-md-12 col-lg-3 d-flex align-items-center mt-md-0 highlight-card-container d-none d-lg-block ">
+       <div class="highlight-card">
+    <div class="position-relative ">
+      <img src="images/trunk.jpg" class="card-img-top" alt="People in car">
+      <div class="card-img-overlay-text text-center ">
+      BUY YOUR CAR. <br> LESS US. MORE YOU. 
+      </div>
+    </div>
+    <div class="card-body-yellow">
+      <h6>FAST. EASY. TRUSTED</h6>
+      <p>Browse certified cars, book a test drive, and drive away with confidence.</p>
+      <p>No hidden fees. No stress. Just smooth car buying, the CARGURU way.</p>
+      <div class="link-line"></div>
+      <a href="#">Start your journey today at carguru.com</a>
+    </div>
+  </div>
+
+      </div>
+<div class="card flex-md-row flex-sm-row g-0 border-0 highlight-card-container d-sm-flex   d-md-flex d-lg-none ">
+  <!-- Image Section -->
+  <div class="col-md-6 col-sm-6">
+    <div class="position-relative h-100">
+      <img src="images/trunk.jpg" class="img-fluid h-100 w-100 object-fit-cover" alt="People in car">
+      <div class="card-img-overlay-text text-center mt-5">
+        BUY YOUR CAR. <br> LESS US. MORE YOU.
+      </div>
+    </div>
+  </div>
+
+  <!-- Text Section -->
+  <div class="col-md-6 col-sm-6 d-flex align-items-center">
+    <div class="card-body-yellow h-100 pt-4 ">
+      <h6>FAST. EASY. TRUSTED</h6>
+      <p>Browse certified cars, book a test drive, and drive away with confidence.</p>
+      <p>No hidden fees. No stress. Just smooth car buying, the CARGURU way.</p>
+      <div class="link-line"></div>
+      <a href="#">Start your journey today at carguru.com</a>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</div>
+
+  <!-- ========== Start footer container ========== -->
+   <footer class="footer pt-lg-5 pt-3 fs-6 mt-xl-5">
+    <div class="container-fluid px-lg-5 px-3 ">
+      <div class="row footer-top-side">
+
+        <!-- About Section -->
+        <div class="col-12 col-lg-4 mb-4 footer-left-side">
+          <p class="fw-semibold">
+            CarGuru is redefining the used car experience through a transparent live bidding platform that
+            connects buyers, sellers, and dealers — all in one seamless ecosystem.
+          </p>
+          <p>
+            Whether you're buying, selling, or just exploring, CarGuru puts you in control of a process
+            that's simple, fair, and rewarding. Your car, your terms.
+          </p>
+          <div class="social-icons mt-5 d-none d-lg-block ">
+            <img src="images/facebook.png" width="24" height="24" alt="Facebook" class="me-5 ">
+            <img src="images/image.png" width="24" height="24" alt="Twitter" class="me-5">
+            <img src="images/instagram.png" width="24" height="24" alt="Instagram" class="me-5">
+            <img src="images/linkedin.png" width="24" height="24" alt="LinkedIn" class="me-5 bg-white rounded-1 ">
+          </div>
+
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-3 col-lg-2 mb-4 ms-lg-0  quick-links d-none d-lg-block d-md-block">
+          <h6 class="text-warning mb-3 fs-6">QUICK LINKS</h6>
+          <ul class="list-unstyled fs-6">
+            <li class="mb-2 mb-xl-3 "><a href="#">Home</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">Sell Car</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">Buy Car</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="col-md-3 col-lg-2 mb-4  d-none d-lg-block d-md-block quick-link ">
+          <h6 class="text-warning mb-3 fs-6">SERVICES</h6>
+          <ul class="list-unstyled fs-6">
+            <li class="mb-2 mb-xl-3"><a href="#">Bidding</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">Car Loans</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">Warranties</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">Body Check</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <!-- ========== Start nav bar for mobile only ========== -->
+        <!-- Wrapper Row -->
+        <div class="d-flex flex-wrap justify-content-between mb-4 d-lg-none d-block d-md-none">
+
+          <!-- Quick Links -->
+          <div class="w-50 pe-2 mb-3 quick-links">
+            <h6 class="text-warning mb-3 fs-6">QUICK LINKS</h6>
+            <ul class="list-unstyled fs-6">
+              <li class="mb-2"><a href="#">Home</a></li>
+              <li class="mb-2"><a href="#">Sell Car</a></li>
+              <li class="mb-2"><a href="#">Buy Car</a></li>
+              <li class="mb-2"><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="w-50 ps-2 mb-3 services">
+            <h6 class="text-warning mb-3 fs-6">SERVICES</h6>
+            <ul class="list-unstyled fs-6">
+              <li class="mb-2"><a href="#">Bidding</a></li>
+              <li class="mb-2"><a href="#">Car Loans</a></li>
+              <li class="mb-2"><a href="#">Warranties</a></li>
+              <li class="mb-2"><a href="#">Body Check</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- ========== End nav bar for mobile only ========== -->
+
+        <!-- Subscribe -->
+        <div class=" col-lg-4 mb-4 subscribe">
+          <h6 class="text-warning mb-3">SUBSCRIBE</h6>
+          <p style="font-size: 14px;">Stay updated with exclusive promos, events, new offers, and useful tips.
+          </p>
+          <form class="subscribe-input d-flex">
+            <input type="email" class="form-control me-2 rounded" placeholder="Your Email Here">
+            <button type="submit" class="btn btn-primary px-3 rounded p-xl-5">
+              <i class="bi bi-caret-right-fill"></i>
+            </button>
+          </form>
+        </div>
+
+        <div class="social-icons mt-lg-5  d-block d-lg-none mt-2 mb-3 d-flex justify-content-around ">
+          <img src="images/facebook.png" width="24" height="24" alt="Facebook" class="">
+          <img src="images/image.png" width="24" height="24" alt="Twitter" class="">
+          <img src="images/instagram.png" width="24" height="24" alt="Instagram" class="">
+          <img src="images/linkedin.png" width="24" height="24" alt="LinkedIn" class="bg-white rounded-1 ">
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="bg-warning border-top border-danger footer-bottom py-2 small px-lg-2 px-0">
+      <div class="container-fluid px-lg-4 px-1 py-lg-0 py-2">
+        <div class="row justify-content-lg-between align-items-lg-center text-center text-md-start">
+
+          <!-- Left -->
+          <div class=" col-lg-4 mb-2 mb-md-0 text-dark ps-lg-4 footer-text text-md-center">
+            © 2025–2026 CARGURU TECHNOLOGY. ALL RIGHTS RESERVED.
+          </div>
+
+          <!-- Center Links -->
+          <div
+            class=" py-md-2 col-lg-5 mb-2 mb-md-0 d-flex justify-content-lg-center justify-content-around flex-wrap gap-lg-4  footer-nav ">
+            <a href="#" class="text-dark text-decoration-none">Privacy Policy</a>
+            <a href="#" class="text-dark text-decoration-none">Terms of Service</a>
+            <a href="#" class="text-dark text-decoration-none">Payment Method</a>
+            <a href="#" class="text-dark text-decoration-none">Cookie Policy</a>
+          </div>
+
+          <!-- Right -->
+          <div class="col-lg-3 text-lg-end text-md-center pe-4 fw-bold text-black footer-text ">
+            CALL US AT +60 13 951 5969
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </footer>
+<!-- Bootstrap Icons CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</body>
+</html>

@@ -1,0 +1,794 @@
+.main-container{
+  background: white;
+    width: 100%;
+    max-width: 800px;
+}
+.img-box .rate{
+        color: red;
+font-weight: 700;
+       }
+.card-custom {
+      max-width: 400px;
+      /* margin: 10px auto; */
+      margin-bottom: 20px;
+      background-color: #f5f6f7!important;
+      border: none;
+      
+    }
+    .card-body { padding: 0; }
+    
+.black-box{
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+}
+.black-box p,strong{
+    color: #fff;
+    font-size: .75rem;
+}
+.black-box .btn{
+    background-color: #0abc38;
+    color: #ffff;
+    font-size: 0.80rem;
+    padding: 2px 5px ;
+
+}
+h3{
+  font-family: 'Gabarito';
+}
+.timer-box .para {
+font-weight: 200;
+font-size: 15px;
+
+}
+.count{
+    font-weight: 800;
+    font-size: 1rem;
+}
+.timer-box .count-red{
+color:#d0021b
+}
+
+.card-custom {
+      max-width: 420px;
+      /* margin: 10px auto; */
+      margin-bottom: 20px;
+      background-color: #f6f7f8;
+      border: none;
+      font-family: Arial, sans-serif;
+    }
+    .card-body { padding: 0;
+ 
+    }
+    .bidder-row .badge{
+      background-color: #4eee5b;
+      margin-left: -6% !important;
+    }
+    .section-header {
+      font-size: 12px;
+      font-weight: 400;
+      color: #6c757d;
+      margin-bottom: 4px;
+    }
+    .latest-price-box {
+      background: #daffca;
+      border-radius: 6px;
+      padding: 8px 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .latest-price-box img {
+      width: 20px;
+      height: 20px;
+    }
+    .latest-price {
+      font-size: 29px !important;
+      font-weight: 700;
+      color: #e60000;
+    }
+    .para{
+      font-size: 14px;
+    }
+    .top-bidder {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #daffca;
+      font-weight: 600;
+     
+      font-size: 14px;
+    }
+    .top-bidder {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #daffca;
+      font-weight: 600;
+     
+      font-size: 14px;
+    }
+    .badge-increment {
+      background: #ffe073;
+      color: #333;
+      font-size: 11px;
+      font-weight: 600;
+      border-radius: 4px;
+      padding: 2px 6px;
+    }
+    .bidder-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 19px;
+    font-size: 14px;
+    padding-left: 78px;
+    border-bottom: 1px solid #b3b3b3;
+}
+
+.badge-btn .btn {
+  font-size: 0.35rem;
+  margin-right: 0.6rem;
+}
+.scn-value{
+  margin-right: 0.6rem;
+}
+/* .price {
+  min-width: 100px; 
+} */
+    .bidder-row .Gabarito{
+      text-align: end;
+    }
+    .bidder-info {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+    .bidder-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+    .see-more {
+      font-size: 13px;
+      color: #000;
+      text-align: center;
+      padding: 8px 0;
+    }
+    .btn-bid {
+      width: 100%;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 10px 0;
+      border-radius: 4px;
+    }
+
+    .latest-container{
+  justify-content: space-around;
+}
+    .input-group .form-control {
+      font-size: 12px;
+      height: 40px;
+    }
+    .input-text{
+        font-size: 10px;
+    }
+    .form-check-label {
+      font-size: 13px;
+    }
+    .form-check{
+        flex-basis: 50%;
+    }
+    .info-icon {
+      font-size: 13px;
+      cursor: pointer;
+      margin-left: 4px;
+      color: #000;
+    }
+.btn-dark{
+    font-size: 12px;
+    
+}
+.input-group span{
+    font-size: 13px;
+}
+    .btn-bid {
+        font-size: 0.8rem !important;
+        padding: 8px 0;
+        font-weight: 600 !important;
+    }
+/* Small Mobile Devices */
+@media (max-width: 575px) {
+  
+  
+  .bidder-row .badge{
+      background-color: #4eee5b;
+      /* margin-right: -27% !important; */
+         margin-right: calc(
+      0% - (250 * ((100vw - 320px) / (575 - 320)))
+    ) !important;
+      margin-left: 1% !important;
+    }
+   .black-box{
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    height: 30px;
+}
+
+.black-box p,strong{
+    color: #fff;
+     font-size: calc(
+      0.4rem + (07 - 0.4) * ((100vw - 320px) / (576 - 320))
+    ) !important;
+}
+.bidder-row .rater{
+  text-align: right;
+}
+.rater{
+  padding-left: 13px;
+  text-align: right;
+}
+.rater2{
+   padding-left: 12px; 
+}
+.rater3{
+  padding-left: 15px; 
+}
+  .carder {
+    margin-left: 0 !important;
+    padding: 0px;
+  }
+
+  .card-body {
+    padding: 0px !important;
+  }
+
+  .carder .row > .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+.latest-container{
+  justify-content: space-between;
+}
+.latest-price{
+  font-size: 2rem !important;
+}
+  .img-container {
+    height: auto !important;
+    min-height: 220px;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+  .sub-img-container{
+    display: none!important;
+  }
+  .not-mobile{
+    display: none !important;
+  }
+  .mobile-text{
+    font-size: 0.50rem !important;
+  }
+  .car-btns {
+    flex-direction: row;
+    gap: 6px;
+    
+  }
+
+  .media-btn {
+    font-size: 10px;
+    padding: 6px 10px;
+  }
+
+  .s-img img {
+    height: 60px !important;
+  }
+
+  .card-body h3 {
+    font-size:1.3rem !important;
+  }
+  .card-body .icons span{
+    margin-top: -40% !important;
+  }
+  .card-body .icons i{
+  
+    font-size: 0.90rem !important;
+  }
+  .card-body small,
+  .card-body p,
+  .card-body .para {
+    font-size: 0.7rem !important;
+  }
+  .whatsapp-banner span {
+    font-size: 0.5rem !important;
+  }
+  .rate {
+    font-size: 1.2rem !important;
+  }
+
+  /* .black-box {
+    flex-direction: column;
+    align-items: start !important;
+    gap: 6px;
+  } */
+
+  /* .black-box div,
+  .black-box strong
+  {
+    font-size: 0.65rem !important;
+    margin-left: 2px;
+ 
+  } */
+  .black-box .btn {
+    font-size: 0.50rem !important;
+   
+  }
+  .timer-box {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .timer-box .count,
+  .timer-box .count-red {
+    font-size: 1rem !important;
+  }
+
+  .card-custom {
+    max-width: 100% !important;
+    margin: 0px ;
+   
+  }
+
+  .section-header {
+    font-size: 0.65rem !important;
+    color: #000;
+    font-weight: 700;
+    width: 100%;
+  }
+
+ .latest-price-box .latest-price {
+    font-size: 1.9rem !important;
+    width: 100%;
+  }
+
+  .top-bidder{
+    
+    font-size: 0.75rem;
+   padding-right: 5% !important;
+    justify-content: space-between;
+    /* width: 100%; */
+  
+
+  }
+  .bidder-row {
+    font-size: 0.75rem;
+    padding-left: 65px ;
+    justify-content: space-between;
+    /* width: 100%; */
+  }
+
+  .bidder-info img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .btn-bid {
+    font-size: 0.8rem;
+    padding: 8px 0;
+  }
+
+ 
+
+  .whatsapp-banner {
+    font-size: 0.75rem;
+    padding: 8px 10px;
+    gap: 6px;
+  }
+
+  .whatsapp-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .see-more {
+    font-size: 0.75rem;
+  }
+  
+
+
+  .form-check {
+    flex-basis: 100% !important;
+    margin-bottom: 8px;
+  }
+
+ 
+  .form-check-label,
+  .input-group span,
+  .para,
+  .count,
+   .btn-dark,
+  .btn-bid,
+  .rate,
+  .fw-light,
+  small,
+  h3 {
+    /* font-size: 12px !important; */
+
+     font-size: calc(
+      10px + ( 14 - 10) * ((100vw - 320px) / (576 - 320))
+    ) !important;
+  }
+  .info-icon {
+    font-size: 1px;
+  }
+
+  .input-group {
+    
+  
+    flex-wrap: nowrap;
+    max-width: 100% !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    height: 36px;
+  }
+  .form-check-label{
+    margin-top: 20px;
+  }
+  .input-group{
+    margin-top:6px !important;
+  }
+  .input-group-text {
+    font-size: 11px !important;
+    padding: 5px !important;
+    height: 30px !important;
+  }
+    .form-control::placeholder{
+      font-size: 10px !important;
+      
+    }
+
+  .form-control {
+    font-size: 11px !important;
+    padding: 0px !important;
+    height: 30px !important;
+  }
+
+  .btn-dark {
+    font-size: 12px;
+    padding: 1px 2px;
+  
+    height: 30px !important;
+  }
+
+  .input-text {
+    font-size: 12px;
+    margin-right: 5px;
+    padding-top: 6px;
+  }
+
+  .d-flex.justify-content-center {
+    flex-wrap: nowrap;
+    gap: 8px;
+    align-items: center;
+  }
+}
+
+/* Tablets */
+
+
+/* Standard Desktop Screens (up to 1439px, excluding large laptops) */
+@media (min-width: 1400px) and (max-width: 1600px) {
+  .main-container {
+    /* max-width: 85vw; */
+  }
+  .card-custom{
+    width: 100% !important;
+  }
+  .black-box .btn {
+    font-size: 13px;
+  }
+
+  .form-check-label,
+  .para,
+  .btn-bid {
+    font-size: 14px;
+  }
+
+  .input-group {
+    max-width: 240px;
+  }
+
+  .rate {
+    font-size: 16px;
+  }
+
+  .section-header,
+  .count,
+  .latest-price {
+    font-size: 16px;
+  }
+}
+
+/* TV and Ultra-Wide Screens (1440px and above) */
+
+
+.form-check-input:checked {
+    background-color: #fac000 !important;
+    border-color: #fac000 !important;
+}
+
+
+/* LOGO ROPDOWN */
+    .btn-yellow {
+  background-color: #fac000;
+  color: black;
+  width: 30px !important;
+  height: 30px !important;
+  font-weight: bold;
+  font-size: 10px !important;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dropdown custom styling */
+.dropdown-menu-custom {
+  background-color: #fac000;
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  min-width: 200px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-menu-custom .dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: black;
+  font-weight: 500;
+  padding: 8px 16px;
+}
+
+.dropdown-menu-custom .dropdown-item:hover {
+  background-color: #f5b800;
+  color: black;
+}
+.bid-second-price{
+  margin-left: -43px !important;
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  
+  .form-check {
+    flex-basis: 58%;
+}
+  .badge-btn .btn {
+  font-size: 0.35rem;
+  margin-right: 0.4rem;
+}
+.scn-value{
+  margin-right: 0rem !important;
+}
+  .badge-btn .rounded-pill{
+    padding: 2px 10px !important;
+  }
+.main-container {
+    width: 100%;
+    min-width: 650px;
+}
+.bidder-row {
+  padding-left: calc(3.3rem + 0.50vw) !important;
+      padding: 8px 6px;
+}
+.bidder-row .Gabarito{
+  font-size: 18px !important;
+}
+.rounded-pill {
+  font-size: 4px !important;
+}
+
+.price-bottom ::placeholder{
+  font-size: 11px !important;
+}
+.price-bottom .price-enter-input{
+  font-size: 11px !important;
+}
+.carder .bid-price-title{
+  font-size: calc(0.8rem + 0.50vw) !important;
+}
+.carder .bid-price-sub{
+font-size: calc(0.6rem + 0.50vw) !important;
+}
+.carder .rate{
+  font-size: calc(0.7rem + 0.50vw) !important;
+}
+.latest-price {
+    font-size: calc(1.3rem + 0.50vw) !important; 
+}
+.para{
+  font-size: calc(0.4rem + 0.50vw) !important;
+}
+
+    .top-bidder img {
+        margin-left: 20px !important;
+        height: 36px !important;
+        width: 36px !important;
+    }
+.bidder-info img {
+  margin-left: 20px !important;
+  height: 30px !important;
+  width: 30px !important;
+}
+.bidder-info span ,.top-bidder span{
+  font-size: calc(0.4rem + 0.50vw) !important;
+}
+  .main-container {
+    padding: 0 12px;
+  }
+
+  .carder {
+    margin-bottom: 16px;
+  }
+  .card-custom {
+    max-width: 100% !important;
+  }
+.price-enter-input, .input-group-text {
+  font-size: 10px !important;
+  padding: 0px 5px !important;
+}
+  .black-box .btn {
+    font-size: 13px !important;
+    padding: 3px 6px;
+  }
+
+  .rate,
+  .count,
+  .count-red,
+  .section-header,
+  .input-group span,
+  .input-group input {
+    font-size: 10px !important;
+  }
+  .form-check-label {
+    /* font-size: 9px !important; */
+    font-size: calc(9px + (2 * (100vw - 600px) / (1023 - 600))) !important; 
+  }
+.input-group {
+   
+    width:85% !important;
+}
+  .btn-bid {
+    font-size: 8px !important;
+    text-align: center;
+    padding: 0px 4px;
+  }
+  }
+@media(min-width:660px) and (max-width:767px){
+   .badge-btn .btn {
+  font-size: 0.35rem;
+  margin-right: calc(0.3rem + 0.50vw);
+}
+.scn-value{
+  margin-right: 0rem !important;
+}
+    .bidder-row {
+  padding-left: calc(3.4rem + 0.50vw) !important;
+      padding: 8px 10px;
+}
+  }
+  @media(min-width:767px) and (max-width:819px){
+     .badge-btn .btn {
+  font-size: 0.35rem;
+  margin-right: 1rem;
+}
+.scn-value{
+  margin-right: 0rem !important;
+}
+    .bidder-row {
+  padding-left: calc(3.8rem + 0.50vw) !important;
+      padding: 8px 10px;
+}
+  }
+  @media(min-width:820px) and (max-width:1023px){
+         .badge-btn .btn {
+  font-size: 0.35rem;
+  margin-right: 1.5rem;
+}
+.scn-value{
+  margin-right: 0.4rem !important;
+}
+    .bidder-row {
+  padding-left: calc(4.3rem + 0.50vw) !important;
+      padding: 8px 13px;
+}
+  }
+@media(min-width:1024px) and (max-width:1280px){
+.main-container .black-box{
+  padding-top: 0.95rem !important;
+}
+}
+@media (min-width: 1440px) and (max-width:1919px) {
+         .badge-btn .btn {
+  font-size: 0.35rem;
+  margin-right: 2.8rem;
+}
+.scn-value{
+  margin-right: 2.8rem !important;
+}
+    .bidder-row {
+  padding-left: calc(6.8rem + 0.50vw) !important;
+      padding: 8px 50px;
+}
+  .img-box img{
+    width: 40% !important;
+    height: 30% !important;
+  }
+  .img-box .logo{
+    width: 64% !important;
+    height: 27% !important;
+  }
+  .img-box .bid-price-title{
+    font-size: 30px !important;
+  }
+  .bid-price-sub{
+    font-size: 20px !important;
+  }
+  .img-box .rate small , .img-box  h3{
+    font-size: 20px !important;
+  }
+    .latest-price {
+        font-size: 31px !important;
+    }
+
+  .main-container {
+    
+    max-width: 1080px;
+    margin: auto;
+  }
+  .card-custom{
+    min-width: 100% !important;
+  }
+ 
+  .rate {
+    font-size: 20px;
+  }
+
+  .black-box .btn {
+    font-size: 14px;
+  }
+
+  .btn-bid {
+    font-size: 16px;
+  }
+
+  .input-group input {
+    font-size: 14px;
+    height: 42px;
+  }
+
+  .form-check-label,
+  .section-header {
+    font-size: 15px;
+  }
+
+  .count {
+    font-size: 18px;
+  }
+
+  .top-bidder img {
+    height: 48px;
+  }
+.bidder-row {
+    padding-left: 59px;
+}
+.badge-row{
+padding-right: 2% !important;
+}
+  .bidder-info img {
+    margin-left: 26px !important;
+    margin-right: 2px;
+    width: 45px;
+    height: 45px;
+  }
+}
