@@ -41,24 +41,7 @@
      .empty-img img{
 width: 100%;
      }
-     .summary-container {
-  position: relative;
-  display: none; /* hidden by default */
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background: #fff;
-}
 
-.close-btn {
-  position: absolute;
-  top: 8px;
-  right: 12px;
-  font-size: 20px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-}
 
  </style>
 </head>
@@ -202,7 +185,7 @@ width: 100%;
       </a>
       <div class="collapse show submenu" id="financialMenu">
         <a href="loan_output.html" ><i class="bi bi-piggy-bank" ></i> Loan</a>
-        <a href="#"><i class="bi bi-credit-card"></i> Payment</a>
+        <a href="payment_page.html"><i class="bi bi-credit-card"></i> Payment</a>
         <a href="#"><i class="bi bi-cash-stack"></i> Refund</a>
         <a href="#"><i class="bi bi-cash-stack"></i> Deposit</a>
       </div>
@@ -219,24 +202,17 @@ width: 100%;
 <div class="row d-flex flex-column align-items-center">
     <div class="text-center heading mt-5">
      <h1 class="">
-        My Appointments
+       My Refund
      </h1>
-     <p>You’re probably still thinking about it!</p>
+     <p>So far, nothing comes up yet!</p>
 
      
     </div>
 
     <div class="empty-img ">
-        <img src="images/girlflower@4x.png" alt="">
+        <img src="images/walletmoney@4x.png" alt="">
     </div>
 
-<div id="summaryContainer" class="summary-container">
-  <button id="closeSummary" class="close-btn">×</button>
-
-  <div id="personalSummary"></div>
-  <div id="workSummary"></div>
-  <div id="creditSummary"></div>
-</div>
 
 </div>
         </div>
@@ -252,18 +228,18 @@ width: 100%;
       </div>
     </div>
 
-    <a href="#" class="active"><i class="bi bi-calendar-check"></i> My Appointments</a>
+    <a href="myappointment.html" class="active"><i class="bi bi-calendar-check"></i> My Appointments</a>
     <a href="#"> <i class="bi bi-palette2"></i>My Bidding</a>
-    <a href="#" ><i class="bi bi-cart"></i> My Orders</a>
-    <a href="#"><i class="bi bi-heart"></i> My Favorites</a>
+    <a href="myOrder.html" ><i class="bi bi-cart"></i> My Orders</a>
+    <a href="myfavorites.html"><i class="bi bi-heart"></i> My Favorites</a>
 
     <div class="mb-2">
       <a data-bs-toggle="collapse" href="#financialMenu" role="button" aria-expanded="true">
         <i class="bi bi-cash-coin"></i> My Financials
       </a>
       <div class="collapse show submenu" id="financialMenu">
-        <a href="#" ><i class="bi bi-piggy-bank"></i> Loan</a>
-        <a href="#"><i class="bi bi-credit-card"></i> Payment</a>
+        <a href="loan_output.html" ><i class="bi bi-piggy-bank"></i> Loan</a>
+        <a href="payment_page.html"><i class="bi bi-credit-card"></i> Payment</a>
         <a href="#"><i class="bi bi-cash-stack"></i> Refund</a>
       </div>
     </div>
