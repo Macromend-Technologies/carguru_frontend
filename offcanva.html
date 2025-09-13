@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap" rel="stylesheet">
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- <script src="script.js"></script> -->
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="offcanva.css">
+</head>
+
+<body>
+  
+<div class="offcanvas offcanvas-end" tabindex="-1" id="filterOffcanvas">
+  <div class="offcanvas-header border-bottom  bg-light">
+    <h6 class="offcanvas-title w-100 text-center ms-3">ALL FILTERS</h6>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+
+  <div class="offcanvas-body d-flex flex-column p-0">
+    <div class="d-flex flex-grow-1">
+      <!-- Left Menu -->
+       
+      <div class="border-0 bg-light  py-3" style="width: 175px !important;">
+        <ul class="nav flex-column" id="custom-tab-nav">
+          <li class="nav-items"><a class="nav-link text-dark " href="#tab-filter">Quick Filters</a></li>
+          <li class="nav-items"><a class="nav-link text-dark"  >Promotion</a></li>
+          <li class="nav-items"><a class="nav-link text-dark" href="#tab-brand">Brand & Model</a></li>
+          <li class="nav-items"><a class="nav-link text-dark" href="#tab-country">Country of Make</a></li>
+          <li class="nav-items"><a class="nav-link text-dark" href="#tab-body">Body Type</a></li>
+          <li class="nav-items"><a class="nav-link text-dark active" href="#tab-fuel">Fuel Type</a></li>
+          <li class="nav-items"><a class="nav-link text-dark" href="#tab-price">Car Price</a></li>
+          <li class="nav-items"><a class="nav-link text-dark" href="#tab-year">Year</a></li>
+          <li class="nav-items"><a class="nav-link text-dark" href="#tab-transmission">Transmission</a></li>
+          <li class="nav-items"><a class="nav-link text-dark" href="#tab-train">Drive Train</a></li>
+          <li class="nav-items"><a class="nav-link text-dark" href="#tab-mileage">Mileage</a></li>
+          <li class="nav-items"><a class="nav-link text-dark" href="#tab-color">Color</a></li>
+          <li class="nav-items"><a class="nav-link text-dark" href="#tab-centre">Centre</a></li>
+        </ul>
+      </div>
+
+      <!-- Right Filter Options -->
+      <div class="flex-grow-1 px-2 py-4 bg-white fuel-items w-100" id="tab-content-wrapper">
+        <!-- ========== Start fuel container ========== -->
+        <div class="tab-pane active" id="tab-fuel">
+         <h6 class="mb-3 text-center ">Select Fuel Type</h6>
+        <div class="row g-3 ">
+          <div class="col-6 "><button class="btn btn-outline-light border-secondary w-100 text-dark">Diesel</button></div>
+          <div class="col-6 "><button class="btn btn-outline-light border-secondary w-100 text-dark">Green Diesel</button></div>
+          <div class="col-6 "><button class="btn btn-outline-light border-secondary w-100 text-dark">Electric</button></div>
+          <div class="col-6 "><button class="btn btn-warning w-100 text-dark">Petrol</button></div>
+          <div class="col-6 "><button class="btn btn-outline-light border-secondary w-100 text-dark">Hybrid</button></div>
+        </div>
+        </div>
+        <!-- ========== End fuel container ========== -->
+        <!-- ========== Start body ========== -->
+       
+<div class=" bg-white body-type-items  tab-pane d-none" id="tab-body">
+  <h6 class="mb-3 text-center">Select Body Type</h6>
+<div class="row g-3 text-center">
+    <!-- Example item -->
+    <div class="col-4">
+      <div class="body-type-card selected">
+        <img src="images/car-1.png" alt="Sedan" class="img-fluid mb-1">
+        <div class="body-type-label">Sedan (8)</div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="body-type-card">
+        <img src="images/car-2.png" alt="Hatchback" class="img-fluid mb-1">
+        <div class="body-type-label">Hatchback (16)</div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="body-type-card">
+        <img src="images/car-3.png" alt="SUV" class="img-fluid mb-1">
+        <div class="body-type-label">SUV (3)</div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="body-type-card">
+        <img src="images/car-4.png" alt="SUV" class="img-fluid mb-1">
+        <div class="body-type-label">Map (3)</div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="body-type-card">
+        <img src="images/car-5.png" alt="SUV" class="img-fluid mb-1">
+        <div class="body-type-label">Couple (3)</div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="body-type-card">
+        <img src="images/car-6.png" alt="SUV" class="img-fluid mb-1">
+        <div class="body-type-label">Truck (12)</div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="body-type-card">
+        <img src="images/car-7.png" alt="SUV" class="img-fluid mb-1">
+        <div class="body-type-label">Convertible (8)</div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="body-type-card">
+        <img src="images/car-8.png" alt="SUV" class="img-fluid mb-1">
+        <div class="body-type-label">Van (20)</div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="body-type-card">
+        <img src="images/car-9.png" alt="SUV" class="img-fluid mb-1">
+        <div class="body-type-label">Wagen (22)</div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+        <!-- ========== End body ========== -->
+         <!-- ========== Start Brand Name ========== -->
+      <div class="tab-pane d-none" id="tab-country">
+    <h6 class="text-center mb-3">Select Car Make Country</h6>
+     <div class="dropdown text-center mt-4">
+  <button class="btn btn-outline-warning dropdown-toggle w-75" type="button" id="countryDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+    <img src="https://flagcdn.com/w40/my.png" width="20" class="me-2"> Malaysia
+  </button>
+  <ul class="dropdown-menu w-75 mx-auto" aria-labelledby="countryDropdown">
+    <li><a class="dropdown-item d-flex align-items-center" href="#">
+      <img src="https://flagcdn.com/w40/us.png" width="20" class="me-2"> United States
+    </a></li>
+    <li><a class="dropdown-item d-flex align-items-center" href="#">
+      <img src="https://flagcdn.com/w40/gb.png" width="20" class="me-2"> United Kingdom
+    </a></li>
+    <li><a class="dropdown-item d-flex align-items-center" href="#">
+      <img src="https://flagcdn.com/w40/in.png" width="20" class="me-2"> India
+    </a></li>
+      <li><a class="dropdown-item d-flex align-items-center" href="#">
+      <img src="https://flagcdn.com/w40/kr.png" width="20" class="me-2"> Korea
+    </a></li>
+    <li><a class="dropdown-item d-flex align-items-center" href="#">
+      <img src="https://flagcdn.com/w40/my.png" width="20" class="me-2"> Malaysia
+    </a></li>
+    <li><a class="dropdown-item d-flex align-items-center" href="#">
+      <img src="https://flagcdn.com/w40/de.png" width="20" class="me-2"> Germany
+    </a></li>
+    <li><a class="dropdown-item d-flex align-items-center" href="#">
+      <img src="https://flagcdn.com/w40/jp.png" width="20" class="me-2"> Japan
+    </a></li>
+    <li><a class="dropdown-item d-flex align-items-center" href="#">
+      <img src="https://flagcdn.com/w40/fr.png" width="20" class="me-2"> France
+    </a></li>
+  </ul>
+</div>
+
+  
+  </div>
+      <!-- ========== End Brand Name ========== -->
+      <!-- ========== Start Brand Name ========== -->
+      <div class="tab-pane d-none" id="tab-brand">
+    <h6 class="text-center mb-3">Select Car Brand & Model</h6>
+     <div class="brand-row">
+      <div class="row row-cols-3 row-cols-md-9 g-3 my-2">
+      <div class="col brand-item" onclick="selectBrand('bmw', this)">
+        <img src="images/brand-1.png" class="brand-logo" alt="BMW">
+        <div class="brand-label">BMW (3)</div>
+      </div>
+      <div class="col brand-item" onclick="selectBrand('daihatsu', this)">
+        <img src="images/brand-2.png" class="brand-logo" alt="Daihatsu">
+        <div class="brand-label">Daihatsu (16)</div>
+      </div>
+      <div class="col brand-item" onclick="selectBrand('ford', this)">
+        <img src="images/brand-3.png" class="brand-logo" alt="Ford">
+        <div class="brand-label">Ford (3)</div>
+      </div>
+     </div>
+     </div>
+          <div class="brand-row">
+      <div class="row row-cols-3 row-cols-md-9 g-3 my-2">
+       <div class="col brand-item" onclick="selectBrand('honda', this)">
+        <img src="images/brand-4.png" class="brand-logo" alt="Honda">
+        <div class="brand-label">Honda (14)</div>
+      </div>
+      <div class="col brand-item" onclick="selectBrand('hyundai', this)">
+        <img src="images/brand-5.png" class="brand-logo" alt="Hyundai">
+        <div class="brand-label">Hyundai (20)</div>
+      </div>
+      <div class="col brand-item" onclick="selectBrand('isuzu', this)">
+        <img src="images/brand-6.png" class="brand-logo" alt="Isuzu">
+        <div class="brand-label">Isuzu (13)</div>
+      </div>
+     </div>
+     </div>
+<div class="brand-row">
+      <div class="row row-cols-3 row-cols-md-9 g-3 my-2">
+       <div class="col brand-item" onclick="selectBrand('kia', this)">
+        <img src="images/brand-7.png" class="brand-logo" alt="Kia">
+        <div class="brand-label">Kia (9)</div>
+      </div>
+      <div class="col brand-item" onclick="selectBrand('lexus', this)">
+        <img src="images/brand-8.png" class="brand-logo" alt="Lexus">
+        <div class="brand-label">Lexus (26)</div>
+      </div>
+      <!-- Row 2 -->
+      <div class="col brand-item"   onclick="selectBrand('mazda', this)">
+        <img src="images/brand-9.png" class="brand-logo" alt="Mazda">
+        <div class="brand-label">Mazda (22)</div>
+      </div>
+     </div>
+     </div>
+     <div class="brand-row">
+      <div class="row row-cols-3 row-cols-md-9 g-3 my-2">
+       <div class="col brand-item"   onclick="selectBrand('mercedes-benz', this)">
+        <img src="images/brand-10.png" class="brand-logo" alt="Mercedes-Benz">
+        <div class="brand-label">Mercedes-Benz (8)</div>
+      </div>
+      <div class="col brand-item"   onclick="selectBrand('mini', this)">
+        <img src="images/brand-11.png" class="brand-logo" alt="Mini">
+        <div class="brand-label">Mini (16)</div>
+      </div>
+      <div class="col brand-item"   onclick="selectBrand('mitsubishi', this)">
+        <img src="images/brand-12.png" class="brand-logo" alt="Mitsubishi">
+        <div class="brand-label">Mitsubishi (3)</div>
+      </div>
+     </div>
+     </div>
+     <div class="brand-row">
+      <div class="row row-cols-3 row-cols-md-9 g-3 my-2 ">
+     
+      <div class="col brand-item"   onclick="selectBrand('naza', this)">
+        <img src="images/brand-13.png" class="brand-logo" alt="Naza">
+        <div class="brand-label">Naza (14)</div>
+      </div>
+      <div class="col brand-item"   onclick="selectBrand('nissan', this)">
+        <img src="images/brand-14.png" class="brand-logo" alt="Nissan">
+        <div class="brand-label">Nissan (20)</div>
+      </div>
+      <div class="col brand-item"   onclick="selectBrand('perodua', this)">
+        <img src="images/brand-15.png" class="brand-logo" alt="Perodua">
+        <div class="brand-label">Perodua (12)</div>
+      </div>
+     </div>
+     </div>
+      <div class="brand-row">
+      <div class="row row-cols-3 row-cols-md-9 g-3 my-2">
+     
+      <div class="col brand-item"   onclick="selectBrand('peugeot', this)">
+        <img src="images/brand-16.png" class="brand-logo" alt="Peugeot">
+        <div class="brand-label">Peugeot (8)</div>
+      </div>
+      <!-- Row 3 -->
+      <div class="col brand-item"  onclick="selectBrand('proton', this)">
+        <img src="images/brand-17.png" class="brand-logo" alt="Proton">
+        <div class="brand-label">Proton (10)</div>
+      </div>
+      <div class="col brand-item" onclick="selectBrand('renault', this)">
+        <img src="images/brand-18.png" class="brand-logo" alt="Renault">
+        <div class="brand-label">Renault (21)</div>
+      </div>
+     </div>
+     </div>
+      <div class="brand-row ">
+      <div class="row row-cols-3 row-cols-md-9 g-3 my-2">
+     
+       <div class="col brand-item" onclick="selectBrand('subaru', this)">
+        <img src="images/brand-19.png" class="brand-logo" alt="Subaru">
+        <div class="brand-label">Subaru (11)</div>
+      </div>
+
+      <div class="col brand-item" onclick="selectBrand('suzuki', this)">
+        <img src="images/brand-20.png" class="brand-logo" alt="Suzuki">
+        <div class="brand-label">Suzuki (6)</div>
+      </div>
+      <div class="col brand-item" onclick="selectBrand('toyota', this)">
+        <img src="images/brand-21.png" class="brand-logo" alt="Toyota">
+        <div class="brand-label">Toyota (17)</div>
+      </div>
+     </div>
+     </div>
+      <div class="brand-row">
+      <div class="row row-cols-3 row-cols-md-9 g-3 my-2">
+     
+     <div class="col brand-item" onclick="selectBrand('volkswagen', this)">
+        <img src="images/brand-22.png" class="brand-logo" alt="Volkswagen">
+        <div class="brand-label">Volkswagen (14)</div>
+      </div>
+     </div>
+     </div>
+    <!-- Template for model section (injected dynamically) -->
+<template id="model-template" class="bg-light">
+  <div class="model-section bg-light  ">
+    <div class="model-buttons  d-flex flex-wrap gap-3 mt-3 py-lg-2 px-lg-1 ps-4 py-3"></div>
+  </div>
+</template>
+    
+
+  
+  </div>
+      <!-- ========== End Brand Name ========== -->
+  <!-- ========== Start brand ========== -->
+       <div class="tab-pane d-none" id="tab-brand">
+          <h6 class="mb-3 text-center">Select Brand & Model</h6>
+          <div class="row g-3">
+            <div class="col-6"><button class="btn btn-outline-dark w-100">Toyota</button></div>
+            <div class="col-6"><button class="btn btn-outline-dark w-100">BMW</button></div>
+             <div class="col-6 "><button class="btn btn-outline-light border-secondary w-100 text-dark">Electric</button></div>
+          <div class="col-6 "><button class="btn btn-warning w-100 text-dark">Petrol</button></div>
+          <div class="col-6 "><button class="btn btn-outline-light border-secondary w-100 text-dark">Hybrid</button></div>
+          </div>
+        </div>
+      <!-- ========== End brand ========== -->
+      <!-- ========== Start color ========== -->
+        <div class="tab-pane d-none " id="tab-color">
+          <h6 class="mb-3 text-center">Select Car Color</h6>
+  <div class="d-flex flex-wrap justify-content-start " id="colorBoxGroup">
+     
+  <div class="color-container " onclick="toggleCheck(this)">
+    <div class="color-box" style="background-color: black;"></div>
+    <div class="color-label">Black</div>
+    <div class="checkmark">
+    <span>&#10003;</span>
+  </div>
+  </div>
+  <div class="color-container" onclick="toggleCheck(this)">
+    <div class="color-box" style="background-color: white; border: 1px solid #ccc;"></div>
+    <div class="color-label">White</div>
+    <div class="checkmark">
+    <span>&#10003;</span>
+  </div>
+  </div>
+  <div class="color-container" onclick="toggleCheck(this)">
+    <div class="color-box" style="background-color: #888;"></div>
+    <div class="color-label">Gray</div>
+    <div class="checkmark">
+    <span>&#10003;</span>
+  </div>
+  </div>
+  <div class="color-container" onclick="toggleCheck(this)">
+    <div class="color-box" style="background-color: red;"></div>
+    <div class="color-label">Red</div>
+    <div class="checkmark">
+    <span>&#10003;</span>
+  </div>
+  </div>
+  <div class="color-container" onclick="toggleCheck(this)">
+    <div class="color-box" style="background-color: #bfbfbf;"></div>
+    <div class="color-label">Silver</div>
+    <div class="checkmark">
+    <span>&#10003;</span>
+  </div>
+  </div>
+  <div>
+ <div class="color-container" onclick="toggleCheck(this)">
+    <div class="color-box" style="background-color:#f5f5df;"></div>
+    <div class="color-label">Beige</div>
+     <div class="checkmark">
+    <span>&#10003;</span>
+  </div>
+  </div>
+  </div>
+ 
+   <div class="color-container" onclick="toggleCheck(this)">
+    <div class="color-box" style="background-color:#f7d748;"></div>
+    <div class="color-label">Gold</div>
+    <div class="checkmark">
+    <span>&#10003;</span>
+  </div>
+  </div>
+   <div class="color-container" onclick="toggleCheck(this)">
+    <div class="color-box" style="background-color:#f0a83c;"></div>
+    <div class="color-label">Orange</div>
+    <div class="checkmark">
+    <span>&#10003;</span>
+  </div>
+  </div>
+   <div class="color-container" onclick="toggleCheck(this)">
+    <div class="color-box" style="background-color:#963430;"></div>
+    <div class="color-label">Brown</div>
+    <div class="checkmark">
+    <span>&#10003;</span>
+  </div>
+  </div>
+   <div class="color-container" onclick="toggleCheck(this)">
+    <div class="color-box" style="background-color:#0a16f5;"></div>
+    <div class="color-label">Blue</div>
+    <div class="checkmark">
+    <span>&#10003;</span>
+  </div>
+  </div>
+  <div class="color-container" onclick="toggleCheck(this)">
+    <div class="color-box" style="background-color:green;"></div>
+    <div class="color-label">Green</div>
+    <div class="checkmark">
+    <span>&#10003;</span>
+  </div>
+  </div>
+  <div class="color-container" onclick="toggleCheck(this)">
+    <div class="color-box" style="background-color:purple;"></div>
+    <div class="color-label">Purple</div>
+    <div class="checkmark">
+    <span>&#10003;</span>
+  </div>
+  </div>
+  <div class="color-container" onclick="toggleCheck(this)">
+    <div class="color-box" style="background-color:#7a5d22;"></div>
+    <div class="color-label">Bronze</div>
+    <div class="checkmark">
+    <span>&#10003;</span>
+  </div>
+  </div>
+  <div class="color-container" onclick="toggleCheck(this)">
+  <div class="color-box rainbow-gradient"></div>
+  <div class="color-label">Other</div>
+  <div class="checkmark">
+    <span>&#10003;</span>
+  </div>
+</div>
+  <!-- Add more as needed -->
+</div>
+
+</div>
+
+      <!-- ========== End color ========== -->
+      
+      <!-- ========== Start Centre ========== -->
+      
+          <div class="tab-pane d-none" id="tab-centre">
+         <h6 class="mb-3 text-center ">Select Carguru Centre</h6>
+        <div class="row g-3 ">
+          <div class="col-12 "><button class="btn btn-warning  w-100 text-dark fw-bold">CARGURU Puchong</button></div>
+          <div class="col-12 "><button class="btn btn-outline-light border-warning w-100 text-dark">CARGURU Cheras</button></div>
+          <div class="col-12 "><button class="btn btn-outline-light border-warning w-100 text-dark">CARGURU Klang</button></div>
+          <div class="col-12"><button class="btn btn-outline-light border-warning w-100 text-dark">CARGURU Johor Bahru</button></div>
+          <div class="col-12 "><button class="btn btn-outline-light border-warning w-100 text-dark">CARGURU Penang</button></div>
+          <div class="col-12 "><button class="btn btn-outline-light border-warning w-100 text-dark">CARGURU Melaka</button></div>
+          <div class="col-12 "><button class="btn btn-outline-light border-warning w-100 text-dark">CARGURU Ipoh</button></div>
+        </div>
+        </div>
+      <!-- ========== End Centre ========== -->
+      <!-- ========== Start Milege ========== -->
+      <div class="tab-pane d-none" id="tab-mileage" style="max-width: 500px;">
+         <h6 class="mb-3 text-center ">Select Car Mileage</h6>
+<div class="mb-3 position-relative" style="height: 30px;">
+  <!-- Track background -->
+  <div class="range-track bg-light w-100" style="height: 6px; position: absolute; top: 50%; transform: translateY(-50%); border-radius: 4px;">
+    <div id="mileageActive" class="range-active" style="position: absolute; height: 6px; background: #f4b000; border-radius: 4px;"></div>
+  </div>
+
+  <!-- Two sliders -->
+  <input type="range" min="0" max="260000" step="1000" value="30000" id="minMileageRange" class="mileage-slider" />
+  <input type="range" min="0" max="260000" step="1000" value="260000" id="maxMileageRange" class="mileage-slider" />
+</div>
+
+
+<!-- Min/Max Mileage Inputs -->
+<div class="row g-3 mb-3">
+  <div class="col-6">
+    <label for="minMileage" class="form-label">Minimum Mileage</label>
+    <input type="text" class="form-control" id="minMileage" value="0" min="0">
+  </div>
+  <div class="col-6">
+    <label for="maxMileage" class="form-label">Maximum Mileage</label>
+    <input type="text" class="form-control" id="maxMileage" value="260,000" readonly>
+  </div>
+</div>
+
+  <!-- Mileage Options -->
+  <div class="row g-2">
+    <div class="col-6"><button class="mileage-btn active" data-value="30000">Under 30,000</button></div>
+    <div class="col-6"><button class="mileage-btn" data-value="50000">Under 50,000</button>
+</div>
+    <div class="col-6"><button class="mileage-btn" data-value="7000">Under 7,000</button></div>
+    <div class="col-6"><button class="mileage-btn" data-value="120000">Under 120,000</button></div>
+  </div>
+</div>
+
+      <!-- ========== End Milege ========== -->
+      <!-- ========== Start Trasmission ========== -->
+    <div class="tab-pane d-none" id="tab-transmission">
+      <h6 class="mb-3 text-center ">Select Transmission</h6>
+   <div class="row g-3 ">
+          <div class="col-6 "><button class="btn btn-outline-light border-secondary w-100 text-dark transmission-btn active" onclick="selectTransmission(this)">Manual</button></div>
+           <div class="col-6 "><button class="btn btn-outline-light border-secondary w-100 text-dark transmission-btn" onclick="selectTransmission(this)">Automatic</button></div>
+        </div>
+  </div>
+      <!-- ========== End Trasmission ========== -->
+        
+      <!-- ========== Start Train ========== -->
+      
+          <div class="tab-pane d-none" id="tab-train">
+         <h6 class="mb-3 text-center ">Select Drive Train </h6>
+        <div class="row g-3 ">
+          <div class="col-12 "><button class="btn btn-warning  w-100 text-dark fw-bold">4-Wheel Drive
+</button></div>
+          <div class="col-12 "><button class="btn btn-outline-light border-warning w-100 text-dark">Front Wheel Drive
+</button></div>
+          <div class="col-12 "><button class="btn btn-outline-light border-warning w-100 text-dark">All Wheel Drive
+</button></div>
+          <div class="col-12"><button class="btn btn-outline-light border-warning w-100 text-dark">Rear Wheel Drive</button></div>
+          <!-- <div class="col-12 "><button class="btn btn-outline-light border-warning w-100 text-dark">CARGURU Penang</button></div>
+          <div class="col-12 "><button class="btn btn-outline-light border-warning w-100 text-dark">CARGURU Melaka</button></div>
+          <div class="col-12 "><button class="btn btn-outline-light border-warning w-100 text-dark">CARGURU Ipoh</button></div> -->
+        </div>
+        </div>
+      <!-- ========== End Train ========== -->
+   <!-- ========== Start Car Years ========== -->
+   <!-- Year Range Filter -->
+<div class="tab-pane d-none" id="tab-year" style="max-width: 500px;">
+  <h6 class="mb-3 text-center">Select Car Year Range</h6>
+
+  <div class="position-relative mb-4 px-2" style="height: 30px;">
+  <!-- Track background -->
+   <div class="range-track bg-light w-100" style="height: 5px; position: absolute; top: 50%; transform: translateY(-50%);">
+    <div id="rangeActive" class="range-active"></div>
+  </div>
+
+  <!-- Actual range sliders -->
+  <input type="range" min="1990" max="2024" value="2018" id="yearMin" class="year-slider" />
+  <input type="range" min="1990" max="2024" value="2024" id="yearMax" class="year-slider" />
+</div>
+
+  <!-- Inputs -->
+  <div class="row g-3 mb-3">
+    <div class="col-6">
+      <label class="form-label">Minimum Year</label>
+      <input type="text" class="form-control text-center" id="minYear" value="2018" readonly />
+    </div>
+    <div class="col-6">
+      <label class="form-label">Maximum Year</label>
+      <input type="text" class="form-control text-center" id="maxYear" value="2024" readonly />
+    </div>
+  </div>
+
+  <!-- Year Buttons -->
+  <div class="row g-2">
+    <div class="col-6"><button class="year-btn">1990 - 1999</button></div>
+    <div class="col-6"><button class="year-btn">2000 - 2006</button></div>
+    <div class="col-6"><button class="year-btn">2007 - 2012</button></div>
+    <div class="col-6"><button class="year-btn">2013 - 2017</button></div>
+    <div class="col-6"><button class="year-btn active">2018 - 2021</button></div>
+    <div class="col-6"><button class="year-btn active">2022 - 2024</button></div>
+  </div>
+</div>
+
+
+   <!-- ========== End Car Years ========== -->
+      
+   <!-- ========== Start Car Price ========== -->
+   <!-- Year Range Filter -->
+<div class="tab-pane d-none" id="tab-price" style="max-width: 500px;">
+  <h6 class="mb-4 text-center">Select Car Price</h6>
+
+  <!-- Range Visual -->
+ <div class="d-flex align-items-center justify-content-between mb-5 px-2 position-relative">
+  <div class="w-100 position-relative">
+    <!-- Active Range Bar -->
+      <div class="range-track bg-light w-100" style="height: 5px; position: absolute; top: 50%; transform: translateY(-50%);">
+ <div id="priceActive" class="range-active"></div>  </div>
+   
+
+    <!-- Sliders using mileage style -->
+    <input type="range" id="minPriceRange" class="carprice-slider" min="0" max="200000" step="1000" value="30000">
+    <input type="range" id="maxPriceRange" class="carprice-slider" min="0" max="200000" step="1000" value="100000">
+  </div>
+</div>
+
+
+  <!-- Min/Max Inputs -->
+  <div class="row g-3 mb-3">
+    <div class="col-6">
+      <label class="form-label">Minimum Price</label>
+      <input type="text" class="form-control text-center" id="minPrice" value="30000" />
+    </div>
+    <div class="col-6">
+      <label class="form-label">Maximum Price</label>
+      <input type="text" class="form-control text-center" id="maxPrice" value="100000" />
+    </div>
+  </div>
+
+  <!-- Price Buttons -->
+  <div class="row g-2">
+    <div class="col-6"><button class="year-btn active"  data-min="0" data-max="30000">Under 30,000</button></div>
+    <div class="col-6"><button class="year-btn" data-min="30000" data-max="50000">30,000 - 50,000</button></div>
+    <div class="col-6"><button class="year-btn" data-min="50000" data-max="100000">50,000 - 100,000</button></div>
+    <div class="col-6"><button class="year-btn" data-min="100000" data-max="9999999">Above 100,000</button></div>
+  </div>
+</div>
+   <!-- ========== End Car Years ========== -->
+    </div>
+</div>
+<!-- ========== Start Bottom for Fuel ========== -->
+<div class="border-0 px-3 py-3 bg-light badge-block" id="badge-fuel">
+  <div class="mb-3 bottom-badge d-flex justify-content-end">
+    <div class="row ms-5">
+      <span class="badge bg-light border text-dark py-2 col-3  me-1">Proton Saga</span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Sedan</span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Petrol</span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Under 30,000</span>
+    </div>
+  </div>
+ 
+  <div class="d-flex justify-content-between bottom-btn mx-1">
+    <button class="btn btn-dark w-50 me-2 rouded-5 ">Clear All</button>
+    <button class="btn btn-warning w-50">Apply (10 Cars)</button>
+  </div>
+</div>
+<!-- ========== End Bottom for Fuel ========== -->
+<!-- ========== Start Car Centre Page ========== -->
+<div class="border-0 px-3 py-3 bg-light badge-block d-none" id="badge-centre">
+  <div class="mb-1 bottom-badge d-flex justify-content-end">
+    <div class="row ms-5">
+      <span class="badge bg-light border text-dark py-2 col-3  me-1">Proton Saga</span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Sedan</span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Petrol</span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Under 30,000</span>
+    </div>
+  </div>
+  <div class=" mb-1 bottom-badge d-flex justify-content-end">
+    <div class="row ms-5">
+  <span class="badge bg-light border text-dark py-2 col-3  me-1">2018 - 2024</span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Automatic</span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Mileage  50k </span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Silver</span>
+    </div>
+  </div>
+  <div class="mb-3 bottom-badge d-flex justify-content-center me-5 pe-2">
+    <div class="row me-4">
+      <span class="badge bg-light border text-dark py-2 col-3  me-1">Puchong</span>
+      
+    </div>
+  </div>
+  <div class="d-flex justify-content-between bottom-btn mx-1">
+    <button class="btn btn-dark w-50 me-2 rouded-5 ">Clear All</button>
+    <button class="btn btn-warning w-50">Apply (1 Cars)</button>
+  </div>
+</div>
+<!-- ========== End Car Centre Page ========== -->
+<!-- ========== Start Color Page ========== -->
+<div class="border-0 px-3 py-3 bg-light badge-block d-none" id="badge-color">
+  <div class="mb-1 bottom-badge d-flex justify-content-end">
+    <div class="row ms-5">
+      <span class="badge bg-light border text-dark py-2 col-3  me-1">Proton Saga</span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Sedan</span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Petrol</span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Under 30,000</span>
+    </div>
+  </div>
+  <div class=" mb-3 bottom-badge d-flex justify-content-end">
+    <div class="row ms-5">
+  <span class="badge bg-light border text-dark py-2 col-3  me-1">2018 - 2024</span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Automatic</span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Mileage  50k </span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Silver</span>
+    </div>
+  </div>
+ 
+  <div class="d-flex justify-content-between bottom-btn mx-1">
+    <button class="btn btn-dark w-50 me-2 rouded-5 ">Clear All</button>
+    <button class="btn btn-warning w-50">Apply (3 Cars)</button>
+  </div>
+</div>
+<!-- ========== End Color Page ========== -->
+<!-- ========== Start Milege Page ========== -->
+<div class="border-0 px-3 py-3 bg-light badge-block d-none" id="badge-mileage">
+  <div class="mb-1 bottom-badge d-flex justify-content-end">
+    <div class="row ms-5">
+      <span class="badge bg-light border text-dark py-2 col-3  me-1">Proton Saga</span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Sedan</span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Petrol</span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Under 30,000</span>
+    </div>
+  </div>
+  <div class=" mb-3 bottom-badge d-flex justify-content-center me-3">
+    <div class="row ms-5">
+  <span class="badge bg-light border text-dark py-2 col-3  me-1">2018 - 2024</span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Automatic</span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Mileage  50k </span>
+      
+    </div>
+  </div>
+ 
+  <div class="d-flex justify-content-between bottom-btn mx-1">
+    <button class="btn btn-dark w-50 me-2 rouded-5 ">Clear All</button>
+    <button class="btn btn-warning w-50">Apply (3 Cars)</button>
+  </div>
+</div>
+<!-- ========== End Milege Page ========== -->
+ <!-- ========== Start Transmission Page ========== -->
+<div class="border-0 px-3 py-3 bg-light badge-block d-none" id="badge-transmission">
+  <div class="mb-1 bottom-badge d-flex justify-content-end">
+    <div class="row ms-5">
+      <span class="badge bg-light border text-dark py-2 col-3  me-1">Proton Saga</span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Sedan</span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Petrol</span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Under 30,000</span>
+    </div>
+  </div>
+  <div class=" mb-3 bottom-badge d-flex justify-content-center me-4">
+    <div class="row ">
+  <span class="badge bg-light border text-dark py-2 col-3  me-1">2018 - 2024</span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Automatic</span>
+      
+      
+    </div>
+  </div>
+ 
+  <div class="d-flex justify-content-between bottom-btn mx-1">
+    <button class="btn btn-dark w-50 me-2 rouded-5 ">Clear All</button>
+    <button class="btn btn-warning w-50">Apply (3 Cars)</button>
+  </div>
+</div>
+<!-- ========== End Transmission Page ========== -->
+  <!-- ========== Start Car Year Page ========== -->
+<div class="border-0 px-3 py-3 bg-light badge-block d-none" id="badge-year">
+  <div class="mb-1 bottom-badge d-flex justify-content-end">
+    <div class="row ms-5">
+      <span class="badge bg-light border text-dark py-2 col-3  me-1">Proton Saga</span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Sedan</span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Petrol</span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Under 30,000</span>
+    </div>
+  </div>
+  <div class=" mb-3 bottom-badge d-flex justify-content-center me-5">
+    <div class="row me-4 pe-2">
+  <span class="badge bg-light border text-dark py-2 col-3  me-1">2018 - 2024</span>
+
+    </div>
+  </div>
+ 
+  <div class="d-flex justify-content-between bottom-btn mx-1">
+    <button class="btn btn-dark w-50 me-2 rouded-5 ">Clear All</button>
+    <button class="btn btn-warning w-50">Apply (3 Cars)</button>
+  </div>
+</div>
+<!-- ========== End  Car Year Page ========== -->
+  <!-- ========== Start Car Price Page ========== -->
+<div class="border-0 px-3 py-3 bg-light badge-block d-none" id="badge-price">
+  <div class="mb-3 bottom-badge d-flex justify-content-end">
+    <div class="row ms-5">
+      <span class="badge bg-light border text-dark py-2 col-3  me-1">Proton Saga</span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Sedan</span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Petrol</span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Under 30,000</span>
+    </div>
+  </div>
+  <div class="d-flex justify-content-between bottom-btn mx-1">
+    <button class="btn btn-dark w-50 me-2 rouded-5 ">Clear All</button>
+    <button class="btn btn-warning w-50">Apply (6 Cars)</button>
+  </div>
+</div>
+<!-- ========== End  Car Price Page ========== -->
+   <!-- ========== Start Car Body Page ========== -->
+<div class="border-0 px-3 py-3 bg-light badge-block d-none" id="badge-body">
+  <div class="mb-3 bottom-badge d-flex justify-content-center me-4">
+    <div class="row ">
+      <span class="badge bg-light border text-dark py-2 col-3  me-1">Proton Saga</span>
+      <span class="badge bg-light border text-dark py-2 col-3 me-1">Sedan</span>
+    </div>
+  </div>
+  <div class="d-flex justify-content-between bottom-btn mx-1">
+    <button class="btn btn-dark w-50 me-2 rouded-5 ">Clear All</button>
+    <button class="btn btn-warning w-50">Apply (10 Cars)</button>
+  </div>
+</div>
+<!-- ========== End  Car Body Page ========== -->
+    <!-- ========== Start Car Brand Page ========== -->
+<div class="border-0 px-3 py-3 bg-light badge-block d-none" id="badge-brand">
+  <div class="mb-3 bottom-badge d-flex justify-content-start ms-5 ps-5">
+    <div class="row ms-2">
+      <span class="badge bg-light border text-dark py-2 col-3  me-1">Proton Saga</span>
+     
+    </div>
+  </div>
+  <div class="d-flex justify-content-between bottom-btn mx-1">
+    <button class="btn btn-dark w-50 me-2 rouded-5 ">Clear All</button>
+    <button class="btn btn-warning w-50">Apply (10 Cars)</button>
+  </div>
+</div>
+<!-- ========== End  Car Brand Page ========== -->
+</div>
+</div>
+
+</body>
+
+</html>

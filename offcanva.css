@@ -1,0 +1,807 @@
+/***** Navigation *****/  
+ @font-face {
+  font-family: 'Ds-Digital';
+  src: url('fonts/DS-DIGII.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gabarito';
+  src: url('fonts/Gabarito-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gabarito Bold';
+  src: url('fonts/Gabarito-VariableFont_wght.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RobotoFlex';
+  src: url('fonts/RobotoFlex-VariableFont_GRAD\,XOPQ\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto Flex ExtraBold';
+  src: url('fonts/RobotoFlex-VariableFont_GRAD\,XOPQ\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght.ttf') format('truetype');
+  font-weight: bolder;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lexend Deca';
+  src: url('fonts/LexendDeca-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lexend Decan';
+  src: url('fonts/LexendDeca-VariableFont_wght.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+html, body {
+  overflow-x: hidden;
+}
+#filterOffcanvas{
+    font-family: 'RobotoFlex' !important;
+  overflow-y: hidden !important;
+}
+#filterOffcanvas ::-webkit-scrollbar{
+  width: 0px;
+}
+#filterOffcanvas 
+.nav-link{
+    font-size: 12px !important;
+    font-family: 'RobotoFlex' !important;
+    margin-bottom: 10% !important;
+}
+/* .nav-item .nav-link:active{
+    color: black !important;
+     background-color: #fac000;
+     border-radius: 10px !important;  
+}
+ .nav-link:hover{
+    color: black !important;
+    background-color: lightgray;
+} */
+ .nav-items .nav-link:hover,
+.nav-items .nav-link:focus {
+  background-color: #fac000 !important;
+  color: #000 !important;
+  font-weight: bold !important;
+  margin-left: 2px !important;
+  margin-right: 2px !important;
+  border-radius: 5px;
+}
+
+.nav-items .nav-link.active {
+  background-color: #fac000 !important;
+  color: #000 !important;
+  font-weight: bold !important;
+  margin-left: 4px !important;
+  margin-right: 4px !important;
+  border-radius: 5px;
+}
+.fuel-items{
+    font-family: 'RobotoFlex' !important;
+}
+.fuel-items h6{
+    font-size: 13px;
+    font-weight: 500;
+}
+.fuel-items button{
+    font-size: 12px;
+    font-weight: 500;
+}
+.offcanvas-header{
+    padding: 2.5% !important;
+}
+.offcanvas-title{
+    font-size: 10px !important;
+    font-weight: bold;
+}
+.btn-close{
+    font-size: 10px !important;
+    font-weight: 1000 !important;
+    color: black !important;
+    border: none !important;
+}
+.badge{
+    font-size: 8px !important;
+      border: 1px solid #ffe592 !important;
+      width: 65px !important;
+}
+
+.bottom-btn button{
+    font-size: 12px !important;
+}
+/***** Body Container *****/  
+.body-type-items h6 {
+  font-size: 13px;
+  font-weight: 500;
+  font-family: 'RobotoFlex';
+}
+
+.body-type-card {
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.body-type-card:hover {
+  background-color: #f8f9fa;
+  border-color: #ccc;
+}
+
+.body-type-card.selected {
+  background-color: #fac000;
+  font-weight: bold;
+  
+  color: #000;
+}
+
+.body-type-label {
+  font-size: 9px !important;
+  font-family: 'RobotoFlex';
+}
+/***** End Body Container *****/
+/* brand and model */
+
+  .brand-logo {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+      margin-bottom: 0px;
+    }
+
+    .brand-item {
+      text-align: center;
+      font-size: 5px;
+      color: #000;
+    }
+.brand-item.active {
+  background-color: #f4b000;
+  border-radius: 5%;
+  height: 7vh !important;
+min-width: 90px !important;
+/* min-width: 100px !important; */
+  /* margin-left: 10px !important; */
+  /* margin-right: 10px !important; */
+ padding-top: 1px;
+ padding-bottom: 3px;
+  
+
+}
+.brand-model-container{
+  margin-top: 10px !important;
+  width: 110%!important;
+  height: 21vh !important;
+  padding: 10px 5px !important;
+}
+    .brand-label {
+      font-size: 8px;
+    }
+
+
+.model-button {
+  font-size: 8px !important;
+      border: 1px solid #ffe592 !important;
+      width: 55px !important;
+      padding: 5px 2px!important;
+      border-radius: 5px;
+   
+}
+
+.model-button.selected {
+  background: #f4b000;
+  color: black;
+  
+}
+    @media (min-width: 768px) {
+      .row-cols-8 > * {
+        flex: 0 0 auto;
+        width: 12.5%;
+      }
+      
+    }
+/* brand and model */
+/***** color container *****/  
+.color-container {
+  width: 70px;
+  border-radius: 10% !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  /* font-family: 'Lexend Deca'; */
+  overflow: visible;  
+  position: relative;
+  text-align: center;
+  margin: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.color-container:hover {
+  transform: scale(1.05);
+}
+
+.color-box {
+  height: 40px;
+ 
+}
+.checkmark {
+  position: absolute;
+  top: -8px;           /* move upward outside */
+  right: -8px;         /* move right outside */
+  background-color: #f4b000;
+  color: #000;
+  font-weight: bold;
+  border-radius: 2px;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+.color-container.selected .checkmark {
+  display: flex;
+}
+.color-label {
+  background-color: #f9f9f9;
+  font-size: 10px;
+  padding: 6px 0;
+  font-weight: 500;
+  color: #333;
+}
+.rainbow-gradient {
+  background: linear-gradient(
+    135deg,
+    red,
+    yellow,
+    lime,
+    cyan,
+    blue,
+    magenta,
+    red
+  );
+}
+
+/***** End color container *****/
+/***** milege container *****/  
+ /* Range Slider Styling */
+.mileage-slider {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  top: 0;
+  left: 0;
+  background: transparent;
+  pointer-events: none;
+  -webkit-appearance: none;
+  z-index: 3;
+}
+
+.mileage-slider::-webkit-slider-thumb {
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  background: #f4b000; /* Yellow */
+  border-radius: 50%;
+  border: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+}
+
+.mileage-slider::-moz-range-thumb {
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  background: #f4b000; /* Yellow */
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  z-index: 3;
+}
+
+
+.range-active {
+  position: absolute;
+  height: 6px;
+  background: #f4b000;
+  top: 0;
+  border-radius: 4px;
+}
+
+
+
+    .form-label{
+      font-size: 10px !important;
+    margin-left: 10px;
+    }
+    /* Mileage Buttons */
+    .mileage-btn {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      background-color: white;
+      color: #000;
+      font-weight: 500;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .mileage-btn.active {
+      background-color: #f9b21c;
+      border-color: #f9b21c;
+      color: #000;
+    }
+
+    .mileage-btn:hover {
+      background-color: #ffe199;
+    }
+
+    input[type="number"] {
+      font-weight: 600;
+    }
+
+/***** End milege container *****/
+/***** Transmission *****/  
+     .transmission-btn.active {
+      background-color: #f4c43b !important;  /* Yellow when active */
+      border-color: #f4c43b !important;
+      color: black !important;
+    }
+/***** End Transmission *****/
+/***** Car year *****/
+.year-slider {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  top: 50% ;
+  left: 0;
+  background: transparent;
+  pointer-events: none;
+  -webkit-appearance: none;
+  z-index: 3;
+  transform: translateY(-50%); /* This centers the slider vertically */
+}
+
+.year-slider::-webkit-slider-thumb {
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  background: #f4b000;
+  border-radius: 50%;
+  border: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  z-index: 4;
+  position: relative;
+}
+
+.year-slider::-moz-range-thumb {
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  background: #f4b000;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+.range-active {
+  position: absolute;
+  height: 6px;
+  background: #f4b000;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  border-radius: 2px;
+}
+
+
+
+.year-btn {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: #000;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  font-size: 13px;
+}
+
+.year-btn.active {
+  background-color: #f4b000;
+  border-color: #f4b000;
+  color: #000;
+}
+
+.year-btn:hover {
+  background-color: #ffe199;
+}
+
+input[value]{
+   font-size: 13px;
+   font-weight: 600 !important;
+}
+
+/***** End Car year *****/
+#tab-price .carprice-slider {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  top: 0;
+  left: 0;
+  background: transparent;
+   transform: translateY(-50%);
+  pointer-events: none;
+  -webkit-appearance: none;
+  z-index: 3;
+}
+
+#tab-price .carprice-slider::-webkit-slider-thumb {
+  pointer-events: auto;
+  width: 16px;
+  height: 16px;
+  background: #f4b000;
+  border-radius: 50%;
+  border: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  z-index: 4;
+}
+
+#tab-price .range-active {
+  position: absolute;
+  height: 6px;
+  background: #f4b000;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 4px;
+  
+  z-index: 2;
+  pointer-events: none;
+}
+
+
+/***** End Car year *****/
+/* ================= MOBILE VIEW STYLES ================= */
+@media (max-width: 767px) {
+
+  html, body {
+    font-size: 14px;
+    overflow-x: hidden;
+  }
+
+  #filterOffcanvas {
+    padding: 10px !important;
+  }
+
+  .nav-link {
+    font-size: 11px !important;
+    padding: 10px 10px !important;
+   border: none !important;
+    /* margin-bottom: 10px !important; */
+  }
+
+  .nav-items .nav-link.active,
+  .nav-items .nav-link:hover {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .offcanvas-header {
+    padding: 10px !important;
+  }
+
+  .offcanvas-title,
+  .btn-close {
+    font-size: 12px !important;
+  }
+
+  .badge {
+    font-size: 9px !important;
+    width: auto !important;
+    padding: 4px 6px;
+  }
+
+  .bottom-btn button {
+    font-size: 13px !important;
+    padding: 8px;
+  }
+
+  .body-type-card {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .body-type-label {
+    font-size: 10px !important;
+  }
+
+  .brand-item {
+    font-size: 16px;
+    /* width: 100% !important; */
+  }
+.brand-item.active {
+    /* width: 80px !important; */
+    height: 60px;
+    /* margin-left: 26px !important; */
+    /* width: 60px !important; */
+    padding-bottom: 4.5rem;
+
+  }
+
+  .brand-logo {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .brand-model-container {
+    width: 100% !important;
+    height: auto !important;
+    padding: 8px !important;
+  }
+
+  .brand-models-list button {
+    font-size: 9px !important;
+    width: auto !important;
+    padding: 4px 8px !important;
+  }
+
+  .color-container {
+    width: 100px !important;
+    /* margin: 5px; */
+  }
+
+  .color-box {
+    height: 50px !important;
+  }
+
+  .color-row{
+    margin-left: 23px !important;
+  }
+  .checkmark {
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+    top: -6px;
+    right: -6px;
+  }
+
+  .color-label {
+    font-size: 9px;
+  }
+
+  .mileage-btn,
+  .year-btn {
+    font-size: 12px !important;
+    padding: 6px !important;
+  }
+
+  input[type="number"],
+  input[value] {
+    font-size: 12px !important;
+  }
+
+  .price-slider {
+    height: 5px;
+  }
+
+  .mileage-slider::-webkit-slider-thumb,
+  .mileage-slider::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+  }
+
+  .transmission-btn {
+    font-size: 11px;
+    padding: 6px;
+  }
+
+  .badge-block {
+    padding: 10px !important;
+  }
+
+}
+/* mobile car price */
+.price-slider-thumb {
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+  appearance: none;
+  z-index: 2;
+}
+
+.price-slider-thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  background: #f4b000;
+  border-radius: 50%;
+  cursor: pointer;
+  pointer-events: all;
+  position: relative;
+  z-index: 3;
+}
+
+.price-slider-thumb::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  background: #f4b000;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.price-range-bar {
+  position: absolute;
+  top: 0;
+  height: 5px;
+  background-color: #f4b000;
+  z-index: 1;}
+
+/* MOBILE YEAR CONTENT */
+/* .year-slider {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  pointer-events: all;
+  -webkit-appearance: none;
+  background: none;
+  z-index: 3;
+}
+
+.year-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 16px;
+  width: 16px;
+  background: #f4b000;
+  border-radius: 50%;
+  cursor: pointer;
+  
+  position: relative;
+  z-index: 4;
+}
+
+.year-slider::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  background: #f4b000;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+} */
+/* .year-slider {
+  position: absolute;
+  width: 100%;
+  height: 36px;
+  top: 0;
+  left: 0;
+  background: transparent;
+  pointer-events: none;
+  -webkit-appearance: none;
+  z-index: 3;
+}
+
+.year-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 16px;
+  width: 16px;
+  background: #f4b000;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  z-index: 4;
+  margin-top: 18px;
+  pointer-events: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.year-slider::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  background: #f4b000;
+  border-radius: 50%;
+  cursor: pointer;
+   margin-top: 18px;
+  pointer-events: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+} */
+#tab-mileage .range-track {
+  position: relative;
+  height: 4px; /* height of the bar itself */
+  background: #eee;
+  border-radius: 2px;
+  top: 50%;
+  transform: translateY(-50%); /* center vertically inside container */
+}
+
+#tab-mileage .range-bar {
+  position: absolute;
+  height: 4px;
+  background: #f4b000;
+  top: 0;
+  left: 0;
+  width: 0%;
+  z-index: 1;
+  border-radius: 2px;
+}
+#mileageMinSlider,
+#mileageMaxSlider {
+  /* Positioning the slider track in container */
+  position: absolute;
+  width: 100%;
+  height: 36px; /* height of the container that holds the slider */
+  top: 0;
+  left: 0;
+  background: transparent;
+  pointer-events: none; /* only thumbs will be clickable */
+  -webkit-appearance: none;
+  z-index: 3;
+}
+
+/* WebKit thumb styling */
+#mileageMinSlider::-webkit-slider-thumb,
+#mileageMaxSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #f4b000;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  pointer-events: all;
+  /* This centers the thumb vertically over the bar */
+  margin-top: -7px; /* tweak this until thumbs perfectly overlap the bar */
+}
+
+/* Firefox thumb styling */
+#mileageMinSlider::-moz-range-thumb,
+#mileageMaxSlider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: #f4b000;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Track styling for WebKit (transparent so you only see the custom bar) */
+#mileageMinSlider::-webkit-slider-runnable-track,
+#mileageMaxSlider::-webkit-slider-runnable-track {
+  height: 4px;
+  background: transparent;
+  border: none;
+}
+
+/* Track styling for Firefox */
+#mileageMinSlider::-moz-range-track,
+#mileageMaxSlider::-moz-range-track {
+  height: 4px;
+  background: transparent;
+  border: none;
+}

@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Home Page</title>
+  <!-- <link rel="icon" type="image/png" href="images/logo-removebg.png"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap" rel="stylesheet">
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+   <!-- <link rel="stylesheet" href="newstyle.css"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- <script src="script.js"></script> -->
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+ <script src="offcanva.js"></script>
+ <script src="offcanva2.js"></script>
+</head>
+
+<body>
+  <!-- ========== Start Navigation ========== -->
+  <!-- Yellow Info Strip -->
+  <div class="yellow-info text-dark text-center">
+    <div class="container-fluid px-3 px-md-5">
+      <p class="mb-0 small fw-bold">
+        FREE INSPECTION + INSURANCE CLAIM CHECK & WARRANTY <span class="fw-normal">FOR CAR SELLERS FROM NOW TILL 15
+          AUGUST 2025!</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+ <nav class="navbar navbar-expand-lg bg-lg-white shadow-sm sticky-top  ">
+    <div class="container-fluid px-1 px-md-4 py-1">
+      <!-- Toggle Button -->
+      <button class="btn d-lg-none " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav">
+        <i class="bi bi-list fs-4 text-danger"></i>
+      </button>
+
+      <a class="navbar-brand mx-lg-0 mx-auto " href="#">
+        <img src="images/myorder-2-removebg.png" alt="CAR GURU" class="d-none d-lg-block mx-lg-0 desktop-top-logo">
+        <img src="images/myorder-2-removebg.png" alt="CAR GURU" class="d-lg-none ms-4  mobile-top-logo">
+      </a>
+
+
+      <!-- Navbar Menu -->
+
+      <div class="collapse navbar-collapse justify-content-center mt-2 me-5 pe-5 navbar-menu-items" id="navbarContent">
+        <ul class="navbar-nav nav-text pe-5 me-5 me-md-0">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="bid_overall.html">Bid for Car</a></li>
+          <li class="nav-item"><a class="nav-link" href="buy_main.html">Buy Car</a></li>
+          <li class="nav-item"><a class="nav-link" href="sellcar.html">Sell Car</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact and Icons -->
+      <div class="d-flex contact align-items-center gap-4 ms-auto mt-3 mt-lg-0">
+        <div class="text-start d-none d-lg-block">
+          <small class="d-block fw-bold nav-text mb-1" style="line-height: 0%;">CALL US AT</small>
+          <span class="text-danger fw-bold">
+            <i class="bi bi-telephone-fill  text-dark"></i> +60 13 951 5969
+          </span>
+        </div>
+        <div
+          class="d-flex align-items-center me-lg-2 gap-lg-4 ms-lg-2 gap-2 ms-0 fs-6 fs-lg-0 mb-3 mb-lg-0 me-1 me-lg-0 icons-navbar">
+          <img src="images/search.png" alt="Search" width="15" height="15">
+          <img src="images/grocery-store.png" alt="Cart" width="15" height="15">
+          
+             <div class="dropdown">
+            <!-- Trigger Button -->
+            <button class="btn border-0 " type="button" id="profileDropdown"
+              data-bs-toggle="dropdown" aria-expanded="false">
+               <img src="images/user.png" alt="User" width="15" height="15" >
+            </button>
+
+            <!-- Dropdown Menu -->
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-custom" aria-labelledby="profileDropdown">
+              <li id="customerlogin"><a class="dropdown-item" href="#"><img src="images/signup_customer.png" alt="User" width="15" height="15" class="me-2 cus-img " ><span > Customer</span></a></li>
+              <li id="loginBtn"><a class="dropdown-item" href="#"><img src="images/signup_dealer.png" alt="User" width="15" height="15" class="me-2 cus-img"> Car Dealer</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV MENU -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNav">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav nav-text  me-md-0">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="bid_overall.html">Bid for Car</a></li>
+        <li class="nav-item"><a class="nav-link" href="buy_main.html">Buy Car</a></li>
+        <li class="nav-item"><a class="nav-link" href="sellcar.html">Sell Car</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+      </ul>
+      <div class="text-center mt-4">
+        <small class="d-block fw-bold nav-text mb-1" style="line-height: 5%;">CALL US AT</small>
+        <span class="text-danger fw-bold">
+          <i class="bi bi-telephone-fill  text-dark"></i> +60 13 951 5969
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTTOM NAV (Mobile Only) -->
+  <div class="bottom-nav d-lg-none ">
+    <a href="buy_car.html" ><span><img src="images/bit-icon.png" alt="" width="23" height="23"  class="gray-icon"></span> Buy</a>
+    <a href="sellcar.html"><span><img src="images/sell-icon.png" alt=""  width="23" height="23"  class="gray-icon"></span>Sell</a>
+    <a href="bid_overall.html"><i><img src="images/bid-icon.png" alt="" width="23" height="23"
+          class="gray-icon"></i>Bid</a>
+
+    <a href="#" ><span ><img src="images/service-icon.png" alt=""   width="25" height="23" class="gray-icon"></span>Services</a>
+    <a href="#"><span><img src="images/message.png" alt=""  width="23" height="23"  class="gray-icon"></span>Message</a>
+  </div>
+  <!-- ========== End Navigation ========== -->
+  <div id="modalContainer"></div>
+  <!-- ========== Start top Banner container ========== -->
+  <!-- ========== Start Top Banner View only lg and xl ========== -->
+  <div class="top-banner-container d-none d-lg-block d-md-none d-xl-block">
+    <div class="row g-0 ">
+      <!-- sell -->
+      <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+        <div class="slide-box left-side-banner">
+          <div class="slide-content left-banner">
+            <h5 class="wanna wanna-1  mt-2 mt-lg-5 pt-5 pt-md-5 mt-md-5 mt-xl-5 pt-xl-5">I WANNA</h5>
+            <h1>SELL</h1>
+            <p class="sell ms-5 ps-5">MY COOL CAR</p>
+            <div class="d-flex justify-content-center my-lg-4 my-md-4 my-xl-2 ms-lg-0 ms-1">
+              <div class="cta-banner mt-lg-3 mt-4 mt-md-2 mt-xl-5">
+                <div class="cta-block cta-red px-lg-0 px-3">
+                  <div class="text-center">
+                    <div class="d-flex align-items-center justify-content-center gap-2 mb-1">
+                      <img src="images/car_icon.png" alt="" width="25" height="20">
+                      <div class="cta-title">GET CAR PRICE</div>
+                    </div>
+                    <div class="cta-subtext">MORE FOR YOU. LESS FOR US</div>
+                  </div>
+                </div>
+                <div class="cta-block cta-yellow px-3">
+                  <div class="text-center">
+                    <div class="d-flex align-items-center justify-content-center gap-1 gap-md-2 mb-1">
+                      <img src="images/hand-icon.png" alt="" width="23" height="24">
+                      <div class="cta-title">PLACE CAR TO BID</div>
+                    </div>
+                    <div class="cta-subtext">I'M FEELIN' LUCKY!</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- bid -->
+      <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+        <div class="slide-box center-side-banner">
+          <div class="slide-content left-banner pt-5  mt-4">
+            <h5 class="wanna wanna-2 pt-5 pt-xl-4 mt-2 ">I WANNA</h5>
+            <h1>BID</h1>
+            <p class="sell ms-5 mb-2 mb-xl-4">FOR A GREAT CAR</p>
+            <div class="bid-timer mt-5 mt-xl-5 cta-banner  pb-1">
+              <div class="bid-section">
+                <div class="label pb-2">VIEW ALL BIDS</div>
+                <i class="bi bi-eye icon-center fs-5"></i>
+              </div>
+              <div class="bid-section">
+                <div class="label">NEXT BID COMING UP</div>
+                <div class="timer pt-1" id="countdown">08:45:58</div>
+              </div>
+              <div class="bid-section">
+                <div class="label pb-1">BID DETAIL</div>
+
+                <button class="scroll-btn me-lg-1 text-white"><i class="bi bi-caret-right-square-fill "></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- buy -->
+      <div class="col-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 ">
+        <div class="slide-box right-side-banner">
+          <div class="slide-content mb-0 right-banner mt-4">
+            <h5 class="wanna wanna-3 mt-5 pt-xl-2 ">I WANNA</h5>
+            <h1>BUY</h1>
+            <p class="sell ps-5 mb-4">MY DREAM CAR</p>
+            <div class="car-filter-box d-flex flex-column cta-banner mt-5 ">
+              <div class="d-flex align-items-center flex-wrap pt-1">
+                <img src="images/Buy_car_logo.png" alt="" class="me-1 right-side-banner-logo">
+                <p class="mb-0 text-dark small fw-bold right-side-banner-logo-text">MORE</p>
+              </div>
+
+              <div class="d-flex align-items-center mt-1">
+                <div class="flex-grow-1">
+                  <div class="price-label text-start">PRICE RANGE</div>
+                  <input type="range" min="10000" max="100000" value="55000" step="1000" class="price-slider"
+                    id="priceRange" oninput="updatePrice(this)" />
+                </div>
+                <div class="d-flex align-items-center gap-1">
+                  <div class="price-value text-muted">RM55,000</div>
+                  <!-- <i class="bi bi-play-fill price-play-btn icon-center fs-6 bg-black text-white px-1 rounded-1" style="margin-top: -2px;"></i> -->
+                  <button class="scroll-btn me-lg-2 text-black"><i class="bi bi-caret-right-square-fill "></i></button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- ========== End Top Banner View only lg and xl ========== -->
+  <div id="multiSlideCarousel" class="carousel slide top-banner-container d-block d-lg-none d-md-block d-xl-none"
+    data-bs-ride="carousel">
+    <div class="carousel-inner top-banner-carousel">
+      <!-- First slide -->
+      <div class="carousel-item active top-banner-carousel-item">
+        <div class="row g-0">
+          <!-- sell -->
+          <div class="col-12  col-lg-4 col-xl-4 col-xxl-4">
+            <div class="slide-box left-side-banner">
+              <div class="slide-content left-banner">
+                <h5 class="wanna wanna-1  mt-4 mt-lg-5 pt-5 pt-md-5 mt-md-5 mt-xl-5 pt-xl-5">I WANNA</h5>
+                <h1>SELL</h1>
+                <p class="sell ms-5 ps-5 pb-2">MY COOL CAR</p>
+                <div class="d-flex justify-content-center my-lg-4 my-md-4 my-xl-2 mb-3 ms-lg-0 ms-1 ">
+                  <div class="cta-banner mt-lg-3 mt-5 mt-md-2 mt-xl-5">
+                    <div class="cta-block cta-red px-lg-0 px-2">
+                      <div class="text-center">
+                        <div class="d-flex align-items-center justify-content-center gap-2 mb-1">
+                          <img src="images/car_icon.png" alt="" width="25" height="20">
+                          <div class="cta-title">GET CAR PRICE</div>
+                        </div>
+                        <div class="cta-subtext">MORE FOR YOU. LESS FOR US</div>
+                      </div>
+                    </div>
+                    <div class="cta-block cta-yellow px-3">
+                      <div class="text-center">
+                        <div class="d-flex align-items-center justify-content-center gap-1 gap-md-2 mb-1">
+                          <img src="images/hand-icon.png" alt="" width="23" height="24">
+                          <div class="cta-title">PLACE CAR TO BID</div>
+                        </div>
+                        <div class="cta-subtext">I'M FEELIN' LUCKY!</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- bid -->
+          <div class="col-12  col-lg-4 col-xl-4 col-xxl-4">
+            <div class="slide-box center-side-banner">
+              <div class="slide-content left-banner pt-5  mt-4">
+                <h5 class="wanna wanna-2 pt-5 pt-xl-4 mt-2 ">I WANNA</h5>
+                <h1>BID</h1>
+                <p class="sell ms-5 mb-2 mb-xl-4">FOR A GREAT CAR</p>
+                <div class="bid-timer mt-5 mt-xl-5 cta-banner  pb-1">
+                  <div class="bid-section">
+                    <div class="label pb-2">VIEW ALL BIDS</div>
+                    <i class="bi bi-eye icon-center fs-5"></i>
+                  </div>
+                  <div class="bid-section">
+                    <div class="label">NEXT BID COMING UP</div>
+                    <div class="timer pt-1" id="countdown">08:45:58</div>
+                  </div>
+                  <div class="bid-section">
+                    <div class="label pb-1">BID DETAIL</div>
+
+                    <button class="scroll-btn me-lg-1 text-white"><i
+                        class="bi bi-caret-right-square-fill "></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- buy -->
+          <div class="col-12  col-lg-4 col-xl-4 col-xxl-4 ">
+            <div class="slide-box right-side-banner">
+              <div class="slide-content mb-0 right-banner mt-4">
+                <h5 class="wanna wanna-3 mt-5 pt-xl-2 ">I WANNA</h5>
+                <h1>BUY</h1>
+                <p class="sell ps-5 mb-4">MY DREAM CAR</p>
+                <div class="car-filter-box d-flex flex-column cta-banner   ">
+
+                  <div class="d-flex align-items-center flex-wrap pt-1">
+                    <img src="images/Buy_car_logo.png" alt="" class="me-2 right-side-banner-logo">
+                    <p class="mb-0 text-dark small fw-bold right-side-banner-logo-text">MORE</p>
+                  </div>
+
+                  <div class="d-flex align-items-center ">
+                    <div class="flex-grow-1">
+                      <div class="price-label text-start">PRICE RANGE</div>
+                      <input type="range" min="10000" max="100000" value="55000" step="1000" class="price-slider"
+                        id="priceRange" oninput="updatePrice(this)" />
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="price-value text-muted">RM55,000</div>
+                      <!-- <i class="bi bi-play-fill price-play-btn icon-center fs-6 bg-black text-white px-1 rounded-1" style="margin-top: -2px;"></i> -->
+                      <button class="scroll-btn me-lg-2 text-black"><i
+                          class="bi bi-caret-right-square-fill "></i></button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second slide (duplicate for mobile carousel) -->
+      <div class="carousel-item">
+        <div class="row g-0">
+          <!-- Bid -->
+          <div class="col-12  col-lg-4 col-xl-4 col-xxl-4">
+            <div class="slide-box center-side-banner">
+              <div class="slide-content left-banner pt-5  mt-4">
+                <h5 class="wanna wanna-2 pt-4 pt-xl-4 mt-2 ">I WANNA</h5>
+                <h1>BID</h1>
+                <p class="sell ms-5 mb-4 mb-xl-4">FOR A GREAT CAR</p>
+                <div class="bid-timer mt-5  mt-xl-5 cta-banner  pb-1">
+                  <div class="bid-section">
+                    <div class="label pb-2">VIEW ALL BIDS</div>
+                    <i class="bi bi-eye icon-center fs-5"></i>
+                  </div>
+                  <div class="bid-section">
+                    <div class="label">NEXT BID COMING UP</div>
+                    <div class="timer pt-1" id="countdown">08:45:58</div>
+                  </div>
+                  <div class="bid-section">
+                    <div class="label pb-1">BID DETAIL</div>
+
+                    <button class="scroll-btn me-lg-1 text-white"><i
+                        class="bi bi-caret-right-square-fill "></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- buy -->
+          <div class="col-12  col-lg-4 col-xl-4 col-xxl-4 ">
+            <div class="slide-box right-side-banner">
+              <div class="slide-content mb-0 right-banner mt-4">
+                <h5 class="wanna wanna-3 mt-5 pt-xl-2 ">I WANNA</h5>
+                <h1>BUY</h1>
+                <p class="sell ps-5 mb-4">MY DREAM CAR</p>
+                <div class="car-filter-box d-flex flex-column cta-banner   ">
+
+                  <div class="d-flex align-items-center flex-wrap pt-1">
+                    <img src="images/Buy_car_logo.png" alt="" class="me-2 right-side-banner-logo">
+                    <p class="mb-0 text-dark small fw-bold right-side-banner-logo-text">MORE</p>
+                  </div>
+
+                  <div class="d-flex align-items-center ">
+                    <div class="flex-grow-1">
+                      <div class="price-label text-start">PRICE RANGE</div>
+                      <input type="range" min="10000" max="100000" value="55000" step="1000" class="price-slider"
+                        id="priceRange" oninput="updatePrice(this)" />
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="price-value text-muted">RM55,000</div>
+                      <!-- <i class="bi bi-play-fill price-play-btn icon-center fs-6 bg-black text-white px-1 rounded-1" style="margin-top: -2px;"></i> -->
+                      <button class="scroll-btn me-lg-2 text-black"><i
+                          class="bi bi-caret-right-square-fill "></i></button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- sell -->
+          <div class="col-12  col-lg-4 col-xl-4 col-xxl-4">
+            <div class="slide-box left-side-banner">
+              <div class="slide-content left-banner">
+                <h5 class="wanna wanna-1  mt-2 mt-lg-5 pt-5 pt-md-5 mt-md-5 mt-xl-5 pt-xl-5">I WANNA</h5>
+                <h1>SELL</h1>
+                <p class="sell ms-5 ps-5">MY COOL CAR</p>
+                <div class="d-flex justify-content-center my-lg-4 my-md-4 my-xl-2 ms-lg-0 ms-1">
+                  <div class="cta-banner mt-lg-3 mt-4 mt-md-2 mt-xl-5">
+                    <div class="cta-block cta-red px-lg-0 px-3">
+                      <div class="text-center">
+                        <div class="d-flex align-items-center justify-content-center gap-2 mb-1">
+                          <img src="images/car_icon.png" alt="" width="25" height="20">
+                          <div class="cta-title">GET CAR PRICE</div>
+                        </div>
+                        <div class="cta-subtext">MORE FOR YOU. LESS FOR US</div>
+                      </div>
+                    </div>
+                    <div class="cta-block cta-yellow px-3">
+                      <div class="text-center">
+                        <div class="d-flex align-items-center justify-content-center gap-1 gap-md-2 mb-1">
+                          <img src="images/hand-icon.png" alt="" width="23" height="24">
+                          <div class="cta-title">PLACE CAR TO BID</div>
+                        </div>
+                        <div class="cta-subtext">I'M FEELIN' LUCKY!</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Third slide (duplicate for mobile carousel) -->
+      <div class="carousel-item">
+        <div class="row g-0">
+          <!-- buy -->
+          <div class="col-12  col-lg-4 col-xl-4 col-xxl-4 ">
+            <div class="slide-box right-side-banner">
+              <div class="slide-content mb-0 right-banner mt-4">
+                <h5 class="wanna wanna-3 mt-5 pt-xl-2 ">I WANNA</h5>
+                <h1>BUY</h1>
+                <p class="sell ps-5 mb-4">MY DREAM CAR</p>
+                <div class="car-filter-box d-flex flex-column cta-banner  mb-2 ">
+
+                  <div class="d-flex align-items-center flex-wrap pt-1">
+                    <img src="images/Buy_car_logo.png" alt="" class="me-2 right-side-banner-logo">
+                    <p class="mb-0 text-dark small fw-bold right-side-banner-logo-text">MORE</p>
+                  </div>
+
+                  <div class="d-flex align-items-center ">
+                    <div class="flex-grow-1">
+                      <div class="price-label text-start">PRICE RANGE</div>
+                      <input type="range" min="10000" max="100000" value="55000" step="1000" class="price-slider"
+                        id="priceRange" oninput="updatePrice(this)" />
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="price-value text-muted">RM55,000</div>
+                      <!-- <i class="bi bi-play-fill price-play-btn icon-center fs-6 bg-black text-white px-1 rounded-1" style="margin-top: -2px;"></i> -->
+                      <button class="scroll-btn me-lg-2 text-black"><i
+                          class="bi bi-caret-right-square-fill "></i></button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- bid -->
+          <div class="col-12 col-lg-4 col-xl-4 col-xxl-4">
+            <div class="slide-box center-side-banner">
+              <div class="slide-content left-banner pt-5  mt-4">
+                <h5 class="wanna wanna-2 pt-5 pt-xl-4 mt-2 ">I WANNA</h5>
+                <h1>BID</h1>
+                <p class="sell ms-5 mb-2 mb-xl-4">FOR A GREAT CAR</p>
+                <div class="bid-timer mt-5 mt-xl-5 cta-banner  pb-1">
+                  <div class="bid-section">
+                    <div class="label pb-2">VIEW ALL BIDS</div>
+                    <i class="bi bi-eye icon-center fs-5"></i>
+                  </div>
+                  <div class="bid-section">
+                    <div class="label">NEXT BID COMING UP</div>
+                    <div class="timer pt-1" id="countdown">08:45:58</div>
+                  </div>
+                  <div class="bid-section">
+                    <div class="label pb-1">BID DETAIL</div>
+
+                    <button class="scroll-btn me-lg-1 text-white"><i
+                        class="bi bi-caret-right-square-fill "></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- sell -->
+          <div class="col-12  col-lg-4 col-xl-4 col-xxl-4">
+            <div class="slide-box left-side-banner">
+              <div class="slide-content left-banner">
+                <h5 class="wanna wanna-1  mt-2 mt-lg-5 pt-5 pt-md-5 mt-md-5 mt-xl-5 pt-xl-5">I WANNA</h5>
+                <h1>SELL</h1>
+                <p class="sell ms-5 ps-5">MY COOL CAR</p>
+                <div class="d-flex justify-content-center my-lg-4 my-md-4 my-xl-2 ms-lg-0 ms-1">
+                  <div class="cta-banner mt-lg-3 mt-4 mt-md-2 mt-xl-5">
+                    <div class="cta-block cta-red px-lg-0 px-3">
+                      <div class="text-center">
+                        <div class="d-flex align-items-center justify-content-center gap-2 mb-1">
+                          <img src="images/car_icon.png" alt="" width="25" height="20">
+                          <div class="cta-title">GET CAR PRICE</div>
+                        </div>
+                        <div class="cta-subtext">MORE FOR YOU. LESS FOR US</div>
+                      </div>
+                    </div>
+                    <div class="cta-block cta-yellow px-3">
+                      <div class="text-center">
+                        <div class="d-flex align-items-center justify-content-center gap-1 gap-md-2 mb-1">
+                          <img src="images/hand-icon.png" alt="" width="23" height="24">
+                          <div class="cta-title">PLACE CAR TO BID</div>
+                        </div>
+                        <div class="cta-subtext">I'M FEELIN' LUCKY!</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ========== End top Banner container ========== -->
+  <!-- ========== Start car card container ========== -->
+
+  <div class="d-none d-lg-block d-md-block mt-5">
+    <div class="container  d-flex justify-content-center text-center py-3 mt-4 mt-md-0">
+      <div class="search-box search-box1">
+        <i class="bi bi-search"></i>
+        <input type="text" placeholder="What car interest you? Search by brand, model or keywords">
+      </div>
+    </div>
+    <div class="filter-container">
+      <div class="filter-tab">Great Deals</div>
+      <div class="filter-tab">Price Range</div>
+      <div class="filter-tab">Make & Model</div>
+      <div class="filter-tab">Body Type</div>
+      <div class="filter-tab">Year & Mileage</div>
+      <div class="filter-tab">Monthly Payment</div>
+      <div class="filter-tab">More Filters</div>
+    </div>
+
+<!-- ========== Start offcanva for right side ========== -->
+    <!-- Offcanvas Right -->
+<div id="offcanvasContainer"></div>
+    <!-- ========== End offcanva for right side ========== -->
+    <div class="container top-bar mt-2">
+      <div class="row d-flex justify-content-between align-items-center ">
+        <!-- Left: Heading -->
+        <div class="col-12 col-md-6 mb-2 mb-md-0">
+          <h5 class="car-heading text-center me-1  ps-4 mb-0 pe-md-0 ps-sm-5">LATEST CARS ON SALE!</h5>
+        </div>
+        <!-- Right: Sort Dropdown -->
+        <div class="col-12 col-md-6 d-flex justify-content-center align-items-center car-filter">
+          <span class="me-2 sort-by" style="font-size: 14px;">Sort by</span>
+          <div class="custom-select-wrapper " style="margin-right: -137px;">
+            <select class="form-select w-auto" aria-label="Sort by">
+              <option selected class="fw-bold">Latest </option>
+              <option value="1">Old</option>
+            </select>
+            <img src="images/filter-arrow.png" alt="" height="20" class="custom-select-icon ">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Search Section -->
+  <div class="container d-md-none w-100 d-flex flex-column align-items-center text-center py-3 mt-4">
+    <!-- Search box (you already styled it nicely) -->
+    <div class="search-box mb-3 w-100 search-box2">
+      <i class="bi bi-search"></i>
+      <input type="text" placeholder="Search by brand, model or keywords" id="mobileSearchInput">
+    </div>
+<div id="offcanvasContainers"></div>
+    <!-- Buttons on smaller screen (stacked), on larger screen (inline) -->
+    <div class="d-flex  gap-2 w-100 mobile-tab" style="max-width: 89%;">
+
+      <button class="btn  w-100 " style="border-color: #ffe592;flex-basis: 50%;">
+        All Filters <img src="images/filter.png" alt="" height="12">
+      </button>
+      <button class="btn  w-100" style="border-color: #ffe592;flex-basis: 50%;width: 100;">
+        Sort <img src="images/filter-arrow.png" alt="" height="20">
+
+      </button>
+    </div>
+
+  </div>
+  <!-- This text only show on mobile -->
+  <p class="car-heading ms-4 ps-3 ps-sm-4 d-md-none d-lg-none d-block pb-2 " style="font-size: 14px;">LATEST CARS ON SALE!</p>
+  <div class="container   px-md-0 px-sm-0">
+  <!-- car card -->
+    <div class="row g-3 g-sm-2  px-lg-5 px-xxl-0 mx-xxl-3 mx-lg-5 mx-md-0 px-md-0" id="imageLoopContainer"></div>  
+    </div>
+  </div>
+
+  <!-- Pagination Component -->
+  <nav aria-label="Page navigation example ">
+    <ul class="pagination custom-pagination d-flex ">
+      <li class="page-item">
+        <a class="page-link" href="#">Previous</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">4</a></li>
+      <li class="page-item"><a class="page-link" href="#">5</a></li>
+      <li class="page-item"><a class="page-link" href="#">6</a></li>
+      <li class="page-item"><a class="page-link" href="#">…</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- ========== End car card container ========== -->
+  <!-- ========== Start car guru container ========== -->
+  <section class="promo-banner mt-5">
+    <div class="">
+      <div class="promo-heading d-flex justify-content-center align-items-top pt-2 pt-lg-0  pt-md-0 ">THE GURU OF
+        GIVING</div>
+      <div class="row d-flex justify-content-center  ">
+        <div class="col-md-4 col-sm-12 promo-banner-container d-lg-block d-none d-md-block">
+          <div class="promo-tag btn btn-danger red  text-start py-2 ps-3">
+            <p class="book fw-light">ONLINE BOOKING & BUY</p>
+            <small class="fw-semibold fs-5">SPECIAL PROMOTION</small> <span
+              class="rm fs-5 fw-light ms-1 text-white">RM<span class="fs-2 fw-bold rate">888</span> OFF</span>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12 promo-banner-container d-lg-block d-none d-md-block">
+          <div class="promo-tag yellow btn btn-warning text-start py-2 ps-3">
+            <p class="book fw-light"> LOCAL CARS</p>
+            <small class="fs-5 fw-bold"> EXTRA DISCOUNT</small> <span
+              class="rm fs-5 fw-semibold ms-2 text-black">RM<span class="fs-2 fw-bold rate">1,888</span>OFF</span>
+          </div>
+        </div>
+        <!-- mobile -->
+        <div class="d-flex d-lg-none d-block d-md-none w-100 gap-2 ">
+          <div class="col-md-4 col-sm-12 w-50 ">
+            <div class="promo-tag red  text-start px-2 py-1">
+              <p class="book fw-light mb-lg-0 mb-1">ONLINE BOOKING & BUY</p>
+              <small class="fw-semibold fs-5">SPECIAL PROMOTION</small> <span
+                class="rm fw-light ms-lg-1 text-white">RM<span class="fs-2 fw-bold rate">888</span> OFF</span>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12 w-50 ">
+            <div class="promo-tag yellow text-start px-2 py-1">
+              <p class="fs-6 fw-light mb-lg-0 mb-1"> LOCAL CARS</p>
+              <small n class="fs-5 fw-bold"> EXTRA DISCOUNT</small> <span
+                class="rm fw-semibold ms-lg-2 text-black">RM<span class="fs-2 fw-bold rate">1,888</span>OFF</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12 contact-section text-start d-flex flex-column justify-content-end ">
+          KEEN TO FIND OUT MORE?<br>
+          <span class="fs-5">CALL US AT +60 13 951 5969</span>
+          <small>*Terms & Conditions Apply</small>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+  <!-- ========== End car guru container ========== -->
+  <!-- ========== Start steps container ========== -->
+ <section class="text-center py-5">
+  <h1 class="steps-title" style="letter-spacing: 2px;">STEP-BY-STEP</h1>
+
+  <!-- Tabs -->
+  <div class="d-flex justify-content-center flex-wrap mt-4 gap-lg-5 gap-4 fw-bold steps-top-title">
+    <p class="fw-bold custom-nav nav-item-tab active" data-target="sell-cards">SELL A CAR</p>
+    <p class="fw-bold custom-nav nav-item-tab" data-target="buy-cards">BUY A CAR</p>
+    <p class="fw-bold custom-nav nav-item-tab" data-target="bid-cards">BID FOR A CAR</p>
+  </div>
+
+  <div class="container py-lg-5 py-1 containers-steps">
+    <div class="row g-lg-3 g-2 mx-lg-5 px-lg-5 mx-2 card-section active" id="sell-cards"></div>
+    <div class="row g-lg-3 g-2 mx-lg-5 px-lg-5 mx-2 card-section d-none" id="buy-cards"></div>
+    <div class="row g-lg-3 g-2 mx-lg-5 px-lg-5 mx-2 card-section d-none" id="bid-cards"></div>
+  </div>
+</section>
+  <!-- ========== End steps container ========== -->
+
+
+
+<!-- ========== Start certification container ========== -->
+  <div class="certified-banner">
+    <div class="container certified-container">
+      <div class="certified-header mt-lg-5">
+        <div class="certified-badge d-flex">
+
+          <img src="images/CCertified_icon.png" alt="" width="50%" height="57">
+        </div>
+      </div>
+
+      <div class="certified-body px-lg-5 mx-lg-5   mx-0 px-0 py-xl-4 ">
+        <div class="left ms-lg-4">
+          <h1 class="fw-bold me-lg-1 fs-2 text-end second-banner banner-heading-view-1 ">THE CAR <br> IS ASSURED
+          </h1>
+          <h1 class="fw-semibold  fs-2 second-banner banner-heading-view-2 me-lg-5" style="line-height: 1px;">THE CAR IS
+            ASSURED</h1>
+          <span class="line ms-lg-5  d-lg-block d-none d-md-block  mt-xl-5 "></span>
+        </div>
+
+        <div class="right  me-lg-2 ms-lg-5  ">
+          <div class="assurance-item mt-lg-2 me-xl-2 ">
+            <div class="icon"><img src="images/certified_200pts@4x.png" alt="" width="60" height="60"></div>
+            <p style="font-size: 10px;" class="certified-text pt-2">Comprehensive<br> Inspection</p>
+
+          </div>
+          <div class="assurance-item  mt-lg-2 me-xl-4">
+            <div class="icon"><img src="images/certified_2years@4x.png" alt="" width="60" height="60"></div>
+            <p style="font-size: 10px;" class="certified-text mt-lg-3 mt-3">2-year Warranty<br> for Engine & Gearbox</p>
+          </div>
+          <div class="assurance-item mt-lg-2 me-xl-4">
+            <div class="icon"><img src="images/certified_mileage@4x.png" alt="" width="60" height="60"></div>
+            <p style="font-size: 10px;" class="certified-text pt-2">Authenticity<br> Check on Mileage</p>
+          </div>
+          <div class="assurance-item mt-lg-2 me-xl-4">
+            <div class="icon"><img src="images/certified_carflood@4x.png" alt="" width="60" height="60"></div>
+            <p style="font-size: 10px;" class="certified-text pt-2">No Major Accidents,<br> Fire or Flood Damage</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ========== End certification container ========== -->
+  <!-- ========== Start Testimonial container ========== -->
+  <div class="container-1 mx-2 mx-lg-0">
+    <h1 class="win mb-4 px-2 px-lg-0 fw-bolder">Everyone’s Winning with Carguru</h1>
+    <p class="text-dark mx-1">Whether buying or selling, our users love the transparent deals, fair prices, and
+      hassle-free experience.</p>
+    <p class="text-center  mt-0 pt-0" style="line-height: 0%;">Here's what they's saying</p>
+  </div>
+  <div class="container-fluid pb-5 mx-lg-3  mx-0 testimonial-container">
+
+    <!-- Arrows -->
+    <div class="d-flex justify-content-between align-items-center mb-3 top-arrow-button">
+      <button class="scroll-btn ms-lg-3" id="scrollLeft"><i class="bi bi-caret-left-square-fill"></i></button>
+      <button class="scroll-btn me-lg-3" id="scrollRight"><i class="bi bi-caret-right-square-fill"></i></button>
+    </div>
+
+    <!-- Scrollable Container -->
+    <div class="scroll-container mx-lg-3 mx-0 " id="testimonialScroll">
+      <!-- Card 1 -->
+      <div class="card testimonial-card border-0 shadow-sm  ">
+        <div class="d-flex align-items-center mb-3">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle me-3 me-lg-3 me-xl-4 "
+            width="70" height="70">
+          <div>
+            <h6 class="mb-0 fw-bold text-uppercase ">KAREENA KAPOOR</h6>
+            <small class="mb-0">Owner of 2024 Nissan Fairlady Z</small>
+            <!-- <div class="text-warning fw-bold fs-4">★ ★ ★ ★ ★</div> -->
+            <!-- <div class="star mt-2">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+            </div> -->
+            <div>
+              <img src="images/5starrating.png" alt="" class="mt-0" width="100">
+            </div>
+            <!-- <img src="images/5starrating.png" alt="" class=" mt-2" width="100" height="20" > -->
+          </div>
+        </div>
+        <p class="text-muted small">Very helpful service from Vijay whom is patient and knowledgeable! Highly recommend
+          Carguru to first time car buyer! Love the overall ambient and experience. No stress, just delightful
+          discovery! </p>
+
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card testimonial-card border-0 shadow-sm">
+        <div class="d-flex align-items-center mb-3">
+          <img src="https://randomuser.me/api/portraits/men/75.jpg" class="rounded-circle me-3 me-lg-3 me-xl-4 "
+            width="70" height="70">
+          <div>
+            <h6 class="mb-0 fw-bold text-uppercase">AAMIR KHAN</h6>
+            <small class="text-muted">Owner of 2024 Landrover</small>
+            <!-- <div class="text-warning fw-bold fs-4">★ ★ ★ ★ ★</div> -->
+            <!-- <div class="text-warning fw-bold fs-4">★ ★ ★ ★ ★</div> -->
+            <!-- <div class="star mt-2">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+            </div> -->
+            <div>
+              <img src="images/5starrating.png" alt="" class="mt-0" width="100">
+            </div>
+          </div>
+        </div>
+        <p class="text-muted small">Awesome website! The bidding process is smooth and exciting! Definitely recommend to
+          friends.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card testimonial-card border-0 shadow-sm">
+        <div class="d-flex align-items-center mb-3">
+          <img src="https://randomuser.me/api/portraits/women/65.jpg" class="rounded-circle me-3 me-lg-3 me-xl-4 "
+            width="70" height="70">
+          <div>
+            <h6 class="mb-0 fw-bold text-uppercase">KATRINA KAIF</h6>
+            <small class="text-muted">Sold her Myvi 1.5</small>
+            <!-- <div class="text-warning fw-bold fs-4">★ ★ ★ ★ ★</div> -->
+            <!-- <div class="text-warning fw-bold fs-4">★ ★ ★ ★ ★</div> -->
+            <!-- <div class="star mt-2">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+            </div> -->
+            <div>
+              <img src="images/5starrating.png" alt="" class="mt-0" width="100">
+            </div>
+          </div>
+        </div>
+        <p class="text-muted small">Servis yang memuaskan! Terima kasih kepada team Carguru yang rajin dan ikhlas dalam
+          semua urusan niaga kereta!
+
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card testimonial-card border-0 shadow-sm">
+        <div class="d-flex align-items-center mb-3">
+          <img src="https://randomuser.me/api/portraits/men/66.jpg" class="rounded-circle me-3 me-lg-3 me-xl-4 "
+            width="70" height="70">
+          <div>
+            <h6 class="mb-0 fw-bold text-uppercase">LIN DAN</h6>
+            <small class="text-muted">Owner of BMW X1</small>
+            <!-- <div class="text-warning fw-bold fs-4">★ ★ ★ ★ ★</div> -->
+            <!-- <div class="star mt-2">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+            </div> -->
+            <div>
+              <img src="images/5starrating.png" alt="" class="mt-0" width="100">
+            </div>
+          </div>
+        </div>
+        <p class="text-muted small">I love the transparency especially when it comes to all the necessary fees. Mike
+          ensured all the coverage needed and I couldn’t be more satisfied with his professionalism!
+
+        </p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card testimonial-card border-0 shadow-sm">
+        <div class="d-flex align-items-center mb-3">
+          <img src="https://randomuser.me/api/portraits/men/33.jpg" class="rounded-circle me-3 me-lg-3 me-xl-4 "
+            width="70" height="70">
+          <div>
+            <h6 class="mb-0 fw-bold text-uppercase">SALMAN KHAN</h6>
+            <small class="text-muted">Owner of 2023 Hyundai Creta</small>
+            <!-- <div class="text-warning fw-bold fs-4">★ ★ ★ ★ ★</div> -->
+            <!-- <div class="text-warning fw-bold fs-4">★ ★ ★ ★ ★</div> -->
+            <!-- <div class="star mt-2">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+            </div> -->
+            <div>
+              <img src="images/5starrating.png" alt="" class="mt-0" width="100">
+            </div>
+          </div>
+        </div>
+        <p class="text-muted small">Seamless experience from start to finish!</p>
+      </div>
+      <!-- Card 6 -->
+      <div class="card testimonial-card border-0 shadow-sm">
+        <div class="d-flex align-items-center mb-3">
+          <img src="https://randomuser.me/api/portraits/women/12.jpg" class="rounded-circle me-3 me-lg-3 me-xl-4 "
+            width="70" height="70">
+          <div>
+            <h6 class="mb-0 fw-bold text-uppercase">DEEPIKA PADUKONE</h6>
+            <small class="text-muted">Bought a 2022 Honda Civic</small>
+            <!-- <div class="text-warning fw-bold fs-4">★ ★ ★ ★ ★</div> -->
+            <!-- <div class="text-warning fw-bold fs-4">★ ★ ★ ★ ★</div> -->
+            <!-- <div class="star mt-2">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+            </div> -->
+            <div>
+              <img src="images/5starrating.png" alt="" class="mt-0" width="100">
+            </div>
+          </div>
+        </div>
+        <p class="text-muted small">Loved the quick process and support. Totally hassle-free experience!</p>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="card testimonial-card border-0 shadow-sm">
+        <div class="d-flex align-items-center mb-3">
+          <img src="https://randomuser.me/api/portraits/men/12.jpg" class="rounded-circle me-3 me-lg-3 me-xl-4 "
+            width="70" height="70">
+          <div>
+            <h6 class="mb-0 fw-bold text-uppercase">HRITHIK ROSHAN</h6>
+            <small class="text-muted">Sold his 2021 Kia Seltos</small>
+            <!-- <div class="text-warning fw-bold fs-4">★ ★ ★ ★ ★</div> -->
+            <!-- <div class="text-warning fw-bold fs-4">★ ★ ★ ★ ★</div> -->
+            <!-- <div class="star mt-2">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+            </div> -->
+            <div>
+              <img src="images/5starrating.png" alt="" class="mt-0" width="100">
+            </div>
+          </div>
+        </div>
+        <p class="text-muted small">Great team and transparent pricing. The bidding system really works!</p>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="card testimonial-card border-0 shadow-sm">
+        <div class="d-flex align-items-center mb-3">
+          <img src="https://randomuser.me/api/portraits/women/22.jpg" class="rounded-circle me-3 me-lg-3 me-xl-4 "
+            width="70" height="70">
+          <div>
+            <h6 class="mb-0 fw-bold text-uppercase">ALIA BHATT</h6>
+            <small class="text-muted">Owner of 2023 Toyota Fortuner</small>
+            <!-- <div class="text-warning fw-bold fs-4">★ ★ ★ ★ ★</div> -->
+            <!-- <div class="text-warning fw-bold fs-4">★ ★ ★ ★ ★</div> -->
+            <!-- <div class="star mt-2">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+            </div> -->
+            <div>
+              <img src="images/5starrating.png" alt="" class="mt-0" width="100">
+            </div>
+          </div>
+        </div>
+        <p class="text-muted small">The entire team made sure I was comfortable every step of the way.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========== End Testimonial container ========== -->
+
+  <!-- ========== Start footer container ========== -->
+  <footer class="footer pt-lg-5 pt-3 fs-6 mt-xl-5">
+    <div class="container-fluid px-lg-5 px-3 ">
+      <div class="row footer-top-side">
+
+        <!-- About Section -->
+        <div class="col-12 col-lg-4 mb-4 footer-left-side">
+          <p class="fw-semibold">
+            CarGuru is redefining the used car experience through a transparent live bidding platform that
+            connects buyers, sellers, and dealers — all in one seamless ecosystem.
+          </p>
+          <p>
+            Whether you're buying, selling, or just exploring, CarGuru puts you in control of a process
+            that's simple, fair, and rewarding. Your car, your terms.
+          </p>
+          <div class="social-icons mt-5 d-none d-lg-block ">
+            <img src="images/facebook.png" width="24" height="24" alt="Facebook" class="me-5 ">
+            <img src="images/image.png" width="24" height="24" alt="Twitter" class="me-5">
+            <img src="images/instagram.png" width="24" height="24" alt="Instagram" class="me-5">
+            <img src="images/linkedin.png" width="24" height="24" alt="LinkedIn" class="me-5 bg-white rounded-1 ">
+          </div>
+
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-3 col-lg-2 mb-4 ms-lg-0  quick-links d-none d-lg-block d-md-block">
+          <h6 class="text-warning mb-3 fs-6">QUICK LINKS</h6>
+          <ul class="list-unstyled fs-6">
+            <li class="mb-2 mb-xl-3 "><a href="#">Home</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">Sell Car</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">Buy Car</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="col-md-3 col-lg-2 mb-4  d-none d-lg-block d-md-block quick-link ">
+          <h6 class="text-warning mb-3 fs-6">SERVICES</h6>
+          <ul class="list-unstyled fs-6">
+            <li class="mb-2 mb-xl-3"><a href="#">Bidding</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">Car Loans</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">Warranties</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">Body Check</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <!-- ========== Start nav bar for mobile only ========== -->
+        <!-- Wrapper Row -->
+        <div class="d-flex flex-wrap justify-content-between mb-4 d-lg-none d-block d-md-none">
+
+          <!-- Quick Links -->
+          <div class="w-50 pe-2 mb-3 quick-links">
+            <h6 class="text-warning mb-3 fs-6">QUICK LINKS</h6>
+            <ul class="list-unstyled fs-6">
+              <li class="mb-2"><a href="#">Home</a></li>
+              <li class="mb-2"><a href="#">Sell Car</a></li>
+              <li class="mb-2"><a href="#">Buy Car</a></li>
+              <li class="mb-2"><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="w-50 ps-2 mb-3 services">
+            <h6 class="text-warning mb-3 fs-6">SERVICES</h6>
+            <ul class="list-unstyled fs-6">
+              <li class="mb-2"><a href="#">Bidding</a></li>
+              <li class="mb-2"><a href="#">Car Loans</a></li>
+              <li class="mb-2"><a href="#">Warranties</a></li>
+              <li class="mb-2"><a href="#">Body Check</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- ========== End nav bar for mobile only ========== -->
+
+        <!-- Subscribe -->
+        <div class=" col-lg-4 mb-4 subscribe">
+          <h6 class="text-warning mb-3">SUBSCRIBE</h6>
+          <p style="font-size: 14px;">Stay updated with exclusive promos, events, new offers, and useful tips.
+          </p>
+          <form class="subscribe-input d-flex">
+            <input type="email" class="form-control me-2 rounded" placeholder="Your Email Here">
+            <button type="submit" class="btn btn-primary px-3 rounded p-xl-5">
+              <i class="bi bi-caret-right-fill"></i>
+            </button>
+          </form>
+        </div>
+
+        <div class="social-icons mt-lg-5  d-block d-lg-none mt-2 mb-3 d-flex justify-content-around ">
+          <img src="images/facebook.png" width="24" height="24" alt="Facebook" class="">
+          <img src="images/image.png" width="24" height="24" alt="Twitter" class="">
+          <img src="images/instagram.png" width="24" height="24" alt="Instagram" class="">
+          <img src="images/linkedin.png" width="24" height="24" alt="LinkedIn" class="bg-white rounded-1 ">
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="bg-warning border-top border-danger footer-bottom py-2 small px-lg-2 px-0">
+      <div class="container-fluid px-lg-4 px-1 py-lg-0 py-2">
+        <div class="row justify-content-lg-between align-items-lg-center text-center text-md-start">
+
+          <!-- Left -->
+          <div class=" col-lg-4 mb-2 mb-md-0 text-dark ps-lg-4 footer-text text-md-center">
+            © 2025–2026 CARGURU TECHNOLOGY. ALL RIGHTS RESERVED.
+          </div>
+
+          <!-- Center Links -->
+          <div
+            class=" py-md-2 col-lg-5 mb-2 mb-md-0 d-flex justify-content-lg-center justify-content-around flex-wrap gap-lg-4  footer-nav ">
+            <a href="#" class="text-dark text-decoration-none">Privacy Policy</a>
+            <a href="#" class="text-dark text-decoration-none">Terms of Service</a>
+            <a href="#" class="text-dark text-decoration-none">Payment Method</a>
+            <a href="#" class="text-dark text-decoration-none">Cookie Policy</a>
+          </div>
+
+          <!-- Right -->
+          <div class="col-lg-3 text-lg-end text-md-center pe-4 fw-bold text-black footer-text ">
+            CALL US AT +60 13 951 5969
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+<script>
+
+  // Its for Open the new File
+  document.getElementById('loginBtn').addEventListener('click', function () {
+    fetch('login.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('modalContainer').innerHTML = html;
+        // Wait for Bootstrap to process modal before showing
+        const modal = new bootstrap.Modal(document.getElementById('loginModal'));
+        modal.show();
+      })
+      .catch(err => console.error('Modal load failed:', err));
+  });
+  function openOTP() {
+
+    const loginModal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+    loginModal.hide();
+    const otpModal = new bootstrap.Modal(document.getElementById('otpModal'));
+    otpModal.show();
+  }
+function closeOTP() { 
+  const otpModal = bootstrap.Modal.getInstance(document.getElementById('otpModal'));
+  otpModal.hide();
+
+  const loginModal = new bootstrap.Modal(document.getElementById('nextModal'));
+  loginModal.show();
+
+  // Wait 3 seconds, then go to dealer.html
+  setTimeout(() => {
+    window.location.href = 'dealer.html';
+  }, 3000); // 3000 = 3 seconds
+}
+
+  // Its for Open the new File( For Customer)
+  document.getElementById('customerlogin').addEventListener('click', function () {
+    fetch('login.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('modalContainer').innerHTML = html;
+        // Wait for Bootstrap to process modal before showing
+        const modal = new bootstrap.Modal(document.getElementById('loginModal'));
+        modal.show();
+      })
+      .catch(err => console.error('Modal load failed:', err));
+  });
+  function openOTP() {
+
+    const loginModal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+    loginModal.hide();
+    const otpModal = new bootstrap.Modal(document.getElementById('otpModal'));
+    otpModal.show();
+  }
+function closeOTP() { 
+  const otpModal = bootstrap.Modal.getInstance(document.getElementById('otpModal'));
+  otpModal.hide();
+
+  const loginModal = new bootstrap.Modal(document.getElementById('nextModal'));
+  loginModal.show();
+
+  // Wait 3 seconds, then go to dealer.html
+  setTimeout(() => {
+    window.location.href = 'user-login.html';
+  }, 3000); // 3000 = 3 seconds
+}
+
+
+   document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".bottom-nav a");
+    const currentPage = window.location.pathname.split("/").pop();
+
+    navLinks.forEach(link => {
+      const linkPage = link.getAttribute("href");
+      if (linkPage === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  });
+ 
+  // 
+   
+  
+</script>
+
+</html>

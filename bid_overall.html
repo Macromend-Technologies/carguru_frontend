@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bid Overall</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bid.css">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- <script src="script.js"></script> -->
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+</head>
+
+<body>
+     <!-- ========== Start Navigation ========== -->
+  <!-- Yellow Info Strip -->
+  <div class="yellow-info text-dark text-center">
+    <div class="container-fluid px-3 px-md-5">
+      <p class="mb-0 small fw-bold">
+        FREE INSPECTION + INSURANCE CLAIM CHECK & WARRANTY <span class="fw-normal">FOR CAR SELLERS FROM NOW TILL 15
+          AUGUST 2025!</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+ <nav class="navbar navbar-expand-lg bg-lg-white shadow-sm sticky-top  ">
+    <div class="container-fluid px-1 px-md-4 py-1">
+      <!-- Toggle Button -->
+      <button class="btn d-lg-none " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav">
+        <i class="bi bi-list fs-4 text-danger"></i>
+      </button>
+
+      <a class="navbar-brand mx-lg-0 mx-auto " href="#">
+        <img src="images/myorder-2-removebg.png" alt="CAR GURU" class="d-none d-lg-block mx-lg-0 desktop-top-logo">
+        <img src="images/myorder-2-removebg.png" alt="CAR GURU" class="d-lg-none ms-4  mobile-top-logo">
+      </a>
+
+
+      <!-- Navbar Menu -->
+
+      <div class="collapse navbar-collapse justify-content-center mt-2 me-5 pe-5 navbar-menu-items" id="navbarContent">
+        <ul class="navbar-nav nav-text pe-5 me-5 me-md-0">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="bid_overall.html">Bid for Car</a></li>
+          <li class="nav-item"><a class="nav-link" href="buy_car.html">Buy Car</a></li>
+          <li class="nav-item"><a class="nav-link" href="sellcar.html">Sell Car</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact and Icons -->
+      <div class="d-flex contact align-items-center gap-4 ms-auto mt-3 mt-lg-0">
+        <div class="text-start d-none d-lg-block">
+          <small class="d-block fw-bold nav-text mb-1" style="line-height: 0%;">CALL US AT</small>
+          <span class="text-danger fw-bold">
+            <i class="bi bi-telephone-fill  text-dark"></i> +60 13 951 5969
+          </span>
+        </div>
+        <div
+          class="d-flex align-items-center me-lg-2 gap-lg-4 ms-lg-2 gap-2 ms-0 fs-6 fs-lg-0 mb-3 mb-lg-0 me-1 me-lg-0 icons-navbar">
+          <img src="images/search.png" alt="Search" width="15" height="15">
+          <img src="images/grocery-store.png" alt="Cart" width="15" height="15">
+          
+             <div class="dropdown">
+            <!-- Trigger Button -->
+            <button class="btn border-0" type="button" id="profileDropdown"
+              data-bs-toggle="dropdown" aria-expanded="false">
+               <img src="images/user.png" alt="User" width="15" height="15" >
+            </button>
+
+            <!-- Dropdown Menu -->
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-custom" aria-labelledby="profileDropdown">
+              <li><a class="dropdown-item" href="#"><img src="images/signup_customer.png" alt="User" width="15" height="15" class="me-2 cus-img"> Customer</a></li>
+              <li id="loginBtn"><a class="dropdown-item" href="#"><img src="images/signup_dealer.png" alt="User" width="15" height="15" class="me-2 cus-img"> Car Dealer</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV MENU -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNav">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav nav-text  me-md-0">
+        <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="bid_overall.html">Bid for Car</a></li>
+        <li class="nav-item"><a class="nav-link" href="buy_car.html">Buy Car</a></li>
+        <li class="nav-item"><a class="nav-link" href="sellcar.html">Sell Car</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+      </ul>
+      <div class="text-center mt-4">
+        <small class="d-block fw-bold nav-text mb-1" style="line-height: 5%;">CALL US AT</small>
+        <span class="text-danger fw-bold">
+          <i class="bi bi-telephone-fill  text-dark"></i> +60 13 951 5969
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTTOM NAV (Mobile Only) -->
+  <div class="bottom-nav d-lg-none ">
+    <a href="buy_car.html" ><span><img src="images/bit-icon.png" alt="" width="23" height="23"  class="gray-icon"></span> Buy</a>
+    <a href="sellcar.html"><span><img src="images/sell-icon.png" alt=""  width="23" height="23"  class="gray-icon"></span>Sell</a>
+    <a href="bid_overall.html"><i><img src="images/bid-icon.png" alt="" width="23" height="23"
+          class="gray-icon"></i>Bid</a>
+
+    <a href="#" ><span ><img src="images/service-icon.png" alt=""   width="25" height="23" class="gray-icon"></span>Services</a>
+    <a href="#"><span><img src="images/message.png" alt=""  width="23" height="23"  class="gray-icon"></span>Message</a>
+  </div>
+  <!-- ========== End Navigation ========== -->
+  <div id="modalContainer"></div>
+ <!-- ========== Start Top Banner for Bid ========== -->
+  <div class="banner  pt-lg-5 pt-2">
+    <!-- Countdown Bar -->
+    <div class="countdown-wrapper">
+      <div class="countdown-item ">
+        <h6>CAR CATEGORIES</h6>
+        <div class="count-value">8 ELECT</div>
+      </div>
+      <div class="countdown-item">
+        <h6>LIVE BID COUNTDOWN</h6>
+        <div class="count-value">08:45:58</div>
+        <p class="date">7:00pm, 24 Jun 2025</p>
+      </div>
+      <div class="countdown-item">
+        <h6>TOTAL CARS</h6>
+        <div class="count-value">238</div>
+      </div>
+    </div>
+
+    <div class="container-fluid py-3 px-5">
+      <div class="row align-items-center text-center text-md-start">
+
+        <!-- Left Section -->
+        <div class="col-lg-4  mb-4 mb-md-0 ">
+          <p class="subheading ">BEST CAR HIGHLIGHT</p>
+          <div class="bid-title">BID</div>
+          <h5 class="text-uppercase   top-banner-text">Perodua Myvi</h5>
+          <p class="description">Best-in-class fuel efficiency, eye-catching youthful design, versatile convenience,
+            amazing usability!</p>
+
+
+        </div>
+
+        <!-- Middle  Image -->
+        <div class="car col-lg-4 text-center">
+          <img src="images/bid-logo-banner.png" class="sml-car1" alt="" width="100px">
+          <img src="images/Asset 47.png" alt="Car" class="car-image "  />
+
+          <div class="sml-car">
+              <img src="images/CCertified_icon.png" alt="" width="129px">
+          </div>
+  
+        
+
+        </div>
+
+        <!-- Right Car Details Box -->
+        <div class="col-lg-4 d-flex justify-content-center   ">
+          
+          <div class="car-info-box text-start ">
+          <div class="pt-2 pb-2 mb-2 border-bottom border-secondary border-2" style="line-height: 1;">
+  <span>Make:</span><br>
+  <strong >Perodua</strong>
+</div>
+
+            <div class=" pb-2 mb-2 border-bottom border-secondary" style="line-height: 1;"><span >Model:</span> <br><strong>Myvi 1.3L G - Automatic</strong></div>
+            <div class=" pb-2  mb-2 border-bottom border-secondary" style="line-height: 1;"><span>Variant:</span><strong><br> 127,474 km  Puchong</strong></div>
+            <div class=" mb-2" style="line-height: 1;">
+              <span>Entry Bid Price:</span><br />
+              <span class="fw-bold fs-5">RM25,000</span>
+            </div>
+
+          </div>
+        </div>
+<button class="view-btn" onclick="location.href='bid_overview.html'">View Car Details</button>
+      </div>
+      
+    </div>
+  </div>
+  <!-- ========== End Top Banner for Bid ========== -->
+  <!-- ========== Start car card container ========== -->
+
+  <div class="d-none d-lg-block d-md-block mt-5">
+    <div class="container d-flex justify-content-center text-center py-3 mt-4 mt-md-0">
+      <div class="search-box search-box1">
+        <i class="bi bi-search"></i>
+        <input type="text" placeholder="What car interest you? Search by brand, model or keywords">
+      </div>
+    </div>
+    <div class="filter-container">
+      <div class="filter-tab">Great Deals</div>
+      <div class="filter-tab">Price Range</div>
+      <div class="filter-tab">Make & Model</div>
+      <div class="filter-tab">Body Type</div>
+      <div class="filter-tab">Year & Mileage</div>
+      <div class="filter-tab">Monthly Payment</div>
+      <div class="filter-tab">More Filters</div>
+    </div>
+
+<!-- ========== Start offcanva for right side ========== -->
+    <!-- Offcanvas Right -->
+<div id="offcanvasContainer"></div>
+    <!-- ========== End offcanva for right side ========== -->
+    <div class="container top-bar mt-2">
+      <div class="row d-flex justify-content-between align-items-center ">
+        <!-- Left: Heading -->
+        <div class="col-12 col-md-6 mb-2 mb-md-0">
+          <h5 class="car-heading text-center me-1  ps-4 mb-0 pe-md-0 ps-sm-5">LATEST CARS ON BID!</h5>
+        </div>
+        <!-- Right: Sort Dropdown -->
+        <div class="col-12 col-md-6 d-flex justify-content-center align-items-center car-filter">
+          <span class="me-2 sort-by" style="font-size: 14px;">Sort by</span>
+          <div class="custom-select-wrapper " style="margin-right: -137px;">
+            <select class="form-select w-auto" aria-label="Sort by">
+              <option selected class="fw-bold">Latest </option>
+              <option value="1">Old</option>
+            </select>
+            <img src="images/filter-arrow.png" alt="" height="20" class="custom-select-icon ">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Search Section -->
+  <div class="container d-md-none w-100 d-flex flex-column align-items-center text-center py-3 mt-4">
+    <!-- Search box (you already styled it nicely) -->
+    <div class="search-box mb-3 w-100 search-box2">
+      <i class="bi bi-search"></i>
+      <input type="text" placeholder="Search by brand, model or keywords" id="mobileSearchInput">
+    </div>
+<div id="offcanvasContainers"></div>
+    <!-- Buttons on smaller screen (stacked), on larger screen (inline) -->
+    <div class="d-flex  gap-2 w-100 mobile-tab" style="max-width: 89%;">
+
+      <button class="btn  w-100 " style="border-color: #ffe592;flex-basis: 50%;">
+        All Filters <img src="images/filter.png" alt="" height="12">
+      </button>
+      <button class="btn  w-100" style="border-color: #ffe592;flex-basis: 50%;width: 100;">
+        Sort <img src="images/filter-arrow.png" alt="" height="20">
+
+      </button>
+    </div>
+
+  </div>
+  <!-- This text only show on mobile -->
+  <p class="car-heading ms-4 ps-3 ps-sm-4 d-md-none d-lg-none d-block pb-2 " style="font-size: 14px;">LATEST CARS ON SALE!</p>
+  <div class="container   px-md-0 px-sm-0">
+  <!-- car card -->
+    <div class="row g-3 g-sm-2  px-lg-5 px-xxl-0 mx-xxl-3 mx-lg-5 mx-md-0 px-md-0" id="imageLoopContainer"></div>  
+    </div>
+  </div>
+
+  <!-- Pagination Component -->
+  <nav aria-label="Page navigation example ">
+    <ul class="pagination custom-pagination d-flex ">
+      <li class="page-item">
+        <a class="page-link" href="#">Previous</a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">4</a></li>
+      <li class="page-item"><a class="page-link" href="#">5</a></li>
+      <li class="page-item"><a class="page-link" href="#">6</a></li>
+      <li class="page-item"><a class="page-link" href="#">…</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- ========== End car card container ========== -->
+ 
+
+   <section class="bid-promo-banner">
+    <div class="">
+      <!-- <div class="promo-heading d-flex justify-content-center align-items-top  ">THE GURU OF GIVING</div> -->
+      <div class="row d-flex justify-content-center  bid-promo-top-banner">
+        <div class="row mt-5 ms-3  ms-sm-0 ps-sm-0  ms-md-2  ps-lg-3 ms-xl-3 ps-xl-2 ">
+          <div class="col-lg-6 col-xl-6 col-12 text-start">
+            <div class="d-flex ">
+              <p class="fs-3 text-black bid-banner-heading">Corolla GR Sport</p>
+              <img src="images/certified-removebg.png" alt="" class="ms-3 scaled-img" width="100" height="30">
+
+            </div>
+
+            <div class="text-white bid-banner-text">
+              <h1>DRIVE NOW</h1>
+              <h3 class="">PAY LATER</h3>
+            </div>
+            <div class="d-flex gap-4 bid-promo-banner-info">
+              <div>
+                <h6 class="text-black fs-4 fw-bolder">5 YEARS</h6>
+                <p class="text-uppercase text-black fw-bold text-center" style="line-height: 1px;font-size: 12px;">
+                  service</p>
+              </div>
+              <div>
+                <h6 class="text-black fs-4 fw-bolder">6 MONTHS</h6>
+                <p class="text-uppercase text-black fw-bold text-center " style="line-height: 1px;font-size: 12px;">
+                  deferred payment</p>
+              </div>
+              <div>
+                <h6 class="text-black fs-4 fw-bolder">10 YEARS</h6>
+                <p class="text-uppercase text-black fw-bold text-center " style="line-height: 1px;font-size: 12px;">
+                  warranty</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-xl-6 col-12"></div>
+        </div>
+
+        <div class="d-flex bid-promo-row justify-content-around">
+          <div class="bid-contact-section text-start d-flex flex-column justify-content-end">
+            KEEN TO FIND OUT MORE?<br>
+            <span class="fs-5">CALL US AT +60 13 951 5969</span>
+            <small>*Terms & Conditions Apply</small>
+          </div>
+
+          <div class="bid-promo-tag red text-start py-2 ps-3">
+            <p class="fs-6 fw-light mb-0">ONLINE BOOKING & BUY</p>
+            <small class="fw-semibold fs-5 Gabarito">SPECIAL PROMOTION</small>
+            <span class="fs-5 fw-light  Gabarito ms-1">RM<span class="fs-2 fw-bold rate">888</span> OFF</span>
+          </div>
+
+          <div class="bid-promo-tag yellow text-start py-2 ps-3">
+            <p class="fs-6 fw-light mb-0">LOCAL CARS</p>
+            <span class="fs-5 Gabarito fw-bold">EXTRA DISCOUNT</span>
+            <span class="fs-5 fw-semibold Gabarito ms-2">RM<span class="fs-2 fw-bold rate">1,888</span> OFF</span>
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+
+  </section>
+<!-- ========== Start steps container ========== -->
+<section class="text-center py-5">
+  <h1 class="steps-title" style="letter-spacing: 2px;">STEP-BY-STEP</h1>
+
+  <!-- Tabs -->
+  <div class="d-flex justify-content-center flex-wrap mt-4 gap-lg-5 gap-4 fw-bold steps-top-title">
+    <p class="fw-bold custom-nav nav-item-tab active" data-target="sell-cards">SELL A CAR</p>
+    <p class="fw-bold custom-nav nav-item-tab" data-target="buy-cards">BUY A CAR</p>
+    <p class="fw-bold custom-nav nav-item-tab" data-target="bid-cards">BID FOR A CAR</p>
+  </div>
+
+  <div class="container py-lg-5 py-1 containers-steps">
+    <div class="row g-lg-3 g-2 mx-lg-5 px-lg-5 mx-2 card-section active" id="sell-cards"></div>
+    <div class="row g-lg-3 g-2 mx-lg-5 px-lg-5 mx-2 card-section d-none" id="buy-cards"></div>
+    <div class="row g-lg-3 g-2 mx-lg-5 px-lg-5 mx-2 card-section d-none" id="bid-cards"></div>
+  </div>
+</section>
+  <!-- ========== End steps container ========== -->
+
+
+
+ <!-- PAYMENT CALCULATOR start   -->
+  <div class="container my-5 d-flex justify-content-center">
+
+    <div class="card payment-calculator ">
+      <h2 class="fw-bolder text-center bg-warning h-100 py-4">PAYMENT CALCULATOR</h2>
+      <div class="payment-inner-content px-3 px-lg-5">
+        <p class="payment text-center py-lg-4 px-lg-3  bg-white ">Take the guesswork out of car financing with our
+          easy-to-use Car Loan Calculator. Simply enter the vehicle price, down payment, loan term, and interest rate to
+          get an instant estimate of your monthly repayments. Whether you're financing or planning to bid, this tool
+          helps you understand your budget and make confident, informed decisions.</p>
+        <h4 class="fw-bold ms-lg-4 bg-white">Loan</h4>
+        <!-- Loan Inputs -->
+        <div class="row g-3 mx-lg-3">
+          <div class="col-md-6 mt-4">
+            <label class="form-label">Price</label>
+            <div class="input-group">
+ <div class="input-group">
+  <span class="input-group-text bg-white">
+    <img src="images/p-c-icon-1.png" alt="%" style="width:16px; height:16px;">
+  </span>
+  <input type="text" class="form-control" placeholder="RM 46,000">
+</div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mt-4">
+            <label class="form-label">Interest Rate</label>
+           <div class="input-group">
+  <span class="input-group-text bg-white">
+    <img src="images/p-c-icon-3.png" alt="%" style="width:16px; height:16px;">
+  </span>
+  <input type="text" class="form-control" placeholder="3.5">
+</div> 
+          </div>
+
+
+          <div class="col-md-6">
+            <label class="form-label">Period (months)</label>
+         <div class="input-group">
+              <span class="input-group-text bg-white"><img src="images/p-c-icon-4_1.png" alt="Insurance" style="width:16px; height:16px;"></span>
+              <input type="text" class="form-control" placeholder="84">
+            </div>
+
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Down Payment</label>
+             <div class="input-group">
+              <span class="input-group-text bg-white fw-bold">RM</i></span>
+              <input type="text" class="form-control" placeholder="84">
+            </div>
+
+          </div>
+        </div>
+        <h4 class="fw-bold ms-lg-4 mt-4"> Insurance </h4>
+        <!-- Insurance -->
+        <div class="row g-3  pt-1 mx-lg-3">
+          <div class="col-md-6">
+            <label class="form-label">Coverage Type</label>
+            <div class="input-group">
+  <span class="input-group-text bg-white">
+    <img src="images/p-c-icon-5_1.png" alt="Insurance" style="width:16px; height:16px;">
+  </span>
+  <select class="form-select">
+    <option selected>Comprehensive</option>
+    <option>Third Party</option>
+  </select>
+</div>
+
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">No Claims Discount</label>
+           <div class="input-group">
+  <span class="input-group-text bg-white">
+    <img src="images/p-c-icon-6.png" alt="Percent" style="width:16px; height:16px;">
+  </span>
+  <select class="form-select">
+    <option selected>Second Year - 30%</option>
+    <option>First Year - 10%</option>
+    <option>Third Year - 40%</option>
+  </select>
+</div>
+
+
+          </div>
+        </div>
+
+        <!-- Road Tax -->
+          <div class="row g-3 mt-3 mx-lg-3">
+  <div class="col-12">
+    <label class="form-label">Coverage Type</label>
+    <div class="input-group">
+      <span class="input-group-text bg-white ">
+        <img src="images/p-c-icon-8.png" alt="Coverage" style="width:16px; height:16px;">
+      </span>
+      <select class="form-select ">
+        <option selected>Saloon Cars / Private Owned</option>
+        <option>Commercial Vehicles</option>
+        <option>Motorcycles</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+        <!-- Results -->
+        <div class="row g-0 border mx-lg-4 mt-4">
+          <!-- Top 3 Boxes -->
+          <div class="col-md-4 col-sm-4 border-end">
+            <div class="result-box">
+              <div>Monthly Car Loan</div>
+              <div class="result-value">RM620.28</div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 border-end">
+            <div class="result-box">
+              <div>Total Interest</div>
+              <div class="result-value">RM10,253.25</div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4">
+            <div class="result-box">
+              <div>Total Payments</div>
+              <div class="result-value">RM56,753.25</div>
+            </div>
+          </div>
+
+          <!-- Bottom 2 Boxes -->
+          <div class="col-md-6 col-sm-6 border-top border-end ">
+            <div class="result-box">
+              <div>Yearly Insurance</div>
+              <div class="result-value">RM2,400</div>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 border-top ">
+            <div class="result-box">
+              <div>Yearly Road Tax</div>
+              <div class="result-value">RM1,200</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Note -->
+        <p class="note-text mt-4 mx-lg-4">
+          Titles, other fees and insurance are not included in this calculator, and this is an estimation only. Monthly
+          payment amount is based on interest and loan tenure you selected. It is designed to assist in financing
+          decisions for when you’re unsure. Click to know more clearly.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PAYMENT CALCULATOR end-->
+
+<!-- ========== Start certification container ========== -->
+  <div class="certified-banner">
+    <div class="container certified-container">
+      <div class="certified-header mt-lg-5">
+        <div class="certified-badge d-flex">
+
+          <img src="images/CCertified_icon.png" alt="" width="50%" height="57">
+        </div>
+      </div>
+
+      <div class="certified-body px-lg-5 mx-lg-5   mx-0 px-0 py-xl-4 ">
+        <div class="left ms-lg-4">
+          <h1 class="fw-bold me-lg-1 fs-2 text-end second-banner banner-heading-view-1 ">THE CAR <br> IS ASSURED
+          </h1>
+          <h1 class="fw-semibold  fs-2 second-banner banner-heading-view-2 me-lg-5" style="line-height: 1px;">THE CAR IS
+            ASSURED</h1>
+        </div>
+
+        <div class="right  me-lg-2 ms-lg-5  ">
+          <div class="assurance-item mt-lg-2 me-xl-2 ">
+            <div class="icon"><img src="images/certified_200pts@4x.png" alt="" width="60" height="60"></div>
+            <p style="font-size: 10px;" class="certified-text pt-2">Comprehensive<br> Inspection</p>
+
+          </div>
+          <div class="assurance-item  mt-lg-2 me-xl-4">
+            <div class="icon"><img src="images/certified_2years@4x.png" alt="" width="60" height="60"></div>
+            <p style="font-size: 10px;" class="certified-text mt-lg-3 mt-3">2-year Warranty<br> for Engine & Gearbox</p>
+          </div>
+          <div class="assurance-item mt-lg-2 me-xl-4">
+            <div class="icon"><img src="images/certified_mileage@4x.png" alt="" width="60" height="60"></div>
+            <p style="font-size: 10px;" class="certified-text pt-2">Authenticity<br> Check on Mileage</p>
+          </div>
+          <div class="assurance-item mt-lg-2 me-xl-4">
+            <div class="icon"><img src="images/certified_carflood@4x.png" alt="" width="60" height="60"></div>
+            <p style="font-size: 10px;" class="certified-text pt-2">No Major Accidents,<br> Fire or Flood Damage</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ========== End certification container ========== -->
+  <!-- ========== Start Testimonial container ========== -->
+  <div class="container-1 mx-2 mx-lg-0">
+    <h1 class="win mb-4 px-2 px-lg-0 fw-bolder">Everyone’s Winning with Carguru</h1>
+    <p class="text-dark mx-1">Whether buying or selling, our users love the transparent deals, fair prices, and
+      hassle-free experience.</p>
+    <p class="text-center  mt-0 pt-0" style="line-height: 0%;">Here's what they's saying</p>
+  </div>
+  <div class="container-fluid pb-5 mx-lg-3  mx-0 testimonial-container">
+
+    <!-- Arrows -->
+    <div class="d-flex justify-content-between align-items-center mb-3 top-arrow-button">
+      <button class="scroll-btn ms-lg-3" id="scrollLeft"><i class="bi bi-caret-left-square-fill"></i></button>
+      <button class="scroll-btn me-lg-3" id="scrollRight"><i class="bi bi-caret-right-square-fill"></i></button>
+    </div>
+
+    <!-- Scrollable Container -->
+    <div class="scroll-container mx-lg-3 mx-0 " id="testimonialScroll">
+      <!-- Card 1 -->
+      <div class="card testimonial-card border-0 shadow-sm  ">
+        <div class="d-flex align-items-center mb-3">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle me-3 me-lg-3 me-xl-4 "
+            width="70" height="70">
+          <div>
+            <h6 class="mb-0 fw-bold text-uppercase ">KAREENA KAPOOR</h6>
+            <small class="mb-0">Owner of 2024 Nissan Fairlady Z</small>
+            <!-- <div class="text-warning fw-bold fs-4">★ ★ ★ ★ ★</div> -->
+            <!-- <div class="star mt-2">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+            </div> -->
+            <div>
+              <img src="images/5starrating.png" alt="" class="mt-0" width="100">
+            </div>
+            <!-- <img src="images/5starrating.png" alt="" class=" mt-2" width="100" height="20" > -->
+          </div>
+        </div>
+        <p class="text-muted small">Very helpful service from Vijay whom is patient and knowledgeable! Highly recommend
+          Carguru to first time car buyer! Love the overall ambient and experience. No stress, just delightful
+          discovery! </p>
+
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card testimonial-card border-0 shadow-sm">
+        <div class="d-flex align-items-center mb-3">
+          <img src="https://randomuser.me/api/portraits/men/75.jpg" class="rounded-circle me-3 me-lg-3 me-xl-4 "
+            width="70" height="70">
+          <div>
+            <h6 class="mb-0 fw-bold text-uppercase">AAMIR KHAN</h6>
+            <small class="text-muted">Owner of 2024 Landrover</small>
+            <!-- <div class="text-warning fw-bold fs-4">★ ★ ★ ★ ★</div> -->
+            <!-- <div class="text-warning fw-bold fs-4">★ ★ ★ ★ ★</div> -->
+            <!-- <div class="star mt-2">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+            </div> -->
+            <div>
+              <img src="images/5starrating.png" alt="" class="mt-0" width="100">
+            </div>
+          </div>
+        </div>
+        <p class="text-muted small">Awesome website! The bidding process is smooth and exciting! Definitely recommend to
+          friends.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card testimonial-card border-0 shadow-sm">
+        <div class="d-flex align-items-center mb-3">
+          <img src="https://randomuser.me/api/portraits/women/65.jpg" class="rounded-circle me-3 me-lg-3 me-xl-4 "
+            width="70" height="70">
+          <div>
+            <h6 class="mb-0 fw-bold text-uppercase">KATRINA KAIF</h6>
+            <small class="text-muted">Sold her Myvi 1.5</small>
+            <!-- <div class="text-warning fw-bold fs-4">★ ★ ★ ★ ★</div> -->
+            <!-- <div class="text-warning fw-bold fs-4">★ ★ ★ ★ ★</div> -->
+            <!-- <div class="star mt-2">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+            </div> -->
+            <div>
+              <img src="images/5starrating.png" alt="" class="mt-0" width="100">
+            </div>
+          </div>
+        </div>
+        <p class="text-muted small">Servis yang memuaskan! Terima kasih kepada team Carguru yang rajin dan ikhlas dalam
+          semua urusan niaga kereta!
+
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card testimonial-card border-0 shadow-sm">
+        <div class="d-flex align-items-center mb-3">
+          <img src="https://randomuser.me/api/portraits/men/66.jpg" class="rounded-circle me-3 me-lg-3 me-xl-4 "
+            width="70" height="70">
+          <div>
+            <h6 class="mb-0 fw-bold text-uppercase">LIN DAN</h6>
+            <small class="text-muted">Owner of BMW X1</small>
+            <!-- <div class="text-warning fw-bold fs-4">★ ★ ★ ★ ★</div> -->
+            <!-- <div class="star mt-2">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+            </div> -->
+            <div>
+              <img src="images/5starrating.png" alt="" class="mt-0" width="100">
+            </div>
+          </div>
+        </div>
+        <p class="text-muted small">I love the transparency especially when it comes to all the necessary fees. Mike
+          ensured all the coverage needed and I couldn’t be more satisfied with his professionalism!
+
+        </p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card testimonial-card border-0 shadow-sm">
+        <div class="d-flex align-items-center mb-3">
+          <img src="https://randomuser.me/api/portraits/men/33.jpg" class="rounded-circle me-3 me-lg-3 me-xl-4 "
+            width="70" height="70">
+          <div>
+            <h6 class="mb-0 fw-bold text-uppercase">SALMAN KHAN</h6>
+            <small class="text-muted">Owner of 2023 Hyundai Creta</small>
+            <!-- <div class="text-warning fw-bold fs-4">★ ★ ★ ★ ★</div> -->
+            <!-- <div class="text-warning fw-bold fs-4">★ ★ ★ ★ ★</div> -->
+            <!-- <div class="star mt-2">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+            </div> -->
+            <div>
+              <img src="images/5starrating.png" alt="" class="mt-0" width="100">
+            </div>
+          </div>
+        </div>
+        <p class="text-muted small">Seamless experience from start to finish!</p>
+      </div>
+      <!-- Card 6 -->
+      <div class="card testimonial-card border-0 shadow-sm">
+        <div class="d-flex align-items-center mb-3">
+          <img src="https://randomuser.me/api/portraits/women/12.jpg" class="rounded-circle me-3 me-lg-3 me-xl-4 "
+            width="70" height="70">
+          <div>
+            <h6 class="mb-0 fw-bold text-uppercase">DEEPIKA PADUKONE</h6>
+            <small class="text-muted">Bought a 2022 Honda Civic</small>
+            <!-- <div class="text-warning fw-bold fs-4">★ ★ ★ ★ ★</div> -->
+            <!-- <div class="text-warning fw-bold fs-4">★ ★ ★ ★ ★</div> -->
+            <!-- <div class="star mt-2">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+            </div> -->
+            <div>
+              <img src="images/5starrating.png" alt="" class="mt-0" width="100">
+            </div>
+          </div>
+        </div>
+        <p class="text-muted small">Loved the quick process and support. Totally hassle-free experience!</p>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="card testimonial-card border-0 shadow-sm">
+        <div class="d-flex align-items-center mb-3">
+          <img src="https://randomuser.me/api/portraits/men/12.jpg" class="rounded-circle me-3 me-lg-3 me-xl-4 "
+            width="70" height="70">
+          <div>
+            <h6 class="mb-0 fw-bold text-uppercase">HRITHIK ROSHAN</h6>
+            <small class="text-muted">Sold his 2021 Kia Seltos</small>
+            <!-- <div class="text-warning fw-bold fs-4">★ ★ ★ ★ ★</div> -->
+            <!-- <div class="text-warning fw-bold fs-4">★ ★ ★ ★ ★</div> -->
+            <!-- <div class="star mt-2">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+            </div> -->
+            <div>
+              <img src="images/5starrating.png" alt="" class="mt-0" width="100">
+            </div>
+          </div>
+        </div>
+        <p class="text-muted small">Great team and transparent pricing. The bidding system really works!</p>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="card testimonial-card border-0 shadow-sm">
+        <div class="d-flex align-items-center mb-3">
+          <img src="https://randomuser.me/api/portraits/women/22.jpg" class="rounded-circle me-3 me-lg-3 me-xl-4 "
+            width="70" height="70">
+          <div>
+            <h6 class="mb-0 fw-bold text-uppercase">ALIA BHATT</h6>
+            <small class="text-muted">Owner of 2023 Toyota Fortuner</small>
+            <!-- <div class="text-warning fw-bold fs-4">★ ★ ★ ★ ★</div> -->
+            <!-- <div class="text-warning fw-bold fs-4">★ ★ ★ ★ ★</div> -->
+            <!-- <div class="star mt-2">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+              <img src="images/star.png" alt="">
+            </div> -->
+            <div>
+              <img src="images/5starrating.png" alt="" class="mt-0" width="100">
+            </div>
+          </div>
+        </div>
+        <p class="text-muted small">The entire team made sure I was comfortable every step of the way.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========== End Testimonial container ========== -->
+
+  <!-- ========== Start footer container ========== -->
+   <footer class="footer pt-lg-5 pt-3 fs-6 mt-xl-5">
+    <div class="container-fluid px-lg-5 px-3 ">
+      <div class="row footer-top-side">
+
+        <!-- About Section -->
+        <div class="col-12 col-lg-4 mb-4 footer-left-side">
+          <p class="fw-semibold">
+            CarGuru is redefining the used car experience through a transparent live bidding platform that
+            connects buyers, sellers, and dealers — all in one seamless ecosystem.
+          </p>
+          <p>
+            Whether you're buying, selling, or just exploring, CarGuru puts you in control of a process
+            that's simple, fair, and rewarding. Your car, your terms.
+          </p>
+          <div class="social-icons mt-5 d-none d-lg-block ">
+            <img src="images/facebook.png" width="24" height="24" alt="Facebook" class="me-5 ">
+            <img src="images/image.png" width="24" height="24" alt="Twitter" class="me-5">
+            <img src="images/instagram.png" width="24" height="24" alt="Instagram" class="me-5">
+            <img src="images/linkedin.png" width="24" height="24" alt="LinkedIn" class="me-5 bg-white rounded-1 ">
+          </div>
+
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-3 col-lg-2 mb-4 ms-lg-0  quick-links d-none d-lg-block d-md-block">
+          <h6 class="text-warning mb-3 fs-6">QUICK LINKS</h6>
+          <ul class="list-unstyled fs-6">
+            <li class="mb-2 mb-xl-3 "><a href="#">Home</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">Sell Car</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">Buy Car</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="col-md-3 col-lg-2 mb-4  d-none d-lg-block d-md-block quick-link ">
+          <h6 class="text-warning mb-3 fs-6">SERVICES</h6>
+          <ul class="list-unstyled fs-6">
+            <li class="mb-2 mb-xl-3"><a href="#">Bidding</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">Car Loans</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">Warranties</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">Body Check</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <!-- ========== Start nav bar for mobile only ========== -->
+        <!-- Wrapper Row -->
+        <div class="d-flex flex-wrap justify-content-between mb-4 d-lg-none d-block d-md-none">
+
+          <!-- Quick Links -->
+          <div class="w-50 pe-2 mb-3 quick-links">
+            <h6 class="text-warning mb-3 fs-6">QUICK LINKS</h6>
+            <ul class="list-unstyled fs-6">
+              <li class="mb-2"><a href="#">Home</a></li>
+              <li class="mb-2"><a href="#">Sell Car</a></li>
+              <li class="mb-2"><a href="#">Buy Car</a></li>
+              <li class="mb-2"><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="w-50 ps-2 mb-3 services">
+            <h6 class="text-warning mb-3 fs-6">SERVICES</h6>
+            <ul class="list-unstyled fs-6">
+              <li class="mb-2"><a href="#">Bidding</a></li>
+              <li class="mb-2"><a href="#">Car Loans</a></li>
+              <li class="mb-2"><a href="#">Warranties</a></li>
+              <li class="mb-2"><a href="#">Body Check</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- ========== End nav bar for mobile only ========== -->
+
+        <!-- Subscribe -->
+        <div class=" col-lg-4 mb-4 subscribe">
+          <h6 class="text-warning mb-3">SUBSCRIBE</h6>
+          <p style="font-size: 14px;">Stay updated with exclusive promos, events, new offers, and useful tips.
+          </p>
+          <form class="subscribe-input d-flex">
+            <input type="email" class="form-control me-2 rounded" placeholder="Your Email Here">
+            <button type="submit" class="btn btn-primary px-3 rounded p-xl-5">
+              <i class="bi bi-caret-right-fill"></i>
+            </button>
+          </form>
+        </div>
+
+        <div class="social-icons mt-lg-5  d-block d-lg-none mt-2 mb-3 d-flex justify-content-around ">
+          <img src="images/facebook.png" width="24" height="24" alt="Facebook" class="">
+          <img src="images/image.png" width="24" height="24" alt="Twitter" class="">
+          <img src="images/instagram.png" width="24" height="24" alt="Instagram" class="">
+          <img src="images/linkedin.png" width="24" height="24" alt="LinkedIn" class="bg-white rounded-1 ">
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="bg-warning border-top border-danger footer-bottom py-2 small px-lg-2 px-0">
+      <div class="container-fluid px-lg-4 px-1 py-lg-0 py-2">
+        <div class="row justify-content-lg-between align-items-lg-center text-center text-md-start">
+
+          <!-- Left -->
+          <div class=" col-lg-4 mb-2 mb-md-0 text-dark ps-lg-4 footer-text text-md-center">
+            © 2025–2026 CARGURU TECHNOLOGY. ALL RIGHTS RESERVED.
+          </div>
+
+          <!-- Center Links -->
+          <div
+            class=" py-md-2 col-lg-5 mb-2 mb-md-0 d-flex justify-content-lg-center justify-content-around flex-wrap gap-lg-4  footer-nav ">
+            <a href="#" class="text-dark text-decoration-none">Privacy Policy</a>
+            <a href="#" class="text-dark text-decoration-none">Terms of Service</a>
+            <a href="#" class="text-dark text-decoration-none">Payment Method</a>
+            <a href="#" class="text-dark text-decoration-none">Cookie Policy</a>
+          </div>
+
+          <!-- Right -->
+          <div class="col-lg-3 text-lg-end text-md-center pe-4 fw-bold text-black footer-text ">
+            CALL US AT +60 13 951 5969
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+<script>
+
+  // Its for Open the new File
+  document.getElementById('loginBtn').addEventListener('click', function () {
+    fetch('login.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('modalContainer').innerHTML = html;
+        // Wait for Bootstrap to process modal before showing
+        const modal = new bootstrap.Modal(document.getElementById('loginModal'));
+        modal.show();
+      })
+      .catch(err => console.error('Modal load failed:', err));
+  });
+  function openOTP() {
+
+    const loginModal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+    loginModal.hide();
+    const otpModal = new bootstrap.Modal(document.getElementById('otpModal'));
+    otpModal.show();
+  }
+function closeOTP() { 
+  const otpModal = bootstrap.Modal.getInstance(document.getElementById('otpModal'));
+  otpModal.hide();
+
+  const loginModal = new bootstrap.Modal(document.getElementById('nextModal'));
+  loginModal.show();
+
+  // Wait 3 seconds, then go to dealer.html
+  setTimeout(() => {
+    window.location.href = 'dealer.html';
+  }, 3000); // 3000 = 3 seconds
+}
+
+   document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".bottom-nav a");
+    const currentPage = window.location.pathname.split("/").pop();
+
+    navLinks.forEach(link => {
+      const linkPage = link.getAttribute("href");
+      if (linkPage === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  });
+ 
+  
+</script>
+
+</html>

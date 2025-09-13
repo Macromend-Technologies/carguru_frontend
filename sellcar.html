@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Seller </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="loanflow.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .stepper{
+            min-width: 200px !important;
+            max-width: 600px !important;
+            margin-left: 0px !important;
+            margin-right: 30px !important;
+        }
+        .personal {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .subtext {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .stepper {
+            margin-bottom: 30px;
+        }
+
+        .step-group {
+            display: none;
+            gap: 10px;
+            margin-left: 50px !important;
+            align-items: center;
+        }
+
+        .step-group.active {
+            display: flex;
+        }
+
+        .circle {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            /* border: 2px solid #ccc; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+            background-color: white;
+            color: #666;
+        }
+
+        .circle.active {
+            border-color: #ffc107;
+            background-color: #ffc107;
+
+        }
+
+        .lines {
+            height: 2px;
+
+            background-color: #ccc;
+            flex-grow: 1;
+        }
+
+        .form-step {
+            display: none;
+        }
+
+        .form-step.active {
+            display: block;
+        }
+
+        .btn-nav {
+            margin-top: 20px;
+        } 
+        @media(min-width:600px) and (max-width:1023px){
+ 
+    .dropdown .btn-yellow {
+  background-color: white;
+  color: black;
+  width: 45px !important;
+  height: 45px !important;
+  font-weight: bold;
+  font-size: 12px !important;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+}
+@media(min-width:600px) and (max-width:767px){
+    select option{
+        font-size: 1px !important;
+    }
+    .summary-item {
+    font-size: 0.85rem;
+}
+.btn1 {
+    margin-left: 113px !important;
+}
+.custom-select-wrapper select {
+    font-size: 10px !important;
+}
+::placeholder{
+    font-size: 10px !important;
+}
+.label-input-group label {
+    width: 90px;
+    font-size: 12px;
+}
+}
+
+  .appointment-box {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .appointment-box h5 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    /* Calendar */
+    /* .calendar {
+      width: 100%;
+      text-align: center;
+      border-collapse: collapse;
+    }
+
+    .calendar th {
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px;
+      color: #666;
+    }
+
+    .calendar td {
+      padding: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 4px;
+     
+    }
+
+    .calendar td.today {
+      background: #00b050;
+      color: #fff;
+    }
+
+    .calendar td.partial {
+      background: #fbe8d3;
+    }
+
+    .calendar td.booked {
+      background: #f9d6d6;
+    }
+
+    .calendar td.selected {
+      background: #00b050 !important;
+      color: #fff !important;
+      font-weight: 600;
+    } */
+
+    /* Calendar */
+.calendar {
+  width: 100%;
+  text-align: center;
+  border-collapse: separate;   /* allow spacing */
+  border-spacing: 6px;         /* gap between cells */
+}
+
+.calendar th {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px;
+  color: #666;
+}
+
+.calendar td {
+  padding: 9px;              /* increase padding for better look */
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  /* background: #fff;           */
+  transition: 0.2s;
+}
+
+.calendar td.today {
+  background: #00b050;
+  color: #fff;
+}
+
+.calendar td.partial {
+  background: #fbe8d3;
+}
+
+.calendar td.booked {
+  background: #f9d6d6;
+}
+
+.calendar td.selected {
+  background: #00b050 !important;
+  color: #fff !important;
+  font-weight: 600;
+}
+
+    /* Slots */
+    .slot-list {
+      margin-bottom: 10px;
+      background-color: white;
+      padding: 10px;
+    }
+
+    .slot-list strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 12px;
+      color: #333;
+    }
+    .slot-head{
+      font-size: 12px;
+      font-weight: 600;
+
+    }
+
+    .slot {
+      /* border: 1px solid #ddd; */
+      border-radius: 6px;
+      padding: 5px 8px;
+      /* margin-bottom: 6px; */
+      cursor: pointer;
+      font-size: 12px;
+      position: relative;
+    }
+
+    .slot:hover {
+      background: #f1f1f1;
+    }
+
+    .slot.active {
+      background: #00b050;
+      color: #fff;
+      font-weight: 500;
+    }
+
+    .slot.active::after {
+      content: "✔";
+      position: absolute;
+      right: 12px;
+      font-weight: bold;
+    }
+
+    /* Legend */
+    .legend {
+      margin-top: 10px;
+      font-size: 13px;
+    }
+
+    .legend span {
+      margin-right: 15px;
+    }
+
+    .legend-box {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-right: 4px;
+      border-radius: 3px;
+    }
+
+    .legend-partial {
+      background: #fbe8d3;
+    }
+
+    .legend-booked {
+      background: #f9d6d6;
+    }
+    </style>
+</head>
+
+<body>
+ <!-- ========== Start Navigation ========== -->
+  <!-- Yellow Info Strip -->
+  <div class="yellow-info text-dark text-center">
+    <div class="container-fluid px-3 px-md-5">
+      <p class="mb-0 small fw-bold">
+        FREE INSPECTION + INSURANCE CLAIM CHECK & WARRANTY <span class="fw-normal">FOR CAR SELLERS FROM NOW TILL 15
+          AUGUST 2025!</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg bg-lg-white shadow-sm sticky-top  ">
+    <div class="container-fluid px-1 px-md-4 py-1">
+      <!-- Toggle Button -->
+      <button class="btn d-lg-none " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav">
+        <i class="bi bi-list fs-4 text-danger"></i>
+      </button>
+
+      <a class="navbar-brand mx-lg-0 mx-auto " href="#">
+        <img src="images/myorder-2-removebg.png" alt="CAR GURU" class="d-none d-lg-block mx-lg-0 desktop-top-logo">
+        <img src="images/myorder-2-removebg.png" alt="CAR GURU" class="d-lg-none ms-4  mobile-top-logo">
+      </a>
+
+
+      <!-- Navbar Menu -->
+
+      <div class="collapse navbar-collapse justify-content-center mt-2 me-5 pe-5 navbar-menu-items" id="navbarContent">
+        <ul class="navbar-nav nav-text pe-5 me-5 me-md-0">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="bid_overall.html">Bid for Car</a></li>
+          <li class="nav-item"><a class="nav-link " href="buy_car.html">Buy Car</a></li>
+          <li class="nav-item"><a class="nav-link active" href="sellcar.html">Sell Car</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact and Icons -->
+      <div class="d-flex contact align-items-center gap-4 ms-auto mt-3 mt-lg-0">
+        <div class="text-start d-none d-lg-block">
+          <small class="d-block fw-bold nav-text mb-1" style="line-height: 0%;">CALL US AT</small>
+          <span class="text-danger fw-bold">
+            <i class="bi bi-telephone-fill  text-dark"></i> +60 13 951 5969
+          </span>
+        </div>
+        <div
+          class="d-lg-none d-none d-flex align-items-center me-lg-2 gap-lg-4 ms-lg-2 gap-2 ms-0 fs-6 fs-lg-0 mb-3 mb-lg-0 me-1 me-lg-0 icons-navbar">
+          <img src="images/search.png" alt="Search" width="15" height="15">
+          <img src="images/grocery-store.png" alt="Cart" width="15" height="15">
+          <img src="images/user.png" alt="User" width="15" height="15" id="loginBtn">
+        </div>
+         <div class="ms-lg-5 me-4 d-md-block d-none d-sm-block">
+          <div class="dropdown">
+            <!-- Trigger Button -->
+            <button class="btn btn-yellow   rounded-circle " type="button" id="profileDropdown"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              MW
+            </button>
+
+            <!-- Dropdown Menu -->
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-custom" aria-labelledby="profileDropdown">
+              <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-text"></i> Personal Info</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-calendar-event"></i> Appointments</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-cart"></i> Orders</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-bookmark"></i> Saved Cars</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-hammer"></i> Bidding</a></li>
+              <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-left"></i> Logout</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div id="modalContainer"></div>
+  <!-- MOBILE NAV MENU -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNav">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+       <ul class="navbar-nav nav-text pe-5 me-5 me-md-0">
+          <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="bid_overall.html">Bid for Car</a></li>
+          <li class="nav-item"><a class="nav-link " href="buy_car.html">Buy Car</a></li>
+          <li class="nav-item"><a class="nav-link active" href="sellcar.html">Sell Car</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+        </ul>
+      <div class="text-center mt-4">
+        <small class="d-block fw-bold nav-text mb-1" style="line-height: 0%;">CALL US AT</small>
+        <span class="text-danger fw-bold">
+          <i class="bi bi-telephone-fill  text-dark"></i> +60 13 951 5969
+        </span>
+      </div>
+    </div>
+  </div>
+
+ <!-- BOTTOM NAV (Mobile Only) -->
+  <div class="bottom-nav d-lg-none ">
+    <a href="buy_car.html" class="active"><span><img src="images/bit-icon.png" alt="" width="23" height="23"  class="gray-icon"></span> Buy</a>
+    <a href="sellcar.html"><span><img src="images/sell-icon.png" alt=""  width="23" height="23"  class="gray-icon"></span>Sell</a>
+    <a href="bid_overall.html"><i><img src="images/bid-icon.png" alt="" width="23" height="23"
+          class="gray-icon"></i>Bid</a>
+
+    <a href="#" ><span ><img src="images/service-icon.png" alt=""   width="25" height="23" class="gray-icon"></span>Services</a>
+    <a href="#"><span><img src="images/message.png" alt=""  width="23" height="23"  class="gray-icon"></span>Message</a>
+  </div>
+  <!-- ========== End Navigation ========== -->       
+
+    <div class="container-main">
+        <h1 class="personal" id="formTitle">Let’s start with your personal details</h1>
+        <p class="subtext " id="formSubtext">Simplifying Car Financing: Pre-Approval Made Easy</p>
+
+        <!-- Progress Bar -->
+        <div class="stepper">
+            <div class="d-flex justify-content-between " id="circlelable">
+                <p id="cicrleLeft"></p>
+                <p id="cicrleCenter"></p>
+                <p id="cicrleRight" class="">Work Info</p>
+            </div>
+            <div class="step-group  active" id="group-0">
+                <div class="circle" id="circle-0">1</div>
+                <div class="lines"></div>
+                <div class="circle" id="circle-1">2</div>
+                <div class="lines"></div>
+                <div class="circle" id="circle-1">3</div>
+                
+            </div>
+     
+           
+            
+        </div>
+
+        <!-- Form Steps -->
+
+
+        <div class="form-step active">
+            <form class="form-box" onsubmit="event.preventDefault();">
+                <h3 class="form-title">ENTER YOUR CAR DETAILS</h3>
+
+
+                <!-- Row 1: Make + Model -->
+                <div class="form-row-pair">
+                    <div class="label-input-group">
+                        <label>Make</label>
+                        <div class="custom-select-wrapper">
+                            <select class="form-select" id="make">
+                                <option>Select Car Make</option>
+                                <option>Toyota</option>
+                                <option>Audi</option>
+                                <option>BMW</option>
+                            </select>
+                            <i class="bi bi-caret-down-fill custom-icon"></i>
+                        </div>
+                    </div>
+                    <div class="label-input-group">
+                        <label>Model </label>
+                        <div class="custom-select-wrapper">
+                            <select class="form-select" id="model">
+                                <option>Select Model</option>
+                                <option>ISWARA</option>
+                                <option>RS4</option>
+                                <option>A9</option>
+                            </select>
+                            <i class="bi bi-caret-down-fill custom-icon"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- Row 2: Year + Variant -->
+                <div class="form-row-pair">
+                    <div class="label-input-group">
+                        <label>Year</label>
+                        <div class="custom-select-wrapper">
+                            <select class="form-select" id="year">
+                                <option>Select Car Year</option>
+                                <option>2012</option>
+                                <option>2008</option>
+                            </select>
+                            <i class="bi bi-caret-down-fill custom-icon"></i>
+                        </div>
+
+                    </div>
+                    <div class="label-input-group">
+                        <label>Car Variant <span> <i class="me-3  bi bi-question-circle-fill"></i></span></label>
+                        <div class="custom-select-wrapper">
+                            <select class="form-select" id="variant">
+                                <option>Select Car Variant</option>
+                                <option>Aeroback</option>
+                                <option>Sedan</option>
+                            </select>
+                            <i class="bi bi-caret-down-fill custom-icon"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- Row 3: Engine + Transmission -->
+                <div class="form-row-pair">
+                    <div class="label-input-group">
+                        <label>Engine</label>
+                        <div class="custom-select-wrapper">
+                            <select class="form-select" id="engine">
+                                <option>Select Engine</option>
+                                <option>1.30</option>
+                                <option>1.50</option>
+                            </select>
+                            <i class="bi bi-caret-down-fill custom-icon"></i>
+                        </div>
+
+                    </div>
+                    <div class="label-input-group">
+                        <label>Transmission</label>
+                        <div class="custom-select-wrapper">
+                            <select class="form-select" id="transmission">
+                                <option>Select Transmission</option>
+                                <option>Manual</option>
+                                <option>Automatic</option>
+                            </select>
+                            <i class="bi bi-caret-down-fill custom-icon"></i>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!--Row 4: Mileage + Car Region-->
+                <div class="form-row-pair">
+                    <div class="label-input-group">
+                        <label>Mileage</label>
+                        <div class="custom-select-wrapper">
+                            <select class="form-select" id="mileage">
+                                <option>Enter Mileage</option>
+                                <option>30 - 70,000 km</option>
+                                <option>60 - 70,000 km</option>
+                            </select>
+                            <i class="bi bi-caret-down-fill custom-icon"></i>
+                        </div>
+
+                    </div>
+                    <div class="label-input-group">
+                        <label>Car Region <span> <i class="me-3 bi bi-info-circle-fill"></i></span></label>
+                        <div class="custom-select-wrapper">
+                            <select class="form-select" id="region">
+                                <option>Select Car Region</option>
+                                <option>Peninsular Malaysia</option>
+                                <option>Kuala Lumpur</option>
+                                <option>Johor</option>
+                            </select>
+                            <i class="bi bi-caret-down-fill custom-icon"></i>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Row 4:Mobile + Plate Number-->
+                <div class="form-row-pair">
+                    <div class="label-input-group">
+                        <label>Mobile</label>
+                        <input type="text" class="form-control" id="mobile" placeholder="Enter Mobile Number">
+
+                    </div>
+                    <div class="label-input-group">
+                        <label>Plate Number</label>
+                        <input type="text" class="form-control" id="plate" placeholder="Enter Car Plate Number">
+
+                    </div>
+                </div>
+
+
+                <!-- Row 6: WhatsApp Checkbox -->
+                <div class=" d-flex justify-content-center ">
+                    <input class="form-check-input" type="checkbox" id="whatsapp" checked>
+                    <label class="form-check-label ms-3">
+                        Allow notifications from CARGURU on <img src="images/WhatsApp.svg" height="30" alt=""> WhatsApp
+                    </label>
+                </div>
+
+
+
+
+                <button id="nextBtn" class="btn btn1" type="submit" onclick="changeStep(1)">Next</button>
+
+                <p class="terms">By Continuing, I agree to CARGURU’s <a href="#">Terms</a> & <a href="#">Privacy
+                        Policy</a>.</p>
+            </form>
+            <div class="gradient-line-side "></div>
+
+
+            <div class="inspection-card d-none d-sm-none d-lg-block">
+                <div class="inspection-image">
+                    <div class="inspection-text">
+                        SELL FAST.<br> SELL EASY.<br> GET A BETTER PRICE.
+                    </div>
+                </div>
+                <div class="inspection-yellow">
+                    <div class="inspection-option">
+                        <h4>CARGURU INSPECTION CENTRE</h4>
+                        <p>Visit CARGURU for a trusted <br> inspection at a minimal cost.</p>
+                        <span class="price text-black fs-6">RM<span class="fs-4">20</span></span>
+                    </div>
+                    <hr>
+                    <div class="inspection-option">
+                        <h4>INSPECTION AT YOUR HOME</h4>
+                        <p>Flexible and hassle-free <br>— we come to your preferred <br>location, anytime.</p>
+                        <span class="price text-black fs-6">RM<span class="fs-4">80</span></span>
+                    </div>
+                    <p class="footnote">*Price valid for Peninsular Malaysia only</p>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- step 2 -->
+        <div class="form-step" id="step2">
+            <div id="summaryContainer"></div>
+            <div class="form-box condition-container" id="formSection">
+                <h3 class="form-title">HOW’S YOUR CAR CONDITION?</h3>
+
+                <div class="form-group d-none">
+                    <label>Monthly Income (gross)</label>
+                    <div class="btn-group" id="incomeGroup">
+                        <button type="button" onclick="selectOption(this, 'income')">RM2,000–RM3,999</button>
+                        <button type="button" onclick="selectOption(this, 'income')">RM4,000–RM5,999</button>
+                        <button type="button" onclick="selectOption(this, 'income')" id="showButton">Above
+                            RM6,000</button>
+                    </div>
+                </div>
+
+                <div class="form-group d-none " id="incomeField">
+                    <label>How much is your monthly commitment?</label>
+                    <p class="sub-label">
+                        Examples; Housing & Car Loan, Credit Card, Student Loan, etc</p>
+                    <div class="input-group income_field">
+                        <span class="input-group-text border-0 bg-transparent">RM</span>
+                        <input type="text" id="monthlyCommitment" class="form-control border-0"
+                            placeholder="Enter your monthly commitment">
+                    </div>
+
+                </div>
+
+                <div class="form-group d-none">
+                    <label>Employment Status</label>
+                    <div class="btn-group" id="employmentGroup">
+                        <button type="button" class="btn2" onclick="selectOption(this, 'employment')">Full-time
+                            Employee</button>
+                        <button type="button" class="btn2" onclick="selectOption(this, 'employment')">Self
+                            Employed</button>
+                        <button type="button" class="btn2" onclick="selectOption(this, 'employment')">Part-time /
+                            Freelancing</button>
+                        <button type="button" class="btn2"
+                            onclick="selectOption(this, 'employment')">Unemployed</button>
+                    </div>
+                </div>
+
+                <div class="form-group d-none">
+                    <label>Duration</label>
+                    <div class="btn-group" id="durationGroup">
+                        <button type="button" onclick="selectOption(this, 'duration')">Less Than 6 Months</button>
+                        <button type="button" onclick="selectOption(this, 'duration')">6 Months – 1 Year</button>
+                        <button type="button" onclick="selectOption(this, 'duration')">Over 1 Year</button>
+                    </div>
+                </div>
+
+                <div class="form-group d-none">
+                    <label>Do you have a CTOS Report readily available?</label>
+                    <div class="btn-group" id="ctosGroup">
+                        <button type="button" onclick="selectOption(this, 'ctos')" id="hideuploadctos">No</button>
+                        <button type="button" onclick="selectOption(this, 'ctos')" id="showuploadctos">Yes</button>
+                    </div>
+                </div>
+
+                <div class="condition-options">
+                    <!-- Left Buttons -->
+                    <div class="left-buttons">
+                        <button data-index="0" data-rate="RM4,000 - 5,000">Excellent</button>
+                        <button data-index="1" data-rate="RM3,500 - 4,000">Very Good</button>
+                        <button data-index="2" data-rate="RM2,500 - 3,500">Good</button>
+                        <button data-index="3" data-rate="RM1,500 - 2,000">Fair</button>
+                    </div>
+
+                    <!-- Right Valuation -->
+                    <div class="valuation-box">
+                        <div class="highlight"></div>
+                        <div class="valuation-row">RM4,000 - 5,000*</div>
+                        <div class="valuation-row">RM3,500 - 4,000*</div>
+                        <div class="valuation-row">RM2,500 - 3,500*</div>
+                        <div class="valuation-row">RM1,500 - 2,000*</div>
+                    </div>
+                </div>
+
+                <div class="container uploaded-ctos-container d-none" id="upload_ctos">
+                    <!-- Upload Box -->
+                    <div class="d-flex flex-column">
+                        <h6>Upload CTOS Report if available*</h6>
+                        <label class="upload-box  upload-section mb-3" id="uploadBox">
+
+                            <div class="upload-text">
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                                <strong>Browse File (Front Photo)</strong>
+                                <small>Drag & drop files here</small>
+                            </div>
+                            <input type="file" id="fileInput" accept="application/pdf" hidden>
+
+                        </label>
+                    </div>
+
+
+                    <!-- Preview Box -->
+                    <div class="d-flex flex-column ">
+                        <small class="text-danger text-center d-none " id="cto_alert">Example of file uploaded
+                            status</small>
+                        <div class="preview-box " id="previewBox">
+                            <div class="file-icon"><img src="images/upoaded.png" alt=""></div>
+                            <div class="file-name" id="fileName"></div>
+                            <a class="delete-link" id="deleteFile">Delete File & Re-upload</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button id="nextBtn" class="btn bg-black w-50 mt-3 text-white text-center"
+                    onclick="changeStep(1)">Submit</button>
+                     <div class="note">*The valuation is a preliminary estimate — final pricing is confirmed after inspection.</div>
+            </div>
+            <!-- <div id="personalDetailsSummary" style="display: none;"></div> -->
+            <div class="gradient-line-side "></div>
+             <div class="inspection-card d-none d-sm-none d-lg-block">
+                <div class="inspection-image">
+                    <div class="inspection-text">
+                        SELL FAST.<br> SELL EASY.<br> GET A BETTER PRICE.
+                    </div>
+                </div>
+                <div class="inspection-yellow">
+                    <div class="inspection-option">
+                        <h4>CARGURU INSPECTION CENTRE</h4>
+                        <p>Visit CARGURU for a trusted <br> inspection at a minimal cost.</p>
+                        <span class="price text-black fs-6">RM<span class="fs-4">20</span></span>
+                    </div>
+                    <hr>
+                    <div class="inspection-option">
+                        <h4>INSPECTION AT YOUR HOME</h4>
+                        <p>Flexible and hassle-free <br>— we come to your preferred <br>location, anytime.</p>
+                        <span class="price text-black fs-6">RM<span class="fs-4">80</span></span>
+                    </div>
+                    <p class="footnote">*Price valid for Peninsular Malaysia only</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- step-3 -->
+
+        <div class="form-step car-inspection" id="step3">
+            <div id="summaryContainer1"></div>
+
+            <div class="form-box">
+                <h3 class="form-title">BOOK FOR YOUR CAR INSPECTION</h3>
+                <!-- options -->
+      <div class="options">
+        <label class="option" for="optCentre">
+          <input type="radio" name="mode" id="optCentre" checked />
+          <span class="box"></span>
+          CARGURU’s Inspection Centre
+        </label>
+        <label class="option" for="optMyLoc">
+          <input type="radio" name="mode" id="optMyLoc" />
+          <span class="box"></span>
+          My Location of choice
+        </label>
+      </div>
+
+      <!-- FORM: Centre -->
+      <div id="form-inspection" class="car-inspection-option">
+    
+
+         <div class="row2 mb-3">
+          <div class="group">
+            <div class="label">Name</div>
+            <input class="control" id="centreName" placeholder="Enter your name" />
+          </div>
+          <div class="group">
+            <div class="label">Email</div>
+            <input class="control" id="centreEmail" type="email" placeholder="Enter your email" />
+          </div>
+        </div>
+
+            <div class="group mb-0">
+          <div class="label">Location</div>
+          <select class="select" id="centreLocation">
+            <option selected>Select the Location</option>
+            <option >Peninsular Centre</option>
+            <option>Cyberjaya Centre</option>
+            <option>Kuala Lumpur Centre</option>
+          </select>
+        </div>
+<!-- Date and time catch and store in dropdown  -->
+
+        <div class="row2 d-none" style="margin-bottom:14px;">
+          <div class="group">
+            <div class="label">Date</div>
+            <select class="select" id="centreDate">
+                <option selected>Select the Date</option>
+              <option >22 June 2025</option>
+              <option>23 June 2025</option>
+            </select>
+          </div>
+          <div class="group">
+            <div class="label">Time</div>
+            <select class="select" id="centreTime">
+                <option selected>Select the Time</option>
+              <option >3:00pm</option>
+              <option>4:00pm</option>
+            </select>
+          </div>
+        
+        </div>
+        <!-- Date and time catch and store in dropdown  -->
+<div class="row ">
+<div class="container my-5">
+  <div class="appointment-box shadow-sm">
+    <h5>Select Your Appointment Date & Time</h5>
+    <div class="row  bg-light p-2">
+      
+      <!-- Calendar -->
+      <div class="col-md-7 border-end">
+        <div class="d-flex justify-content-center align-items-center mb-2">
+          <button id="prevMonth" class="btn btn-sm "><i class="bi bi-caret-left-fill"></i></button>
+          <strong id="monthYear">Aug 2025</strong>
+          <button id="nextMonth" class="btn btn-sm "><i class="bi bi-caret-right-fill"></i></button>
+        </div>
+        <table class="calendar w-100">
+          <thead>
+            <tr>
+              <th>Sun</th>
+              <th>Mon</th>
+              <th>Tue</th>
+              <th>Wed</th>
+              <th>Thu</th>
+              <th>Fri</th>
+              <th>Sat</th>
+            </tr>
+          </thead>
+          <tbody id="calendarBody">
+            <!-- Days dynamically injected -->
+          </tbody>
+        </table>
+
+        <div class="legend">
+          <span><span class="legend-box legend-partial"></span> Partial</span>
+          <span><span class="legend-box legend-booked"></span> Fully Booked</span>
+        </div>
+      </div>
+
+      <!-- Slots -->
+      <div class="col-md-5">
+        <div id="slotsContainer">
+          <div>
+            <p class="slot-head mt-2">Available Test Drive Slots</p>
+          </div>
+          <div class="slot-list">
+            <strong class="border-bottom">Morning slot available</strong>
+            <div class="slot">10:00 - 10:30</div>
+            <div class="slot">10:30 - 11:00</div>
+            <div class="slot">11:00 - 11:30</div>
+            <div class="slot">11:30 - 12:00</div>
+          </div>
+
+          <div class="slot-list">
+            <strong class="border-bottom">Afternoon slot available</strong>
+            <div class="slot">14:00 - 14:30</div>
+            <div class="slot">14:30 - 15:00</div>
+            <div class="slot">15:00 - 15:30</div>
+            <div class="slot">15:30 - 16:00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+       
+      </div>
+
+      <!-- FORM: My location -->
+      <div id="form-mylocation" class="hidden">
+        <div class="group">
+          <div class="label">Address</div>
+          <input class="control" id="addr1" placeholder="Address Line 1" />
+        </div>
+        <div class="group">
+          <div class="label"></div>
+          <input class="control" id="addr2" placeholder="Address Line 2" />
+        </div>
+
+        <div class="row2" style="margin-bottom:14px;">
+          <div class="group">
+            <div class="label">City</div>
+            <select class="select" id="city">
+                <option value="">Select City</option>
+              <option >Cyberjaya</option>
+              <option>Kuala Lumpur</option>
+            </select>
+          </div>
+          <div class="group">
+            <div class="label">State</div>
+            <select class="select" id="state">
+                <option value="">Select State</option>
+              <option >Selangor</option>
+              <option>Johor</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="label">Postcode</div>
+          <input class="control" id="postcode" placeholder="Enter Postcode"/>
+        </div>
+
+        <div class="row2 mb-3">
+          <div class="group">
+            <div class="label">Date</div>
+            <select class="select" id="myDate">
+                <option value="">Select Date</option>
+              <option >22 June 2025</option>
+              <option value="">23 June 2025</option>
+            </select>
+          </div>
+          <div class="group">
+            <div class="label">Time</div>
+            <select class="select" id="myTime">
+                <option value="">Select Time</option>
+              <option >3:00pm</option>
+              <option value="">6:00pm</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row2">
+          <div class="group">
+            <div class="label">Name</div>
+            <input class="control" id="myName" placeholder="Enter your name" />
+          </div>
+          <div class="group">
+            <div class="label">Email</div>
+            <input class="control" id="myEmail" type="email" placeholder="Enter your email" />
+          </div>
+        </div>
+      </div>
+
+      <p class="help mt-5">
+        We’ll send the details of your appointment via email and
+        <img alt="WhatsApp" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"> WhatsApp
+      </p>
+
+                 <button type="submit" id="nextBtn" class="btn btn1"
+                            onclick="changeStep(1)">Book Inspection</button>
+                <!-- Next Button -->
+               
+                <!-- <button class="btn btn1 mt-3" >Change The Card</button> -->
+                <p class="terms">By Continuing, I agree to CARGURU’s <a href="#">Terms</a> & <a href="#">Privacy
+                        Policy</a>.</p>
+            </div>
+            <div class="gradient-line-side "></div>
+ <div class="inspection-card d-none d-sm-none d-lg-block">
+                <div class="inspection-image">
+                    <div class="inspection-text">
+                        SELL FAST.<br> SELL EASY.<br> GET A BETTER PRICE.
+                    </div>
+                </div>
+                <div class="inspection-yellow">
+                    <div class="inspection-option">
+                        <h4>CARGURU INSPECTION CENTRE</h4>
+                        <p>Visit CARGURU for a trusted <br> inspection at a minimal cost.</p>
+                        <span class="price text-black fs-6">RM<span class="fs-4">20</span></span>
+                    </div>
+                    <hr>
+                    <div class="inspection-option">
+                        <h4>INSPECTION AT YOUR HOME</h4>
+                        <p>Flexible and hassle-free <br>— we come to your preferred <br>location, anytime.</p>
+                        <span class="price text-black fs-6">RM<span class="fs-4">80</span></span>
+                    </div>
+                    <p class="footnote">*Price valid for Peninsular Malaysia only</p>
+                </div>
+            </div>
+            
+
+
+        
+
+
+        </div>
+        <!-- step-3 -->
+  
+        <div class="form-step">   
+<div class="summary-details">
+      <div id="summaryContainer2"></div>
+       <div class="gradient-line-side1 "></div>
+       <div class="inspection-card d-none d-sm-none d-lg-block">
+                <div class="inspection-image">
+                    <div class="inspection-text">
+                        SELL FAST.<br> SELL EASY.<br> GET A BETTER PRICE.
+                    </div>
+                </div>
+                <div class="inspection-yellow">
+                    <div class="inspection-option">
+                        <h4>CARGURU INSPECTION CENTRE</h4>
+                        <p>Visit CARGURU for a trusted <br> inspection at a minimal cost.</p>
+                        <span class="price text-black fs-6">RM<span class="fs-4">20</span></span>
+                    </div>
+                    <hr>
+                    <div class="inspection-option">
+                        <h4>INSPECTION AT YOUR HOME</h4>
+                        <p>Flexible and hassle-free <br>— we come to your preferred <br>location, anytime.</p>
+                        <span class="price text-black fs-6">RM<span class="fs-4">80</span></span>
+                    </div>
+                    <p class="footnote">*Price valid for Peninsular Malaysia only</p>
+                </div>
+            </div>
+      </div>
+      <button class="btn btn-dark bg-black px-4 w-50"
+        onclick="changeStep(1)" id="confirmBtn" type="button">Confirm</button>
+  </div>
+
+
+
+ <div class="form-step">
+
+            <div class="summary-details">
+                <button class="edit-btn"> PRINT &nbsp;<img src="images/print_1.png"></img></button>
+                <div id="summaryContainer5"></div>
+                <div class="gradient-line-side-out"></div>
+                    <div class="inspection-card d-none d-sm-none d-lg-block">
+                <div class="inspection-image">
+                    <div class="inspection-text">
+                        SELL FAST.<br> SELL EASY.<br> GET A BETTER PRICE.
+                    </div>
+                </div>
+                <div class="inspection-yellow">
+                    <div class="inspection-option">
+                        <h4>CARGURU INSPECTION CENTRE</h4>
+                        <p>Visit CARGURU for a trusted <br> inspection at a minimal cost.</p>
+                        <span class="price text-black fs-6">RM<span class="fs-4">20</span></span>
+                    </div>
+                    <hr>
+                    <div class="inspection-option">
+                        <h4>INSPECTION AT YOUR HOME</h4>
+                        <p>Flexible and hassle-free <br>— we come to your preferred <br>location, anytime.</p>
+                        <span class="price text-black fs-6">RM<span class="fs-4">80</span></span>
+                    </div>
+                    <p class="footnote">*Price valid for Peninsular Malaysia only</p>
+                </div>
+            </div>
+            </div>
+           
+           
+
+        </div>
+
+        <div class="form-step">
+                
+            <div id="step4" class="bg-white">
+                <div class="form-section mx-5 py-3" id="step4container">
+                    <h5 class="fw-bold mb-4 text-center pt-3">UPLOAD DOCUMENTS</h5>
+                    <!-- Upload NRIC -->
+                    <div class="section-title">Upload NRIC*</div>
+                    <div class="upload-row">
+                        <div class="upload-box upload-section" onclick="document.getElementById('nricFront').click()">
+                            <div class="upload-text">
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                                <strong>Browse File (Front Photo)</strong>
+                                <small>Drag & drop files here</small>
+                            </div>
+
+
+                            <input type="file" class="file-input d-none" id="nricFront" accept="image/*,.pdf"
+                                onchange="handleFileSelect(this)">
+
+                            <!-- Show file name -->
+                            <!-- <div id="fileNameNricFront" class="mt-2 text-success small text-center"></div> -->
+                        </div>
+                        <div class="upload-box upload-section" id="nricBackBox"
+                            onclick="document.getElementById('nricBack').click()">
+                            <div class="upload-text">
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                                <strong>Browse File (Back Photo)</strong>
+                                <small>Drag & drop files here</small>
+                            </div>
+                            <input type="file" class="file-input d-none" id="nricBack" accept="image/*,.pdf"
+                                onchange="handleFileSelect(this)">
+                            <!-- <div id="fileNameNricBack" class="mt-2 text-success small text-center"></div> -->
+                        </div>
+                    </div>
+
+                    <!-- Upload Driver's Licence -->
+                    <div class="section-title">Upload Driver's Licence*</div>
+                    <div class="upload-row">
+                        <div class="upload-box upload-section" id="licenseFrontBox"
+                            onclick="document.getElementById('licenseFront').click()">
+                            <div class="upload-text">
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                                <strong>Browse File (Front Photo)</strong>
+                                <small>Drag & drop files here</small>
+                            </div>
+                            <input type="file" class="file-input d-none" id="licenseFront" accept="image/*,.pdf"
+                                onchange="handleFileSelect(this)">
+                        </div>
+                        <div class="upload-box upload-section" id="licenseBackBox"
+                            onclick="document.getElementById('licenseBack').click()">
+                            <div class="upload-text">
+                                <i class="fa-solid fa-cloud-arrow-up"></i>
+                                <strong>Browse File (Back Photo)</strong>
+                                <small>Drag & drop files here</small>
+                            </div>
+                            <input type="file" class="file-input d-none" id="licenseBack" accept="image/*,.pdf"
+                                onchange="handleFileSelect(this)">
+                        </div>
+                    </div>
+
+                    <!-- Utility & Bank Statement -->
+                    <div class="upload-row">
+                        <div style="flex: 1; min-width: 260px;">
+                            <div class="section-title">Upload Water / Electric Bill*</div>
+                            <div class="upload-box upload-section" id="utilityBillBox"
+                                onclick="document.getElementById('utilityBill').click()">
+                                <div class="upload-text">
+                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                    <strong>Browse File (Photo)</strong>
+                                    <small>Drag & drop files here</small>
+                                </div>
+                                <input type="file" class="file-input d-none" id="utilityBill" accept="image/*,.pdf"
+                                    onchange="handleFileSelect(this)">
+                            </div>
+                        </div>
+
+                        <div style="flex: 1; min-width: 260px;">
+                            <div class="section-title">3 Months’ Bank Statement</div>
+                            <div class="upload-box upload-section" id="bankStatementBox"
+                                onclick="document.getElementById('bankStatement').click()">
+                                <div class="upload-text">
+                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                    <strong>Browse File (Photo)</strong>
+                                    <small>Drag & drop files here</small>
+                                </div>
+                                <input type="file" class="file-input d-none" id="bankStatement" accept="image/*,.pdf"
+                                    onchange="handleFileSelect(this)">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="section-title">3 Months' Pay Slip</div>
+                            <div class="upload-box upload-section " id="bankStatementPaySlipBox"
+                                onclick="document.getElementById('payslip').click()"
+                                style="flex: 1; min-width: 270px!important;">
+                                <div class="upload-text">
+                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                    <strong>Browse File (Photo)</strong>
+                                    <small>Drag & drop files here</small>
+                                </div>
+                                <input type="file" class="file-input d-none" id="payslip" accept="image/*,.pdf"
+                                    onchange="handleFileSelect(this)">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center my-4">
+                        <button type="submit" id="nextBtn" class="submit-btn py-2 w-50"
+                            onclick="changeStep(1)">Submit</button>
+                    </div>
+                    <p class="file-note">All file format to be in .pdf / .jpeg / .png</p>
+                </div>
+
+                <!-- Output Section -->
+
+            </div>
+        
+           
+        </div>
+
+      
+
+
+    </div>
+
+
+
+
+    <!-- Navigation -->
+    <div class="btn-nav d-flex justify-content-between d-none">
+        <button id="prevBtn" class="btn btn-secondary " onclick="changeStep(-1)" disabled>Back</button>
+        <button id="nextBtn" class="btn btn-warning" onclick="changeStep(1)">Next</button>
+    </div>
+
+    <!-- Template for Personal Details Summary -->
+    <template id="personalDetailsSummaryTemplate">
+        <div class="summary-card">
+            <div class="summary-body">
+                <button class="edit-btn"> EDIT <i class="bi bi-pencil-square"></i></button>
+                <div class="summary-left">
+                    <h6>YOUR CAR DETAILS</h6>
+                </div>
+                <div class="summary-right">
+                    <div class="summary-item"><span id="summaryCardetails" class="fw-bold"></span></div>
+                    <div class="summary-item"><span id="summarymodel" class="fw-bold"></span></div>
+                    <div class="summary-item"><span id="summarykilometer"></span></div>
+                    <div class="summary-item"><span id="summaryPlatenumber" class="fw-bold"></span></div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Template for Work Info Summary -->
+    <template id="workDetailsSummaryTemplate">
+        <div class="summary-card">
+            <div class="summary-body">
+                <button class="edit-btn"> EDIT <i class="bi bi-pencil-square"></i></button>
+                <div class="summary-left">
+                    <h6>YOUR CAR VALUE</h6>
+                </div>
+                <div class="summary-right">
+                    <div class="summary-item"> <h6>Value Estimated at</h6></div>
+                    <div class="summary-item"> <p id="finalValue" class="fw-bold fs-4">RM0 - 0*</p></span>
+                    </div>
+                    <div class="summary-item"><p class="text-muted mb-0">*Final pricing is confirmed after inspection.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="creditDetailsSummaryTemplate">
+        <div class="summary-card">
+            <div class="summary-body">
+                <button class="edit-btn"> EDIT <i class="bi bi-pencil-square"></i></button>
+                <div class="summary-left">
+                    <h6>INSPECTION APPOINTMENT</h6>
+                </div>
+                <div class="summary-right">
+                    <div class="summary-item location"><strong>Location:</strong> <span
+                            id="summaryinspectionLocation"></span>
+                    </div>
+                    <div class="summary-item"><strong>Date:</strong> <span id="summaryinspectionDate"></span></div>
+                    <div class="summary-item"><strong>Time:</strong> <span id="summaryinspectionTime"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    
+
+
+
+
+
+    <!-- ========== Start footer container ========== -->
+     <footer class="footer pt-lg-5 pt-3 fs-6 mt-xl-5">
+    <div class="container-fluid px-lg-5 px-3 ">
+      <div class="row footer-top-side">
+
+        <!-- About Section -->
+        <div class="col-12 col-lg-4 mb-4 footer-left-side">
+          <p class="fw-semibold">
+            CarGuru is redefining the used car experience through a transparent live bidding platform that
+            connects buyers, sellers, and dealers — all in one seamless ecosystem.
+          </p>
+          <p>
+            Whether you're buying, selling, or just exploring, CarGuru puts you in control of a process
+            that's simple, fair, and rewarding. Your car, your terms.
+          </p>
+          <div class="social-icons mt-5 d-none d-lg-block ">
+            <img src="images/facebook.png" width="24" height="24" alt="Facebook" class="me-5 ">
+            <img src="images/image.png" width="24" height="24" alt="Twitter" class="me-5">
+            <img src="images/instagram.png" width="24" height="24" alt="Instagram" class="me-5">
+            <img src="images/linkedin.png" width="24" height="24" alt="LinkedIn" class="me-5 bg-white rounded-1 ">
+          </div>
+
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-3 col-lg-2 mb-4 ms-lg-0  quick-links d-none d-lg-block d-md-block">
+          <h6 class="text-warning mb-3 fs-6">QUICK LINKS</h6>
+          <ul class="list-unstyled fs-6">
+            <li class="mb-2 mb-xl-3 "><a href="#">Home</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">Sell Car</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">Buy Car</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="col-md-3 col-lg-2 mb-4  d-none d-lg-block d-md-block quick-link ">
+          <h6 class="text-warning mb-3 fs-6">SERVICES</h6>
+          <ul class="list-unstyled fs-6">
+            <li class="mb-2 mb-xl-3"><a href="#">Bidding</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">Car Loans</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">Warranties</a></li>
+            <li class="mb-2 mb-xl-3"><a href="#">Body Check</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <!-- ========== Start nav bar for mobile only ========== -->
+        <!-- Wrapper Row -->
+        <div class="d-flex flex-wrap justify-content-between mb-4 d-lg-none d-block d-md-none">
+
+          <!-- Quick Links -->
+          <div class="w-50 pe-2 mb-3 quick-links">
+            <h6 class="text-warning mb-3 fs-6">QUICK LINKS</h6>
+            <ul class="list-unstyled fs-6">
+              <li class="mb-2"><a href="#">Home</a></li>
+              <li class="mb-2"><a href="#">Sell Car</a></li>
+              <li class="mb-2"><a href="#">Buy Car</a></li>
+              <li class="mb-2"><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="w-50 ps-2 mb-3 services">
+            <h6 class="text-warning mb-3 fs-6">SERVICES</h6>
+            <ul class="list-unstyled fs-6">
+              <li class="mb-2"><a href="#">Bidding</a></li>
+              <li class="mb-2"><a href="#">Car Loans</a></li>
+              <li class="mb-2"><a href="#">Warranties</a></li>
+              <li class="mb-2"><a href="#">Body Check</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- ========== End nav bar for mobile only ========== -->
+
+        <!-- Subscribe -->
+        <div class=" col-lg-4 mb-4 subscribe">
+          <h6 class="text-warning mb-3">SUBSCRIBE</h6>
+          <p style="font-size: 14px;">Stay updated with exclusive promos, events, new offers, and useful tips.
+          </p>
+          <form class="subscribe-input d-flex">
+            <input type="email" class="form-control me-2 rounded" placeholder="Your Email Here">
+            <button type="submit" class="btn btn-primary px-3 rounded p-xl-5">
+              <i class="bi bi-caret-right-fill"></i>
+            </button>
+          </form>
+        </div>
+
+        <div class="social-icons mt-lg-5  d-block d-lg-none mt-2 mb-3 d-flex justify-content-around ">
+          <img src="images/facebook.png" width="24" height="24" alt="Facebook" class="">
+          <img src="images/image.png" width="24" height="24" alt="Twitter" class="">
+          <img src="images/instagram.png" width="24" height="24" alt="Instagram" class="">
+          <img src="images/linkedin.png" width="24" height="24" alt="LinkedIn" class="bg-white rounded-1 ">
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="bg-warning border-top border-danger footer-bottom py-2 small px-lg-2 px-0">
+      <div class="container-fluid px-lg-4 px-1 py-lg-0 py-2">
+        <div class="row justify-content-lg-between align-items-lg-center text-center text-md-start">
+
+          <!-- Left -->
+          <div class=" col-lg-4 mb-2 mb-md-0 text-dark ps-lg-4 footer-text text-md-center">
+            © 2025–2026 CARGURU TECHNOLOGY. ALL RIGHTS RESERVED.
+          </div>
+
+          <!-- Center Links -->
+          <div
+            class=" py-md-2 col-lg-5 mb-2 mb-md-0 d-flex justify-content-lg-center justify-content-around flex-wrap gap-lg-4  footer-nav ">
+            <a href="#" class="text-dark text-decoration-none">Privacy Policy</a>
+            <a href="#" class="text-dark text-decoration-none">Terms of Service</a>
+            <a href="#" class="text-dark text-decoration-none">Payment Method</a>
+            <a href="#" class="text-dark text-decoration-none">Cookie Policy</a>
+          </div>
+
+          <!-- Right -->
+          <div class="col-lg-3 text-lg-end text-md-center pe-4 fw-bold text-black footer-text ">
+            CALL US AT +60 13 951 5969
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </footer>
+    <script src="sellcar.js"></script>
+   <script>
+    function toggleSidebar() {
+    const sidebar = document.getElementById('mobileSidebar');
+    const backdrop = document.getElementById('sidebarBackdrop');
+    sidebar.classList.toggle('open');
+    backdrop.classList.toggle('show');
+  }
+  
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function () {
+      document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+
+  
+  const monthYear = document.getElementById("monthYear");
+  const calendarBody = document.getElementById("calendarBody");
+  let currentDate = new Date();
+
+  const monthNames = [
+    "Jan","Feb","Mar","Apr","May","Jun",
+    "Jul","Aug","Sep","Oct","Nov","Dec"
+  ];
+
+  function renderCalendar(date) {
+    const year = date.getFullYear();
+    const month = date.getMonth();
+
+    monthYear.innerText = `${monthNames[month]} ${year}`;
+    
+    // First day & last date of month
+    const firstDay = new Date(year, month, 1).getDay();
+    const lastDate = new Date(year, month + 1, 0).getDate();
+
+    let html = "";
+    let day = 1;
+
+    for (let i = 0; i < 6; i++) { // 6 weeks grid
+      html += "<tr>";
+      for (let j = 0; j < 7; j++) {
+        if (i === 0 && j < firstDay) {
+          html += "<td></td>";
+        } else if (day > lastDate) {
+          html += "<td></td>";
+        } else {
+          let today = new Date();
+          let cellClass = "";
+
+          if (
+            day === today.getDate() &&
+            month === today.getMonth() &&
+            year === today.getFullYear()
+          ) {
+            cellClass = "today";
+          }
+
+          // Example random partial/booked style
+          if (day % 7 === 4) cellClass = "partial";
+          if (day % 7 === 5) cellClass = "booked";
+
+          html += `<td class="${cellClass}" data-day="${day}" data-month="${month}" data-year="${year}">${day}</td>`;
+          day++;
+        }
+      }
+      html += "</tr>";
+    }
+
+    calendarBody.innerHTML = html;
+
+    // Add click event for dates
+    document.querySelectorAll(".calendar td").forEach(td => {
+      if(td.innerText.trim() !== ""){
+        td.addEventListener("click", () => {
+          document.querySelectorAll(".calendar td").forEach(d => d.classList.remove("selected"));
+          td.classList.add("selected");
+        });
+      }
+    });
+  }
+
+  // Init calendar
+  renderCalendar(currentDate);
+
+  // Navigation
+  document.getElementById("prevMonth").addEventListener("click", () => {
+    currentDate.setMonth(currentDate.getMonth() - 1);
+    renderCalendar(currentDate);
+  });
+
+  document.getElementById("nextMonth").addEventListener("click", () => {
+    currentDate.setMonth(currentDate.getMonth() + 1);
+    renderCalendar(currentDate);
+  });
+
+  // Slot selection
+  function enableSlotSelection() {
+    document.querySelectorAll(".slot").forEach(slot => {
+      slot.addEventListener("click", () => {
+        document.querySelectorAll(".slot").forEach(s => s.classList.remove("active"));
+        slot.classList.add("active");
+      });
+    });
+  }
+
+  enableSlotSelection();
+// Add click event for dates
+document.querySelectorAll(".calendar td").forEach(td => {
+  if (td.innerText.trim() !== "") {
+    td.addEventListener("click", () => {
+      document.querySelectorAll(".calendar td").forEach(d => d.classList.remove("selected"));
+      td.classList.add("selected");
+
+      // ✅ Get clicked date
+      const day = td.getAttribute("data-day");
+      const month = parseInt(td.getAttribute("data-month")); 
+      const year = td.getAttribute("data-year");
+
+      // ✅ Convert month number to full name
+      const monthFullNames = [
+        "January","February","March","April","May","June",
+        "July","August","September","October","November","December"
+      ];
+
+      const formattedDate = `${day} ${monthFullNames[month]} ${year}`;
+
+      // ✅ Update the dropdown
+      const dateSelect = document.getElementById("centreDate");
+      dateSelect.innerHTML = `<option selected>${formattedDate}</option>`;
+    });
+  }
+});
+// Add click event for time slots
+document.querySelectorAll(".slot").forEach(slot => {
+  slot.addEventListener("click", () => {
+    // Remove highlight from all slots
+    document.querySelectorAll(".slot").forEach(s => s.classList.remove("selected"));
+
+    // Highlight clicked slot
+    slot.classList.add("selected");
+
+    // Get clicked time
+    const selectedTime = slot.innerText.trim();
+
+    // ✅ Update the Time dropdown
+    const timeSelect = document.getElementById("centreTime");
+    timeSelect.innerHTML = `<option selected>${selectedTime}</option>`;
+  });
+});
+
+   </script>
+</body>
+
+</html>

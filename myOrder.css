@@ -1,0 +1,394 @@
+.form-section{
+    background: white !important;
+} 
+
+.sidebar {
+     max-width:230px;
+     width: 100%;
+      min-height: 100vh;
+      background: white;
+      padding: 0.8rem;
+    height: 100%;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: black;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.5rem 0.75rem;
+      border-radius: 5px;
+      margin-bottom: 0.25rem;
+      font-weight: 500;
+      font-size: 0.80rem;
+
+    }
+
+    .sidebar a:hover,
+    .sidebar .active {
+      background-color: #ffc107;
+      color: black;
+    }
+
+    .submenu a {
+      padding-left: 2.5rem;
+      font-size: 0.80rem;
+    }
+
+    .logout-btn {
+      margin-top: 1rem;
+    }
+
+    .logout-btn button {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .bi {
+      font-size: 1rem;
+    }
+
+    /* Offcanvas Sidebar (mobile) */
+.offcanvas-sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 230px;
+  height: 100vh;
+  background: white;
+  padding: 0.8rem;
+  transition: left 0.3s ease;
+  z-index: 1050;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+}
+
+/* Slide it in */
+.offcanvas-sidebar.open {
+  left: 0;
+}
+
+/* Backdrop overlay */
+#sidebarBackdrop {
+  display: none;
+  position: fixed;
+  z-index: 1040;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0,0,0,0.5);
+}
+
+#sidebarBackdrop.show {
+  display: block;
+}
+
+    /* Main-content */
+
+    .main-content{
+        background-color: #f8f9fa;
+    }
+    .main-content .heading{
+       max-width: 610px;
+       margin-right: 18%;
+    }
+    .main-content .heading h1{
+        color: #000;
+font-family: 'lexend Decan' !important;
+        font-size: 38px;
+
+    }
+    .main-content .heading p{
+        font-size: 12px;
+        color: #000;
+        font-weight: 550;
+        letter-spacing: 1px;
+        line-height: 25px;
+    }
+        /* MOBILE VIEW */
+
+.mobile-menu {
+
+ width: 40px;
+ height: 40px;
+ border-radius: 50%;
+ background-color:#fac000;
+}
+.mobile-menu i{
+  font-size: larger;
+  color: red;
+}
+    .card{
+        max-width: 780px;
+
+        width: 100%;
+        /* margin-left: 18%; */
+        
+    }
+    .card .card-head{
+        background-color: #ffc107;
+        border-radius:5px  5px  0px 0px;
+    }
+    .card-head p{
+      color: #000;
+      font-size: 0.80rem;
+      
+    }
+   
+    .card .img-contaniner{
+        width: 370px;
+        border-radius: 5px;
+        
+    }
+    .card-body h3{
+     font-weight: 600;
+     color: #000; 
+     
+    }
+     .card-body  small{
+      font-size: .90rem;
+      
+      font-weight: 500;
+     
+     }
+     .card-body .icons i{
+      font-size: 1rem;
+      color: #ffc107;
+      
+      font-weight: 700;
+     }
+     .card-body p{
+      color: #000;
+     }
+       .card-body .para{
+        font-size: 0.75rem;
+       }
+       .card-body .para-1{
+        font-size: 0.85rem;
+       }
+      .card-body .rate{
+        color: red;
+
+       }
+       strong{
+        color: #000;
+       }
+      
+      .media-btn {
+      background-color: rgba(0, 0, 0, 0.3); /* translucent black */
+      color: white;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 5px;
+      font-size: 9px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: background-color 0.3s ease;
+    }
+    .car-btns .media-btn i{
+        font-size: 10px;
+    }
+
+/* LOGO ROPDOWN */
+    .btn-yellow {
+  background-color: #fac000;
+  color: black;
+  width: 30px !important;
+  height: 30px !important;
+  font-weight: bold;
+  font-size: 10px !important;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dropdown custom styling */
+.dropdown-menu-custom {
+  background-color: #fac000;
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  min-width: 200px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-menu-custom .dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: black;
+  font-weight: 500;
+  padding: 8px 16px;
+}
+
+.dropdown-menu-custom .dropdown-item:hover {
+  background-color: #f5b800;
+  color: black;
+}
+@media(max-width:600px){
+  .media-btn {
+    font-size: 8px;
+}
+.main-content .heading{
+       max-width: 100%;
+       margin-right: 0;
+    }
+     .card-body .img-container{
+       
+        border-radius: 5px;
+     background: url('images/car1.jpg') center center /  no-repeat;
+     background-size: 100vw ;
+     width: 100%;
+ 
+        min-height: 288px;
+     
+      
+    }
+
+    .car-btns .media-btn i{
+        font-size: 10px;
+    }
+     .card-body .para-1{
+        font-size: 0.70rem !important;
+       }
+       .card-body .cerfied-logo img{
+        height: 30px ;
+       }
+
+   .card-head p{
+      color: #000;
+      /* font-size: 0.80rem; */
+       font-size: calc(
+      0.6rem + (6 * ((100vw - 320px) / (576 - 320)))
+    ) !important;
+      
+    }
+   
+.dropdown .btn-yellow {
+  background-color: white;
+  color: black;
+  width: 45px !important;
+  height: 45px !important;
+  font-weight: bold;
+  font-size: 12px !important;
+  border: none;
+  display: inline-flex;
+  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+}
+}
+@media (min-width: 600px) and (max-width: 645px) {
+  .car-btns .media-btn {
+    font-size: 8px;
+}
+h3 {
+    font-size: calc(1rem + .6vw);
+}
+.cerfied-logo img{
+  height: 30px !important;
+  width: 100px !important;
+}
+.para,.para-1{
+  font-size: 10px !important;
+  line-height: 15px !important;
+}
+}
+
+@media(min-width:600px) and (max-width:1023px){
+  /* .card-body .img-container{
+    height: 35vh !important;
+  } */
+ 
+    .dropdown .btn-yellow {
+  background-color: white;
+  color: black;
+  width: 45px !important;
+  height: 45px !important;
+  font-weight: bold;
+  font-size: 12px !important;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+  .main-content .heading{
+       /* max-width: 610px; */
+       margin-right: 0%;
+    }
+}
+
+@media (min-width:2000px){
+.car-content{
+  margin-left: 18%;
+}
+}
+@media(min-width:1024px) and (max-width:1100px){
+.sidebar {
+    max-width: 213px !important;
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+    padding: 1rem;
+    height: 100%;
+}
+.card {
+    max-width: 726px;
+    width: 100%;
+    /* margin-left: 18%; */
+    border-radius: 10px;
+}
+
+}
+@media(min-width:1100px) and (max-width:1280px){
+.sidebar {
+    max-width: 250px !important;
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+    padding: 1rem;
+    height: 100%;
+}
+.card {
+    max-width: 790px;
+    width: 100%;
+    /* margin-left: 18%; */
+    border-radius: 10px;
+}
+
+}
+@media(min-width:1280px) and (max-width:2000px){
+.sidebar {
+    max-width: 250px !important;
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+    padding: 1rem;
+    height: 100%;
+}
+.card {
+    max-width: 790px;
+    width: 100%;
+    /* margin-left: 18%; */
+    border-radius: 10px;
+}
+
+}
+@media(min-width:2560px){
+  .sidebar {
+    max-width:calc(80% + 2rem)!important;
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+    padding: 1rem;
+    height: 100%;
+}
+.card {
+    max-width: 790px;
+    width: 100%;
+    /* margin-left: 18%; */
+    border-radius: 10px;
+}
+}

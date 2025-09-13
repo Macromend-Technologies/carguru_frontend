@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Favorites</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+ 
+   .remove-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  line-height: 24px;
+  font-size: 18px;
+  font-weight: bold;
+  z-index: 10; /* make sure it's above card content */
+  color: #333;
+  transition: all 0.2s ease-in-out;
+}
+
+.remove-btn:hover {
+  background: red;
+  color: #fff;
+  border-color: red;
+}
+body {
+  overflow: hidden;
+}
+    .clear-all {
+      cursor: pointer;
+      font-size: 14px;
+      color: red;
+      font-weight: bold;
+      overflow: hidden;
+    }
+   .no-longer {
+  position: relative;
+}
+
+.no-longer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 0, 0, 0.6); /* red transparent overlay */
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  z-index: 20;
+}
+
+  </style>
+</head>
+<body class="container my-4">
+
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>My Favorite Cars</h2>
+    <span class="clear-all" onclick="clearAll()">Clear All</span>
+  </div>
+
+  <div id="favoritesContainer" class="row g-3"></div>
+
+  <script>
+    let favCars = JSON.parse(localStorage.getItem("favorites")) || [];
+    const favContainer = document.getElementById("favoritesContainer");
+
+    function renderFavorites() {
+      favContainer.innerHTML = "";
+      favCars.forEach((item, index) => {
+        const isMG2024 = item.label.includes("2024 MG");
+        favContainer.innerHTML += `
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4 d-flex justify-content-center align-items-center card-bottom-container  ">
+            <div class="car-card  position-relative  ${isMG2024 ? 'no-longer' : ''}" >
+              <span class="remove-btn" onclick="removeFavorite(${index}, event)">×</span>
+              
+              <div class="carousel-inner1  ">
+                <div class="carousel-item active car-container-carousel-item ">
+                  <img src="${item.image}" class="d-block w-100 car-card-img" alt="" style="height:200px !important">
+                  ${item.tag === 'bid' ? `
+                    <div class="bid-banner position-absolute bottom-0 start-0 w-100 text-white p-2 px-sm-1 py-sm-2" style="background-color: rgba(0,0,0,0.6);">
+                      Bid Date: <span class="fw-bold">20 June 2025</span> &nbsp;Time: <span class="fw-bold">8:30PM</span>
+                      <span class="text-white p-1 ms-1 rounded-2 h-50" style="background-color: red;">
+                        Notify Me<i class="bi bi-alarm-fill text-white ms-1"></i>
+                      </span>
+                    </div>` :
+                    item.tag === 'deal' ? `
+                    <div class="deal-banner position-absolute bottom-0 start-0 w-100 text-white">
+                      <div class="fw-bold ps-2">BEST DEAL IN TOWN!<br>
+                        <small class="fw-light ms-1" style="line-height: 0%; font-size: 9px;">Promo till 30 July 2025</small>
+                      </div>
+                      <div class="off-badge text-dark ">RM <span class="fw-bold fs-4">8,800 </span>OFF</div>
+                    </div>` : ''
+                  }
+        
+
+                </div>
+                                ${isMG2024 ? `
+  <div class="position-absolute top-50 start-50 translate-middle text-center" style="z-index: 100;">
+    <div class="fw-bold bg-warning text-white px-3 py-1 rounded">No Longer Available</div>
+  </div>` : ''}
+              </div>
+     
+              <div class="px-3 py-2 card-contents">
+                <div class="d-flex justify-content-between ">
+                  <div class="fs-5 fw-semibold card-titles" style="font-weight: 1200;">${item.label}</div>
+                  <img src="images/fav.png" class="mt-1 heart" alt="">
+                </div>
+                <p class="fw-semibold" style=" font-size: 15px;">${item.subheading}</p>
+                <div class="punch text-dark small">${item.km} | Auto | Puchong</div>
+                <div class="mt-3"><img src="images/1.jpeg" alt="" width="150px" height="30px"></div>
+                <div class="rm small">RM<span class="fs-4 fw-bolder mb-2 ms-1">${item.price}</span></div>
+                <div class="loan-info mb-2">${item.bottom_text}</div>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+    }
+
+    function removeFavorite(index, event) {
+      event.stopPropagation(); // prevent card click
+      favCars.splice(index, 1);
+      localStorage.setItem("favorites", JSON.stringify(favCars));
+      renderFavorites();
+    }
+
+    function clearAll() {
+      favCars = [];
+      localStorage.removeItem("favorites");
+      renderFavorites();
+    }
+
+    // Initial render
+    renderFavorites();
+  </script>
+</body>
+</html>

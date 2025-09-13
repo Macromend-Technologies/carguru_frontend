@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Home Page</title>
+  <!-- <link rel="icon" type="image/png" href="images/logo-removebg.png"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap" rel="stylesheet">
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="topbanner.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- <script src="script.js"></script> -->
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+ <script src="offcanva.js"></script>
+ <script src="offcanva2.js"></script>
+</head>
+
+<body> 
+ 
+ 
+ <div id="multiSlideCarousel" class="carousel slide top-banner-container d-block d-lg-none d-md-block d-xl-none"
+    data-bs-ride="carousel">
+    <div class="carousel-inner top-banner-carousel">
+      <!-- First slide -->
+      <div class="carousel-item active top-banner-carousel-item">
+        <div class="row g-0">
+          <!-- sell -->
+          <div class="col-12 col-md-6 col-sm-6 col-lg-4 col-xl-4 col-xxl-4">
+            <div class="slide-box left-side-banner">
+              <div class="slide-content left-banner">
+                <h5 class="wanna wanna-1  mt-4 mt-lg-5 pt-5 pt-md-5 mt-md-5 mt-xl-5 pt-xl-5">I WANNA</h5>
+                <h1>SELL</h1>
+                <p class="sell ms-5 ps-5 pb-2">MY COOL CAR</p>
+                <div class="d-flex justify-content-center my-lg-4 my-md-4 my-xl-2 mb-3 ms-lg-0 ms-1 ">
+                  <div class="cta-banner mt-lg-3 mt-5 mt-md-2 mt-xl-5">
+                    <div class="cta-block cta-red px-lg-0 px-2">
+                      <div class="text-center">
+                        <div class="d-flex align-items-center justify-content-center gap-2 mb-1">
+                          <img src="images/car_icon.png" alt="" width="25" height="20">
+                          <div class="cta-title">GET CAR PRICE</div>
+                        </div>
+                        <div class="cta-subtext">MORE FOR YOU. LESS FOR US</div>
+                      </div>
+                    </div>
+                    <div class="cta-block cta-yellow px-3">
+                      <div class="text-center">
+                        <div class="d-flex align-items-center justify-content-center gap-1 gap-md-2 mb-1">
+                          <img src="images/hand-icon.png" alt="" width="23" height="24">
+                          <div class="cta-title">PLACE CAR TO BID</div>
+                        </div>
+                        <div class="cta-subtext">I'M FEELIN' LUCKY!</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- bid -->
+          <div class="col-12 col-md-6 col-sm-6 col-lg-4 col-xl-4 col-xxl-4">
+            <div class="slide-box center-side-banner">
+              <div class="slide-content left-banner pt-5  mt-4">
+                <h5 class="wanna wanna-2 pt-5 pt-xl-4 mt-2 ">I WANNA</h5>
+                <h1>BID</h1>
+                <p class="sell ms-5 mb-2 mb-xl-4">For A GREAT CAR</p>
+                <div class="bid-timer mt-5 mt-xl-5 cta-banner  pb-1">
+                  <div class="bid-section">
+                    <div class="label pb-2">VIEW ALL BIDS</div>
+                    <i class="bi bi-eye icon-center fs-5"></i>
+                  </div>
+                  <div class="bid-section">
+                    <div class="label">NEXT BID COMING UP</div>
+                    <div class="timer pt-1" id="countdown">08:45:58</div>
+                  </div>
+                  <div class="bid-section">
+                    <div class="label pb-1">BID DETAIL</div>
+
+                    <button class="scroll-btn me-lg-1 text-white"><i
+                        class="bi bi-caret-right-square-fill "></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- buy -->
+          <div class="col-12 col-md-6  col-sm-6 col-lg-4 col-xl-4 col-xxl-4 ">
+            <div class="slide-box right-side-banner">
+              <div class="slide-content mb-0 right-banner mt-4">
+                <h5 class="wanna wanna-3 mt-5 pt-xl-2 ">I WANNA</h5>
+                <h1>BUY</h1>
+                <p class="sell ps-5 mb-4">MY DREAM CAR</p>
+                <div class="car-filter-box d-flex flex-column cta-banner   ">
+
+                  <div class="d-flex align-items-center flex-wrap pt-1">
+                    <img src="images/Buy_car_logo.png" alt="" class="me-2 right-side-banner-logo">
+                    <p class="mb-0 text-dark small fw-bold right-side-banner-logo-text">MORE</p>
+                  </div>
+
+                  <div class="d-flex align-items-center mt-1">
+                    <div class="flex-grow-1">
+                      <div class="price-label text-start">PRICE RANGE</div>
+                      <input type="range" min="10000" max="100000" value="55000" step="1000" class="price-slider"
+                        id="priceRange" oninput="updatePrice(this)" />
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="price-value text-muted">RM55,000</div>
+                      <!-- <i class="bi bi-play-fill price-play-btn icon-center fs-6 bg-black text-white px-1 rounded-1" style="margin-top: -2px;"></i> -->
+                      <button class="scroll-btn me-lg-2 text-black"><i
+                          class="bi bi-caret-right-square-fill "></i></button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second slide (duplicate for mobile carousel) -->
+      <div class="carousel-item">
+        <div class="row g-0">
+          <!-- Bid -->
+          <div class="col-12 col-md-6  col-sm-6 col-lg-4 col-xl-4 col-xxl-4">
+            <div class="slide-box center-side-banner">
+              <div class="slide-content left-banner pt-5  mt-4">
+                <h5 class="wanna wanna-2 pt-4 pt-xl-4 mt-2 ">I WANNA</h5>
+                <h1>BID</h1>
+                <p class="sell ms-5 mb-4 mb-xl-4">For A GREAT CAR</p>
+                <div class="bid-timer mt-5  mt-xl-5 cta-banner  pb-1">
+                  <div class="bid-section">
+                    <div class="label pb-2">VIEW ALL BIDS</div>
+                    <i class="bi bi-eye icon-center fs-5"></i>
+                  </div>
+                  <div class="bid-section">
+                    <div class="label">NEXT BID COMING UP</div>
+                    <div class="timer pt-1" id="countdown">08:45:58</div>
+                  </div>
+                  <div class="bid-section">
+                    <div class="label pb-1">BID DETAIL</div>
+
+                    <button class="scroll-btn me-lg-1 text-white"><i
+                        class="bi bi-caret-right-square-fill "></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- buy -->
+          <div class="col-12 col-md-6 col-sm-6 col-lg-4 col-xl-4 col-xxl-4 ">
+            <div class="slide-box right-side-banner">
+              <div class="slide-content mb-0 right-banner mt-4">
+                <h5 class="wanna wanna-3 mt-5 pt-xl-2 ">I WANNA</h5>
+                <h1>BUY</h1>
+                <p class="sell ps-5 mb-4">MY DREAM CAR</p>
+                <div class="car-filter-box d-flex flex-column cta-banner   ">
+
+                  <div class="d-flex align-items-center flex-wrap pt-1">
+                    <img src="images/Buy_car_logo.png" alt="" class="me-2 right-side-banner-logo">
+                    <p class="mb-0 text-dark small fw-bold right-side-banner-logo-text">MORE</p>
+                  </div>
+
+                  <div class="d-flex align-items-center mt-1">
+                    <div class="flex-grow-1">
+                      <div class="price-label text-start">PRICE RANGE</div>
+                      <input type="range" min="10000" max="100000" value="55000" step="1000" class="price-slider"
+                        id="priceRange" oninput="updatePrice(this)" />
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="price-value text-muted">RM55,000</div>
+                      <!-- <i class="bi bi-play-fill price-play-btn icon-center fs-6 bg-black text-white px-1 rounded-1" style="margin-top: -2px;"></i> -->
+                      <button class="scroll-btn me-lg-2 text-black"><i
+                          class="bi bi-caret-right-square-fill "></i></button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- sell -->
+          <div class="col-12 col-md-6 col-sm-6 col-lg-4 col-xl-4 col-xxl-4">
+            <div class="slide-box left-side-banner">
+              <div class="slide-content left-banner">
+                <h5 class="wanna wanna-1  mt-2 mt-lg-5 pt-5 pt-md-5 mt-md-5 mt-xl-5 pt-xl-5">I WANNA</h5>
+                <h1>SELL</h1>
+                <p class="sell ms-5 ps-5">MY COOL CAR</p>
+                <div class="d-flex justify-content-center my-lg-4 my-md-4 my-xl-2 ms-lg-0 ms-1">
+                  <div class="cta-banner mt-lg-3 mt-4 mt-md-2 mt-xl-5">
+                    <div class="cta-block cta-red px-lg-0 px-3">
+                      <div class="text-center">
+                        <div class="d-flex align-items-center justify-content-center gap-2 mb-1">
+                          <img src="images/car_icon.png" alt="" width="25" height="20">
+                          <div class="cta-title">GET CAR PRICE</div>
+                        </div>
+                        <div class="cta-subtext">MORE FOR YOU. LESS FOR US</div>
+                      </div>
+                    </div>
+                    <div class="cta-block cta-yellow px-3">
+                      <div class="text-center">
+                        <div class="d-flex align-items-center justify-content-center gap-1 gap-md-2 mb-1">
+                          <img src="images/hand-icon.png" alt="" width="23" height="24">
+                          <div class="cta-title">PLACE CAR TO BID</div>
+                        </div>
+                        <div class="cta-subtext">I'M FEELIN' LUCKY!</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Third slide (duplicate for mobile carousel) -->
+      <div class="carousel-item">
+        <div class="row g-0">
+          <!-- buy -->
+          <div class="col-12 col-md-6 col-sm-6 col-lg-4 col-xl-4 col-xxl-4 ">
+            <div class="slide-box right-side-banner">
+              <div class="slide-content mb-0 right-banner mt-4">
+                <h5 class="wanna wanna-3 mt-5 pt-xl-2 ">I WANNA</h5>
+                <h1>BUY</h1>
+                <p class="sell ps-5 mb-4">MY DREAM CAR</p>
+                <div class="car-filter-box d-flex flex-column cta-banner  mb-2 ">
+
+                  <div class="d-flex align-items-center flex-wrap pt-1">
+                    <img src="images/Buy_car_logo.png" alt="" class="me-2 right-side-banner-logo">
+                    <p class="mb-0 text-dark small fw-bold right-side-banner-logo-text">MORE</p>
+                  </div>
+
+                  <div class="d-flex align-items-center mt-1">
+                    <div class="flex-grow-1">
+                      <div class="price-label text-start">PRICE RANGE</div>
+                      <input type="range" min="10000" max="100000" value="55000" step="1000" class="price-slider"
+                        id="priceRange" oninput="updatePrice(this)" />
+                    </div>
+                    <div class="d-flex align-items-center gap-1">
+                      <div class="price-value text-muted">RM55,000</div>
+                      <!-- <i class="bi bi-play-fill price-play-btn icon-center fs-6 bg-black text-white px-1 rounded-1" style="margin-top: -2px;"></i> -->
+                      <button class="scroll-btn me-lg-2 text-black"><i
+                          class="bi bi-caret-right-square-fill "></i></button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- bid -->
+          <div class="col-12 col-md-6 col-sm-6 col-lg-4 col-xl-4 col-xxl-4">
+            <div class="slide-box center-side-banner">
+              <div class="slide-content left-banner pt-5  mt-4">
+                <h5 class="wanna wanna-2 pt-5 pt-xl-4 mt-2 ">I WANNA</h5>
+                <h1>BID</h1>
+                <p class="sell ms-5 mb-2 mb-xl-4">For A GREAT CAR</p>
+                <div class="bid-timer mt-5 mt-xl-5 cta-banner  pb-1">
+                  <div class="bid-section">
+                    <div class="label pb-2">VIEW ALL BIDS</div>
+                    <i class="bi bi-eye icon-center fs-5"></i>
+                  </div>
+                  <div class="bid-section">
+                    <div class="label">NEXT BID COMING UP</div>
+                    <div class="timer pt-1" id="countdown">08:45:58</div>
+                  </div>
+                  <div class="bid-section">
+                    <div class="label pb-1">BID DETAIL</div>
+
+                    <button class="scroll-btn me-lg-1 text-white"><i
+                        class="bi bi-caret-right-square-fill "></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- sell -->
+          <div class="col-12 col-md-6 col-sm-6 col-lg-4 col-xl-4 col-xxl-4">
+            <div class="slide-box left-side-banner">
+              <div class="slide-content left-banner">
+                <h5 class="wanna wanna-1  mt-2 mt-lg-5 pt-5 pt-md-5 mt-md-5 mt-xl-5 pt-xl-5">I WANNA</h5>
+                <h1>SELL</h1>
+                <p class="sell ms-5 ps-5">MY COOL CAR</p>
+                <div class="d-flex justify-content-center my-lg-4 my-md-4 my-xl-2 ms-lg-0 ms-1">
+                  <div class="cta-banner mt-lg-3 mt-4 mt-md-2 mt-xl-5 ">
+                    <div class="cta-block cta-red px-lg-0 px-3">
+                      <div class="text-center">
+                        <div class="d-flex align-items-center justify-content-center gap-2 mb-1">
+                          <img src="images/car_icon.png" alt="" width="25" height="20">
+                          <div class="cta-title">GET CAR PRICE</div>
+                        </div>
+                        <div class="cta-subtext">MORE FOR YOU. LESS FOR US</div>
+                      </div>
+                    </div>
+                    <div class="cta-block cta-yellow px-3">
+                      <div class="text-center">
+                        <div class="d-flex align-items-center justify-content-center gap-1 gap-md-2 mb-1">
+                          <img src="images/hand-icon.png" alt="" width="23" height="24">
+                          <div class="cta-title">PLACE CAR TO BID</div>
+                        </div>
+                        <div class="cta-subtext">I'M FEELIN' LUCKY!</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

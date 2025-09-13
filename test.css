@@ -1,0 +1,390 @@
+/* CARDER CONTENT  */
+    .carder{
+        max-width: 800px;
+        width: 100%;
+        margin-left: -3%;
+ 
+    }
+    .card{
+        /* max-width: 880px; */
+        width: 100%;
+ 
+    }
+    .card .card-head{
+        background-color: #ffc107;
+    }
+    .card-head p{
+      color: #000;
+      
+    }
+    .card-subtext{
+      line-height: 1px;
+      font-family: 'Gabarito';
+      letter-spacing: 1px;
+    }
+   
+    .card-body .img-container{
+       
+        border-radius: 5px;
+     background: url('images/car-main.png') center center / cover no-repeat;
+     width: 100%;
+     
+      height: 80%;
+    }
+    .buy-button{
+      height: 48px !important;
+      margin-bottom: 5px;
+      
+      justify-content: center;
+      align-items: center;
+     
+      margin-right: 10%;
+    }
+   .s-img{
+    flex-basis: 35%;
+   }
+.car-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 10px !important;
+  border: none;
+  border-radius: 6px;
+ 
+  font-weight: 600;
+  text-align: left;
+  gap: 10px;
+  width: 100%;
+  min-height: 55px;
+  transition: background-color 0.2s ease;
+  line-height: 1.5; /* Ensure vertical alignment */
+}
+
+.car-action-btn .buy-button {
+  width: 28px;
+  height: 58px;
+  object-fit: contain;
+  flex-shrink: 0; /* Prevent resizing */
+}
+
+
+/* Button Colors */
+.book-btn {
+  background-color: red;
+  /* width: 700px; */
+  color: white;
+  font-size: 5rem;
+  padding-right: 5% !important;
+}
+.test-drive-btn,
+.loan-btn {
+  background-color: #ffc107;
+  color: black;
+  font-size: 5rem;
+ 
+}
+
+/* Hover */
+.car-action-btn:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+      .media-btn {
+      background-color: rgba(0, 0, 0, 0.3); /* translucent black */
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 5px;
+      font-size: 9px !important;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: background-color 0.3s ease;
+    }
+    .media-btns{
+      background-color: rgba(0, 0, 0, 0.3); 
+   
+      color: white;
+      display: grid;
+      justify-content: center;
+      border: none;
+      left: 50%; 
+      transform: translateX(-50%); 
+      bottom: 10px ;
+      width: 80%;
+      padding: 6px 3px;
+      border-radius: 5px;
+      font-size: 10px;
+      display: flex;
+      align-items: center;
+     
+      transition: background-color 0.3s ease;
+    }
+    /* /MOBILE-RESPONSIVE  */
+    @media (max-width:576px) {
+   .container .button-containers .book-btn{
+  padding-right: 14% !important;
+   }
+.button-containers .car-action-btn {
+    font-size: 0.95rem !important;
+    padding: 10px 14px !important;
+    align-items: center; 
+  }
+  .button-containers{
+     flex-direction: column;
+     width: 100%;
+    gap: 12px;
+  }
+/* .book-btn{
+  width: 378px;
+} */
+   .car-action-btn .buy-button {
+    width: 30px !important;
+    height: 30px !important;
+    margin-right: 8px;
+  }
+       .media-btns{
+        font-size: 9px;
+       }
+       .buy-button{
+      height: 20px !important;
+      
+    }
+      
+      /* td{
+        font-size: 12px;
+      } */
+     main {
+  overflow-x: hidden;
+}
+      .carder{
+        /* max-width: 800px; */
+        /* width: 100%; */
+       
+        margin-left: 0;
+ 
+    }
+    .card{
+        /* max-width: 880px; */
+        width: 100%;
+ 
+    }
+      .card-body .img-container{
+       
+        border-radius: 5px;
+     background: url('images/car1.jpg') center center /  no-repeat;
+     background-size: 100vw ;
+     width: 100%;
+ 
+        min-height: 200px;
+     
+      
+    }
+      .img-container2{
+    display: flex;
+    /* justify-content: space-between; */
+    /* flex-basis: 50%; */
+      }
+      .s-img{
+        flex-basis: 34%;
+      }
+   .s-img img{
+    height: 60px;
+width: 100%;
+   }
+
+      .media-btn {
+      background-color: rgba(0, 0, 0, 0.3); /* translucent black */
+      color: white;
+      border: none;
+      padding: 8px 9px;
+      border-radius: 5px;
+      font-size: 10px !important;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: background-color 0.3s ease;
+    }
+ 
+    .card-body h3{
+     font-weight: 600;
+     font-size: 1.2rem ;
+     color: #000; 
+    }
+    .car-action-btn{
+     
+      font-size: 8px !important;
+        padding: 6px 8px !important;
+    }
+    .car-action-btn svg{
+      width: 30px;
+      height: 20px !important;
+    }
+       /* NAV TAB */
+  .tab-menu {
+  display: flex;
+  gap: 14px !important;
+  padding: 20px 0 !important;
+  background-color: #f5f5f5; }
+  .tab {
+  text-transform: uppercase;
+  font-size: 8px !important;
+  font-weight: 400;
+  color: #000;
+  position: relative;
+  cursor: pointer;
+  padding-bottom: 2px !important;
+  transition: all 0.2s ease-in-out;
+}
+ .overview p{
+  font-size: 12px !important;
+color: #000;
+font-weight: 400;
+line-height: 30px !important;
+ }
+ .payment-inner-content p {
+    font-size: 13px;
+    margin-left: 0px !important;
+    margin-right:  0px !important;
+}
+
+    }
+   
+    /* ultra 4k view  */
+@media (min-width: 1920px){
+      .carder{
+      width: 100%;
+      max-width: 80%;
+    margin-left: 10%;
+
+    }
+}
+   main{
+  position: relative;
+}
+.test-drive-card {
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 300px;
+  position: fixed;
+  z-index: 1000;
+  top: 15% !important;
+  right: 0%;
+  transform: translateY(-5%);
+ opacity: 0.8 !important;
+
+}
+
+.test-drive-card img {
+  height: 160px;
+  object-fit: cover;
+  position: relative;
+}
+.test-drive-card label{
+  font-size: 13px;
+}
+.test-drive-card label input,.test-drive-card select{
+  max-width: 60%;
+}
+@media (min-width: 600px) and (max-width: 719px) {
+ 
+  .card-body .img-container{
+    height: 20vh !important;
+  }
+  .carder{
+    margin-left: 0;
+  }
+  .filter-tab{
+    flex-basis: 49% !important;
+  }
+  .button-containers{
+    gap: 8px;
+  }
+  .book-btn {
+    width: 100%;
+  }
+  .car-action-btn{
+    width: 31% !important;
+    padding: 0px 5px !important;
+    font-size: 0.7rem !important;
+    min-height: 41px !important;
+  }
+  .car-action-btn .buy-button{
+    height: 20px !important;
+    width: 20px !important;
+  } 
+  .buy-button{
+    margin-bottom: 0% !important;
+  }
+  .tab {
+    font-size: 12px !important;
+  }
+  .tab-btn,.tab-button{
+    font-size: 11px !important;
+    padding: 10px 0px !important;
+}
+.insp {
+    font-size: 12px !important;
+}
+.status-text,.equipment-label,.equipment-value{
+  font-size: 12px !important;
+}
+.equipment-wrapper {
+    height: 35vh !important;
+}
+}
+@media (min-width: 719px) and (max-width: 819px){
+
+  
+.container{
+  min-width: 98% !important;
+}
+  .book-btn{
+    width: 100%;
+  }
+  .car-action-btn{
+    /* width: 31% !important; */
+    margin-right: calc(1% + 2px);
+    padding: 0px 5px !important;
+    font-size: 0.7rem !important;
+    min-height: 41px !important;
+  }
+   .carder{
+        max-width: 800px;
+        width: 100%;
+        margin-left: 0.5% !important;
+ 
+    }
+ 
+  }
+  
+@media  (min-width: 820px) and (max-width: 1180px){
+
+.container{
+  min-width: 98% !important;
+}
+  .book-btn{
+    width: 100%;
+  }
+  .car-action-btn{
+    margin-right: calc(1% + 2px);
+    padding: 0px 5px !important;
+    font-size: 0.7rem !important;
+    min-height: 41px !important;
+  }
+   .carder{
+        max-width: 800px;
+        width: 100%;
+        margin-left: 0.5% !important;
+ 
+    }
+ 
+  }
+
+@media(min-width:1024px) and (max-width:1280px){
+.assurance-item {
+    margin-left: 15px;
+    text-align: center;
+    max-width: 150px;
+}
+}

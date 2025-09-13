@@ -1,0 +1,961 @@
+@font-face {
+  font-family: 'Ds-Digital';
+  src: url('fonts/DS-DIGII.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gabarito';
+  src: url('fonts/Gabarito-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gabarito Bold';
+  src: url('fonts/Gabarito-VariableFont_wght.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RobotoFlex';
+  src: url('fonts/RobotoFlex-VariableFont_GRAD\,XOPQ\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Flex ExtraBold';
+  src: url('fonts/RobotoFlex-VariableFont_GRAD\,XOPQ\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght.ttf') format('truetype');
+  font-weight: bolder;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lexend Deca';
+  src: url('fonts/LexendDeca-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lexend Decan';
+  src: url('fonts/LexendDeca-VariableFont_wght.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+/***** Top Banner Container *****/
+.right-side-banner-logo {
+  height: 15px !important;
+}
+
+.top-banner-carousel-item {
+  padding: 0;
+}
+
+.top-banner-carousel .row {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0;
+}
+
+.top-banner-carousel .col-md-4 {
+  flex: 0 0 auto;
+  padding: 0;
+}
+
+.slide-box {
+  /* height: 1000px; */
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  aspect-ratio: 1/1;
+}
+
+.left-banner {
+  margin-top: 6% !important;
+}
+
+.center-banner {
+  margin-top: 10% !important;
+}
+
+.right-banner {
+  margin-top: 7% !important;
+  /* margin-bottom: -100% !important; */
+}
+
+.slide-content {
+  position: relative;
+  /* z-index: 2; */
+  padding: 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.slide-content h1 {
+  font-family: "Lexend Decan" !important;
+  font-size: 155px;
+  font-weight: bolder !important;
+  margin-top: 4% !important;
+  letter-spacing: 6px;
+  margin-bottom: 1vw;
+}
+
+.btn-custom {
+  margin: 5px;
+  padding: 10px 20px;
+  font-weight: 600;
+}
+
+.bid-timer {
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 18px 20px; */
+  border-radius: 10px;
+  height: 90px;
+  max-width: 520px;
+  /* margin: 0 auto; */
+  margin-left: 10%;
+}
+
+.bid-section {
+  text-align: center;
+  flex: 1;
+}
+
+.label {
+  font-size: 8px;
+  text-transform: uppercase;
+  color: #ccc;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  /* margin-bottom: 4px; */
+}
+
+.icon-center {
+  margin-top: -4px;
+  padding: 0px 3px;
+  font-size: 26px;
+  display: inline-block;
+}
+
+.timer {
+  font-family: "Ds-Digital", monospace;
+  font-size: 38px;
+  color: #ffcc00;
+  line-height: 1;
+  margin-top: -4px;
+}
+
+.wanna {
+  font-size: 20px;
+  font-weight: 600;
+  /* margin-top: 10px !; */
+
+  font-style: italic;
+  font-family: 'Gabarito';
+}
+
+.wanna-1 {
+  margin-bottom: -10%;
+  margin-right: 320px;
+  line-height: 0%;
+}
+
+.wanna-2 {
+  margin-bottom: -10%;
+  /* margin-right: 20% !important; */
+}
+
+.wanna-3 {
+  margin-bottom: -10%;
+  /* margin-right: 30% !important; */
+}
+
+.sell {
+  font-style: italic;
+  font-family: 'Gabarito';
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: -6%;
+  margin-left: 12px;
+}
+
+/***** first banner box *****/
+.cta-banner {
+  display: flex;
+  width: 80%;
+  max-width: 600px;
+  height: 60px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 19px !important;
+  margin-right: 14px;
+}
+
+.cta-block {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  text-align: center;
+  flex-direction: column;
+}
+
+.cta-red {
+  background-color: #d80000;
+  color: #fff;
+}
+
+.cta-yellow {
+  background-color: #ffc700;
+  color: #000;
+}
+
+.cta-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.cta-subtext {
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+
+
+
+/***** End first banner box *****/
+
+/* top */
+.car-filter-box {
+  margin-left: 40px;
+  margin-top: 25px;
+  margin-bottom: -2% !important;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 0px 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.car-icon-group i {
+  color: #333;
+}
+
+.price-slider {
+  -webkit-appearance: none;
+  line-height: 0% !important;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #f4b000 55%, #ddd 55%);
+  border-radius: 4px;
+  outline: none;
+  transition: background 0.3s;
+}
+
+.price-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  background-color: #f4b000;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+
+.price-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background-color: #f4b000;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.flex-grow-1 {
+  padding-top: 5px;
+}
+
+.flex-grow-1 .price-label {
+  font-size: 7px !important;
+  color: black;
+  line-height: 0% !important;
+}
+
+.price-value {
+  line-height: 0% !important;
+  font-weight: 600;
+  font-size: 12px;
+  min-width: 80px;
+}
+
+.price-play-btn {
+  margin-top: 10px;
+}
+
+.car-filter-box {
+  background-color: #fff;
+  border-radius: 6px;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.left-side-banner {
+  background-image: url("images/left-banner.png");
+  width: 100%;
+
+  background-size: cover !important;
+}
+
+.left-side-banner .sell {
+  margin-left: 35% !important;
+  line-height: 0%;
+}
+
+.center-side-banner {
+  background-image: url("images/center-banner.png");
+  width: 100%;
+
+  background-size: cover !important;
+}
+
+.center-side-banner .wanna-2 {
+  line-height: 0%;
+}
+
+.center-side-banner .sell {
+  line-height: 0%;
+}
+
+.right-side-banner {
+  background-image: url("images/right-banner.png");
+  width: 100%;
+
+  background-size: cover !important;
+}
+
+.right-side-banner .wanna-3 {
+  line-height: 0%;
+  margin-left: -3%;
+}
+
+.right-side-banner .sell {
+  line-height: 0%;
+  margin-left: 65px;
+}
+
+.iconifys {
+  font-size: 10px !important;
+}
+@media (min-width: 600px) and (max-width: 719px) {
+
+  .mobile-top-logo {
+    padding-left: clamp(20px, 20%, 44px) !important;
+  }
+
+  .icons-navbar img {
+    width: clamp(10px, 3vw, 30px) !important;
+    height: clamp(10px, 3vw, 30px) !important;
+    margin-right: 0.5rem !important;
+  }
+
+  .mobile-tab {
+    max-width: 100% !important;
+    
+  }
+
+  .left-side-banner,
+  .center-side-banner,
+  .right-side-banner {
+    margin-top: -54px !important;
+    background-size: 100% !important;
+    max-height: clamp(10%, 100vh, 100vh) !important;
+    
+    width: 100% !important;
+  }
+
+  .left-banner .wanna-1 {
+    /* line-height:6px !important; */
+    /* margin-top: 90% !important; */
+    /* font-size: 1.5rem !important; */
+    /* margin-bottom: 0.2rem !important; */
+    padding-top: 3rem !important;
+    margin-right: 64% !important;
+  }
+
+  .left-banner h1 {
+    /* margin-bottom: 0.5rem !important; */
+    font-size: 7rem !important;
+  }
+
+  .left-banner p {
+    /* font-size: 1.5rem !important; */
+    /* margin-bottom: 4rem !important; */
+    /* padding-left: 25% !important; */
+  }
+
+  .cta-banner {
+    /* margin-top: 2rem !important; */
+   
+    min-height: 8vh !important;
+    max-height: 8vh !important;
+    min-width: 92% !important;
+    margin-bottom: 1.5rem !important;
+    /* max-width: 70% !important; */
+  }
+
+  .cta-red,
+  .cta-yellow {
+    margin-top: -2% !important;
+  }
+
+  .cta-red img,
+  .cta-yellow img {
+    width: 20% !important;
+    height: 20% !important;
+  }
+
+  .cta-red .cta-title {
+    /* font-size: 1rem !important; */
+  }
+
+  .cta-yellow .cta-title {
+    /* font-size: 1rem !important; */
+  }
+
+  .cta-red .cta-subtext {
+    /* font-size: 0.8rem !important; */
+  }
+
+  .cta-yellow .cta-subtext {
+    /* font-size: 0.8rem !important; */
+  }
+
+  .center-side-banner .wanna-2 {
+    /* margin-top: 3rem !important; */
+    line-height: 10px !important;
+    /* font-size: 1.5rem !important; */
+    /* margin-bottom: 0.2rem !important; */
+    margin-right: 52% !important;
+  }
+
+  .center-side-banner p {
+    /* font-size: 1.5rem !important; */
+    /* margin-bottom: 4rem !important; */
+    padding-left: 25% !important;
+  }
+
+  .center-side-banner .bid-section .label {
+    /* font-size: 0.8rem !important; */
+  }
+
+  .center-side-banner .bid-section i {
+    margin-top: 1px !important;
+    /* font-size: 1.8rem !important; */
+  }
+
+  .center-side-banner .bid-section .timer {
+    /* font-size: 3.4rem !important; */
+  }
+
+  .steps-top-title .nav-item-tab {
+    /* font-size: 0.8rem !important; */
+
+  }
+
+  .center-banner h1 {
+    /* font-size: 14rem !important; */
+  }
+
+  .right-side-banner h1 {
+    /* font-size: 14rem !important; */
+  }
+
+  .right-side-banner .wanna-3 {
+    margin-top: 7rem !important;
+    line-height: 10px !important;
+    /* font-size: 1.5rem !important; */
+    /* margin-bottom: 0.2rem !important; */
+    margin-right: 53% !important;
+  }
+
+  .right-side-banner .sell {
+    /* font-size: 1.5rem !important; */
+    margin-bottom: 4rem !important;
+    /* padding-left: 20% !important; */
+  }
+
+  .right-side-banner .right-side-banner-logo {
+    margin-top: 0.2rem !important;
+    margin-bottom: 0.6rem !important;
+    height: 23px !important;
+  }
+
+  .right-side-banner .right-side-banner-logo-text {
+    padding-left: 4px !important;
+    font-size: 14px !important
+  }
+
+  .right-side-banner .price-label,
+  .price-value {
+    font-size: 12px !important
+  }
+
+  .right-side-banner i {
+    margin-top: 1px !important;
+    font-size: 1.8rem !important;
+  }
+
+  .container .search-box2 {
+    min-width: 87vw !important;
+    max-width: 100vw !important;
+  }
+
+  .search-box2-buttons {
+    min-width: 89vw !important;
+  }
+
+  .search-box2-buttons button {
+    min-width: 20vw !important;
+  }
+
+  .search-box2-buttons button i {
+    font-size: 16px !important;
+  }
+
+  .card-bottom-container {
+    min-width: 44vw !important;
+    max-width: 100vw !important;
+
+  }
+
+  .car-card {
+    min-width: 43vw !important;
+    /* column-gap: 2rem !important; */
+    max-width: 50vw !important;
+  }
+
+  .bid-banner {
+    font-size: clamp(5px, 0.7rem, 10px) !important;
+  }
+
+  .card-section {
+    row-gap: 0.6rem !important;
+
+  }
+
+  .promo-tag {
+    width: 90% !important;
+    max-width: 100% !important;
+
+  }
+
+  .promo-tag p {
+    font-size: clamp(8px, 1rem, 12px) !important;
+  }
+
+  .promo-tag small {
+    font-size: clamp(6px, 0.8rem, 10px) !important;
+    margin-bottom: 50px !important;
+    margin-top: 50px !important;
+  }
+
+  .contact-section {
+    font-size: 0.8rem;
+  }
+
+  .contact-section small {
+    padding-bottom: 1rem !important;
+  }
+
+  .promo-banner {
+    min-height: min(40vh, 300px) !important;
+  }
+
+  .promo-banner .promo-heading {
+    font-size: clamp(16px, 2rem, 30px) !important;
+  }
+
+  .steps-title {
+    font-size: clamp(20px, 2.5rem, 30px) !important;
+  }
+
+  .containers-steps {
+    max-width: 96vw !important;
+  }
+
+  .card-section .seller-card {
+    width: 43vw !important;
+     height: 45vh !important;
+    min-height: 45vh !important;
+    max-height: 40vh !important;
+
+  }
+
+  .seller-card .card-img-top {
+    min-height: 18vh !important;
+  }
+
+  .certified-badge img {
+    width: 100% !important;
+    height: 100% !important;
+    margin-left: 28% !important;
+  }
+
+  .certified-body .certified-text {
+    font-size: clamp(10px, 0.6rem, 12px) !important;
+    max-width: 100% !important;
+  }
+
+  .certified-body .right {
+    min-width: 80vh !important;
+    max-width: 100vh !important;
+
+  }
+
+  .assurance-item {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+    max-width: 100vw !important;
+    min-width: 17vw !important;
+
+  }
+
+  .assurance-item .icon img {
+    width: clamp(50px, 12vw, 90px) !important;
+    height: clamp(50px, 12vw, 90px) !important;
+
+  }
+
+  .assurance-item p {
+    font-size: clamp(10px, 0.8rem, 12px) !important;
+  }
+
+  .testimonial-card {
+    /* width: 46vh !important; */
+    width: clamp(10rem, 46vh, 30rem) !important;
+  }
+
+  .testimonial-card p {
+    font-size: clamp(0.5rem, 1.6vw, 1rem) !important;
+  }
+
+  .testimonial-card small {
+    font-size: clamp(0.5rem, 1.6vw, 1rem) !important;
+  }
+
+  .container-1 p {
+    font-size: clamp(0.5rem, 1.6vw, 1rem) !important;
+  }
+
+  .container-1 .win {
+    font-size: clamp(1.5rem, 5.6vw, 3rem) !important;
+  }
+}
+@media (min-width: 720px) and (max-width: 899px) {
+  .left-side-banner,
+  .center-side-banner,
+  .right-side-banner {
+    background-size: cover !important;
+    height: clamp(10%, 100vh, 100vh) !important;
+    width: 100% !important;
+  }
+  .mobile-top-logo {
+    padding-left: clamp(20px, 40%, 65px) !important;
+  }
+
+  .icons-navbar img {
+    width: clamp(10px, 3vw, 30px) !important;
+    height: clamp(10px, 3vw, 30px) !important;
+    margin-right: 0.5rem !important;
+  }
+
+  .mobile-tab {
+    max-width: 100% !important;
+  }
+   .left-banner .wanna-1 {
+    line-height: 10px !important;
+    font-size: 1.5rem !important;
+    /* margin-bottom: 0.2rem !important; */
+    margin-right: 64% !important;
+  }
+
+  .left-banner h1 {
+    margin-bottom: 0.5rem !important;
+    font-size: 16rem !important;
+  }
+
+  .left-banner p {
+    font-size: 1.5rem !important;
+    margin-bottom: 6rem !important;
+    padding-left: 25% !important;
+  }
+
+  .cta-banner {
+    margin-top: 2rem !important;
+    min-height: 13vh !important;
+    min-width: 75% !important;
+    
+    /* max-width: 70% !important; */
+  }
+  
+  .cta-red,
+  .cta-yellow {
+    margin-top: -2% !important;
+  }
+
+  .cta-red img,
+  .cta-yellow img {
+    width: 20% !important;
+    height: 20% !important;
+  }
+
+  .cta-red .cta-title {
+    font-size: 1rem !important;
+  }
+
+  .cta-yellow .cta-title {
+    font-size: 1rem !important;
+  }
+
+  .cta-red .cta-subtext {
+    font-size: 0.8rem !important;
+  }
+
+  .cta-yellow .cta-subtext {
+    font-size: 0.8rem !important;
+  }
+  
+  .center-side-banner .wanna-2 {
+    margin-top: 3rem !important;
+    line-height: 10px !important;
+    font-size: 1.5rem !important;
+    /* margin-bottom: 0.2rem !important; */
+    margin-right: 50% !important;
+  }
+
+  .center-side-banner p {
+    font-size: 1.5rem !important;
+    margin-bottom: 6rem !important;
+    padding-left: 25% !important;
+  }
+
+  .center-side-banner .bid-section .label {
+    font-size: 0.8rem !important;
+  }
+
+  .center-side-banner .bid-section i {
+    margin-top: 1px !important;
+    font-size: 1.8rem !important;
+  }
+
+  .center-side-banner .bid-section .timer {
+    font-size: 3.4rem !important;
+  }
+.steps-top-title .nav-item-tab {
+    font-size: 0.8rem !important;
+
+  }
+
+  .center-banner h1 {
+    font-size: 14rem !important;
+  }
+
+  .right-side-banner h1 {
+    font-size: 16rem !important;
+  }
+
+  .right-side-banner .wanna-3 {
+    margin-top: 7rem !important;
+    line-height: 10px !important;
+    font-size: 1.5rem !important;
+    /* margin-bottom: 0.2rem !important; */
+    margin-right: 50% !important;
+  }
+
+  .right-side-banner .sell {
+    font-size: 1.5rem !important;
+    margin-bottom: 6rem !important;
+    padding-left: 20% !important;
+  }
+
+  .right-side-banner .right-side-banner-logo {
+    margin-top: 0.2rem !important;
+    margin-bottom: 0.4rem !important;
+    height: 27px !important;
+  }
+
+  .right-side-banner .right-side-banner-logo-text {
+    padding-left: 8px !important;
+    font-size: 16px !important
+  }
+
+  .right-side-banner .price-label,
+  .price-value {
+    font-size: 14px !important;
+    
+  }
+
+  .right-side-banner i {
+    margin-top: 1px !important;
+    font-size: 1.6rem !important;
+  }
+  .container .search-box2 {
+    min-width: 87vw !important;
+    max-width: 100vw !important;
+  }
+
+  .search-box2-buttons {
+    min-width: 89vw !important;
+  }
+
+  .search-box2-buttons button {
+    min-width: 20vw !important;
+  }
+
+  .search-box2-buttons button i {
+    font-size: 16px !important;
+  }
+  .card-bottom-container {
+    min-width: 44vw !important;
+    max-width: 100vw !important;
+
+  }
+
+  .car-card {
+    min-width: 43vw !important;
+    /* column-gap: 2rem !important; */
+    max-width: 50vw !important;
+  }
+  .container{
+    max-width: 90vw !important;
+  }
+
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .slide-content h1 {
+    font-family: "Lexend Decan" !important;
+    font-weight: bolder !important;
+    letter-spacing: 6px;
+    margin-bottom: 1vw;
+    font-size: 8rem !important;
+  }
+
+  /* .left-side-banner,
+  .center-side-banner,
+  .right-side-banner {
+    background-size: 100vw !important;
+    width: 100%;
+    height: 64vh !important;
+  } */
+
+  .top-banner-carousel .col-md-4 {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .slide-box {
+    height: 350px;
+    background-size: cover;
+  }
+
+  .slide-content {
+    position: relative;
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .right-side-banner .car-filter-box {
+    margin-left: 50px !important;
+  }
+
+  .wanna {
+    font-size: 16px;
+  }
+
+  .wanna-1 {
+    margin-right: 70% !important;
+  }
+
+  .wanna-2 {
+    margin-right: 59% !important;
+  }
+
+  .wanna-3 {
+    margin-right: 60% !important;
+  }
+
+  .sell {
+    font-size: 18px;
+  }
+
+  .cta-banner {
+    height: 60px;
+    min-width: 80%;
+  }
+
+  .right-side-banner-logo {
+    height: 2.6vh !important;
+  }
+
+  .right-side-banner-logo-text {
+
+    font-size: 8px !important;
+  }
+
+  .cta-banner .col-md-6 {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .cta-block {
+    padding: 9%;
+  }
+
+  .cta-title {
+    font-size: 0.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+
+  .cta-subtext {
+    font-size: 7px;
+    font-weight: 500;
+  }
+
+  .car-filter-box {
+    margin-left: 1px !important;
+    margin-top: 4px;
+  }
+
+}
