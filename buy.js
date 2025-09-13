@@ -13,7 +13,7 @@ const carItems = [
         carItems.forEach(item => {
           container.innerHTML += `
        <div class="col-12 col-sm-6 col-md-6 col-lg-4 d-flex justify-content-center align-items-center card-bottom-container">
-        <div class="car-card "onclick="location.href='bid_overview.html'" >
+        <div class="car-card "onclick="location.href='buy_car.html'" >
           <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
             <!-- Carousel indicators -->
             <div class="carousel-indicators custom-indicators">

@@ -17,6 +17,7 @@
 <!-- CSS filse -->
  <link rel="stylesheet" href="myOrder.css">
  <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="appointment.css">
  <link rel="stylesheet" href="loanflow.css">
 
  <style>
@@ -45,9 +46,11 @@ width: 100%;
   position: relative;
   display: none; /* hidden by default */
   padding: 1rem;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   border-radius: 10px;
-  background: #fff;
+  /* background: #fff; */
+display: flex;
+justify-content: center;
 }
 
 .close-btn {
@@ -221,7 +224,7 @@ width: 100%;
      <h1 class="">
         My Appointments
      </h1>
-     <p>You’re probably still thinking about it!</p>
+     <p class="sub-Head">You’re probably still thinking about it!</p>
 
      
     </div>
@@ -234,8 +237,8 @@ width: 100%;
   <button id="closeSummary" class="close-btn">×</button>
 
   <div id="personalSummary"></div>
-  <div id="workSummary"></div>
-  <div id="creditSummary"></div>
+  <!-- <div id="workSummary"></div>
+  <div id="creditSummary"></div> -->
 </div>
 
 </div>
@@ -425,50 +428,75 @@ document.addEventListener("DOMContentLoaded", () => {
   const data = JSON.parse(localStorage.getItem("formData") || "{}");
 
   const emptyImg = document.querySelector(".empty-img");
+  const subheading = document.querySelector(".sub-Head");
   const summaryContainer = document.getElementById("summaryContainer");
   const personalSummary = document.getElementById("personalSummary");
-  const workSummary = document.getElementById("workSummary");
-  const creditSummary = document.getElementById("creditSummary");
   const closeBtn = document.getElementById("closeSummary");
 
   if (!data.personal) {
-    // No data → show image, hide summary
     emptyImg.style.display = "block";
+    subheading.style.display = "block";
     summaryContainer.style.display = "none";
     return;
   }
 
-  // Data exists → hide image, show summary
+  // Data exists → show summary
   emptyImg.style.display = "none";
+  subheading.style.display = "none";
   summaryContainer.style.display = "block";
 
-  // Fill summaries
-  const personal = data.personal;
+  const personal = data.personal || {};
+  const work = data.work || {};
+  const credit = data.credit || {};
+
   personalSummary.innerHTML = `
-    <p>Car: ${personal.year} ${personal.make} ${personal.model}</p>
-    <p>Variant/Engine/Transmission: ${personal.variant} / ${personal.engine} / ${personal.transmission}</p>
-    <p>Mileage/Region: ${personal.mileage} km | ${personal.region}</p>
-    <p>Mobile: ${personal.mobile}</p>
-    <p>Plate Number: ${personal.plate}</p>
+    <div class="card main-card ms-5">
+      <div class="card-body ">
+
+        <!-- Header actions -->
+        <div class="heading d-flex justify-content-end mb-4 gap-4">
+          <span>GET DIRECTION <i class="bi bi-geo-alt-fill"></i></span>
+          <span>ADD TO CALENDER <i class="bi bi-calendar-plus-fill"></i></span>
+          <span>PRINT <i class="bi bi-printer-fill fs-5"></i></span>
+        </div>
+
+        <!-- Appointment -->
+        <div class="d-md-flex mb-3">
+          <div class="border-end testhead border-secondary fs-5 d-flex text-end align-items-center me-lg-5 pe-lg-4 me-md-5 pe-md-4  fw-bold borde-black">
+            TEST DRIVE <br class="d-none d-md-block">APPOINTMENT
+          </div>
+          <div>
+            <p class=" ms-4 ms-md-0"><strong>Date:</strong> ${credit.inspectionDate || "—"}</p>
+            <p  class=" ms-4 ms-md-0"><strong>Time:</strong> ${credit.inspectionTime || "—"}</p>
+            <p  class=" ms-4 ms-md-0"><strong>Location:</strong> ${credit.inspectionLocation || "—"}</p>
+          </div>
+        </div>
+
+        <!-- Car Details -->
+        <div class="d-md-flex ms-md-3 ps-md-3">
+          <div class="border-end testhead border-secondary fs-5 d-flex text-end align-items-center me-5 pe-5 me-md-5 pe-md-5 fw-bold borde-black">
+            CAR<br class="d-none d-md-block">DETAILS
+          </div>
+          <div>
+            <p class="fw-bold mb-1">${personal.year || ""} ${personal.make || ""} ${personal.model || ""}</p>
+            <small class="fw-bold">${personal.variant || ""} / ${personal.engine || ""} / ${personal.transmission || ""}</small>
+            <p>${personal.mileage || ""} km | ${personal.region || ""}</p>
+
+            <p><strong>Price:</strong> ${work.selectedRate || "—"}</p>
+           
+            <p><strong>Condition:</strong> Excellent Condition</p>
+          </div>
+        </div>
+      </div>
+    </div>
   `;
 
-  const work = data.work;
-  workSummary.innerHTML = `
-    <p>Selected Rate: ${work.selectedRate}</p>
-  `;
-
-  const credit = data.credit;
-  creditSummary.innerHTML = `
-    <p>Inspection Location: ${credit.inspectionLocation}</p>
-    <p>Date: ${credit.inspectionDate}</p>
-    <p>Time: ${credit.inspectionTime}</p>
-  `;
-
-  // Close button → clear data + toggle visibility
+  // Close button → clear data
   closeBtn.addEventListener("click", () => {
     localStorage.removeItem("formData");
     summaryContainer.style.display = "none";
     emptyImg.style.display = "block";
+    subheading.style.display = "block";
   });
 });
 
