@@ -783,6 +783,20 @@ body {
       font-size: 12px;
       cursor: pointer;
     }
+    #summaryContainer_details{
+      position: relative !important;
+    }
+    .print-btn
+ {
+    position: absolute;
+    right: 281px;
+    top: 295px;
+    border: 0;
+    color: #888;
+    background-color: transparent;
+    font-size: 12px;
+    cursor: pointer;
+}
 
     .edit-btn i {
       margin-left: 5px;
@@ -1033,6 +1047,21 @@ body {
 #summaryContainer5 .edit-btn {
  display: none !important;
 }
+
+#summaryContainer_output {
+  background-color: white !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+#summaryContainer_output [class*="summary-card"] {
+  background-color: white !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+#summaryContainer_output .edit-btn  {
+ display: none !important;
+}
+
 /***** BankFlow Design *****/  
 .sub-label{
   font-size: 10px !important;

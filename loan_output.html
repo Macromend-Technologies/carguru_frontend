@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Appointments</title>
+    <title>Loan Application</title>
          <!-- Bootstrap links -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <!-- Bootstrap js links -->
@@ -20,6 +20,9 @@
  <link rel="stylesheet" href="loanflow.css">
 
  <style>
+    #outputContainer{
+        max-width: 70% !important;
+    }
     /* Sidebar hidden by default (collapsed) */
 #desktopSidebar {
   transition: all 0.3s ease;
@@ -41,25 +44,8 @@
      .empty-img img{
 width: 100%;
      }
-     .summary-container {
-  position: relative;
-  display: none; /* hidden by default */
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background: #fff;
-}
-
-.close-btn {
-  position: absolute;
-  top: 8px;
-  right: 12px;
-  font-size: 20px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-}
-
+    
+     
  </style>
 </head>
 <body>
@@ -122,16 +108,6 @@ width: 100%;
               onclick="toggleDesktopSidebar()">
               MW
             </button>
-
-            <!-- Dropdown Menu -->
-            <!-- <ul class="dropdown-menu dropdown-menu-end dropdown-menu-custom" aria-labelledby="profileDropdown">
-              <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-text"></i> Personal Info</a></li>
-              <li><a class="dropdown-item" href="#"><i class="bi bi-calendar-event"></i> Appointments</a></li>
-              <li><a class="dropdown-item" href="#"><i class="bi bi-cart"></i> Orders</a></li>
-              <li><a class="dropdown-item" href="#"><i class="bi bi-bookmark"></i> Saved Cars</a></li>
-              <li><a class="dropdown-item" href="#"><i class="bi bi-hammer"></i> Bidding</a></li>
-              <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-left"></i> Logout</a></li>
-            </ul> -->
           </div>
 
         </div>
@@ -191,9 +167,9 @@ width: 100%;
       </div>
     </div>
 
-    <a href="myappointment.html" class="active"><i class="bi bi-calendar-check"></i> My Appointments</a>
+    <a href="myappointment.html"><i class="bi bi-calendar-check"></i> My Appointments</a>
     <a href="#"> <i class="bi bi-palette2"></i>My Bidding</a>
-    <a href="#" ><i class="bi bi-cart"></i> My Orders</a>
+    <a href="myOrder.html" ><i class="bi bi-cart"></i> My Orders</a>
     <a href="myfavorites.html"><i class="bi bi-heart"></i> My Favorites</a>
 
     <div class="mb-2">
@@ -201,7 +177,7 @@ width: 100%;
         <i class="bi bi-cash-coin"></i> My Financials
       </a>
       <div class="collapse show submenu" id="financialMenu">
-        <a href="loan_output.html" ><i class="bi bi-piggy-bank" ></i> Loan</a>
+        <a href="loan_output.html" class="active" ><i class="bi bi-piggy-bank" ></i> Loan</a>
         <a href="#"><i class="bi bi-credit-card"></i> Payment</a>
         <a href="#"><i class="bi bi-cash-stack"></i> Refund</a>
         <a href="#"><i class="bi bi-cash-stack"></i> Deposit</a>
@@ -219,24 +195,26 @@ width: 100%;
 <div class="row d-flex flex-column align-items-center">
     <div class="text-center heading mt-5">
      <h1 class="">
-        My Appointments
+      My Loan
      </h1>
-     <p>You’re probably still thinking about it!</p>
+     <p>Nothing’s going on here.</p>
 
      
     </div>
 
-    <div class="empty-img ">
-        <img src="images/girlflower@4x.png" alt="">
+    <div class="empty-img "id="emptyImage">
+        <img src="images/guyatbus@4x.png" alt="">
     </div>
 
-<div id="summaryContainer" class="summary-container">
+ <div id="outputContainer" class="d-none"></div>
+
+<!-- <div id="summaryContainer" class="summary-container">
   <button id="closeSummary" class="close-btn">×</button>
 
   <div id="personalSummary"></div>
   <div id="workSummary"></div>
   <div id="creditSummary"></div>
-</div>
+</div> -->
 
 </div>
         </div>
@@ -417,60 +395,30 @@ width: 100%;
   </footer>
 
   <script>
+      // ✅ Get the summary from localStorage
+    const summary = localStorage.getItem("loanSummary");
+    if (summary) {
+      document.getElementById("outputContainer").innerHTML = summary;
+    } else {
+      document.getElementById("outputContainer").innerHTML = "<p>No data found</p>";
+    }
+      document.addEventListener("DOMContentLoaded", () => {
+    const summary = localStorage.getItem("loanSummary");
+
+    if (summary && summary.trim() !== "") {
+      // ✅ Show summary and hide image
+      document.getElementById("outputContainer").innerHTML = summary;
+      document.getElementById("outputContainer").classList.remove("d-none");
+      document.getElementById("emptyImage").classList.add("d-none");
+    } else {
+      document.getElementById("outputContainer").classList.add("d-none");
+      document.getElementById("emptyImage").classList.remove("d-none");
+    }
+  });
   function toggleDesktopSidebar() {
     document.getElementById("desktopSidebar").classList.toggle("collapsed");
   }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const data = JSON.parse(localStorage.getItem("formData") || "{}");
-
-  const emptyImg = document.querySelector(".empty-img");
-  const summaryContainer = document.getElementById("summaryContainer");
-  const personalSummary = document.getElementById("personalSummary");
-  const workSummary = document.getElementById("workSummary");
-  const creditSummary = document.getElementById("creditSummary");
-  const closeBtn = document.getElementById("closeSummary");
-
-  if (!data.personal) {
-    // No data → show image, hide summary
-    emptyImg.style.display = "block";
-    summaryContainer.style.display = "none";
-    return;
-  }
-
-  // Data exists → hide image, show summary
-  emptyImg.style.display = "none";
-  summaryContainer.style.display = "block";
-
-  // Fill summaries
-  const personal = data.personal;
-  personalSummary.innerHTML = `
-    <p>Car: ${personal.year} ${personal.make} ${personal.model}</p>
-    <p>Variant/Engine/Transmission: ${personal.variant} / ${personal.engine} / ${personal.transmission}</p>
-    <p>Mileage/Region: ${personal.mileage} km | ${personal.region}</p>
-    <p>Mobile: ${personal.mobile}</p>
-    <p>Plate Number: ${personal.plate}</p>
-  `;
-
-  const work = data.work;
-  workSummary.innerHTML = `
-    <p>Selected Rate: ${work.selectedRate}</p>
-  `;
-
-  const credit = data.credit;
-  creditSummary.innerHTML = `
-    <p>Inspection Location: ${credit.inspectionLocation}</p>
-    <p>Date: ${credit.inspectionDate}</p>
-    <p>Time: ${credit.inspectionTime}</p>
-  `;
-
-  // Close button → clear data + toggle visibility
-  closeBtn.addEventListener("click", () => {
-    localStorage.removeItem("formData");
-    summaryContainer.style.display = "none";
-    emptyImg.style.display = "block";
-  });
-});
 
 </script>
 
