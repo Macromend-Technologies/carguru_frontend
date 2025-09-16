@@ -176,7 +176,7 @@ width: 100%;
 
     <a href="myappointment.html" class="active"><i class="bi bi-calendar-check"></i> My Appointments</a>
     <a href="#"> <i class="bi bi-palette2"></i>My Bidding</a>
-    <a href="#" ><i class="bi bi-cart"></i> My Orders</a>
+    <a href="myOrder.html" ><i class="bi bi-cart"></i> My Orders</a>
     <a href="myfavorites.html"><i class="bi bi-heart"></i> My Favorites</a>
 
     <div class="mb-2">
@@ -186,8 +186,8 @@ width: 100%;
       <div class="collapse show submenu" id="financialMenu">
         <a href="loan_output.html" ><i class="bi bi-piggy-bank" ></i> Loan</a>
         <a href="payment_page.html"><i class="bi bi-credit-card"></i> Payment</a>
-        <a href="#"><i class="bi bi-cash-stack"></i> Refund</a>
-        <a href="#"><i class="bi bi-cash-stack"></i> Deposit</a>
+        <a href="refused.html"><i class="bi bi-cash-stack"></i> Refund</a>
+        <a href="deposit.html"><i class="bi bi-cash-stack"></i> Deposit</a>
       </div>
     </div>
 
@@ -223,7 +223,7 @@ width: 100%;
        <span> <i class="bi bi-person-fill me-2"></i> My Account </span><span><i class="bi bi-caret-down-fill"></i></span>
       </a>
       <div class="collapse submenu" id="accountMenu">
-        <a href="#"><i class="bi bi-file-earmark-person"></i> Personal Info</a>
+        <a href="personalinfo.html"><i class="bi bi-file-earmark-person"></i> Personal Info</a>
         <a href="#"><i class="bi bi-book"></i> Viewing History</a>
       </div>
     </div>
@@ -240,7 +240,7 @@ width: 100%;
       <div class="collapse show submenu" id="financialMenu">
         <a href="loan_output.html" ><i class="bi bi-piggy-bank"></i> Loan</a>
         <a href="payment_page.html"><i class="bi bi-credit-card"></i> Payment</a>
-        <a href="#"><i class="bi bi-cash-stack"></i> Refund</a>
+        <a href="refused.html"><i class="bi bi-cash-stack"></i> Refund</a>
       </div>
     </div>
 
@@ -397,56 +397,6 @@ width: 100%;
     document.getElementById("desktopSidebar").classList.toggle("collapsed");
   }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const data = JSON.parse(localStorage.getItem("formData") || "{}");
-
-  const emptyImg = document.querySelector(".empty-img");
-  const summaryContainer = document.getElementById("summaryContainer");
-  const personalSummary = document.getElementById("personalSummary");
-  const workSummary = document.getElementById("workSummary");
-  const creditSummary = document.getElementById("creditSummary");
-  const closeBtn = document.getElementById("closeSummary");
-
-  if (!data.personal) {
-    // No data → show image, hide summary
-    emptyImg.style.display = "block";
-    summaryContainer.style.display = "none";
-    return;
-  }
-
-  // Data exists → hide image, show summary
-  emptyImg.style.display = "none";
-  summaryContainer.style.display = "block";
-
-  // Fill summaries
-  const personal = data.personal;
-  personalSummary.innerHTML = `
-    <p>Car: ${personal.year} ${personal.make} ${personal.model}</p>
-    <p>Variant/Engine/Transmission: ${personal.variant} / ${personal.engine} / ${personal.transmission}</p>
-    <p>Mileage/Region: ${personal.mileage} km | ${personal.region}</p>
-    <p>Mobile: ${personal.mobile}</p>
-    <p>Plate Number: ${personal.plate}</p>
-  `;
-
-  const work = data.work;
-  workSummary.innerHTML = `
-    <p>Selected Rate: ${work.selectedRate}</p>
-  `;
-
-  const credit = data.credit;
-  creditSummary.innerHTML = `
-    <p>Inspection Location: ${credit.inspectionLocation}</p>
-    <p>Date: ${credit.inspectionDate}</p>
-    <p>Time: ${credit.inspectionTime}</p>
-  `;
-
-  // Close button → clear data + toggle visibility
-  closeBtn.addEventListener("click", () => {
-    localStorage.removeItem("formData");
-    summaryContainer.style.display = "none";
-    emptyImg.style.display = "block";
-  });
-});
 
 </script>
 

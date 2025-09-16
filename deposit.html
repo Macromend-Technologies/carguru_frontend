@@ -30,8 +30,12 @@
 #desktopSidebar.collapsed {
   margin-left: -250px; /* hides it by sliding left */
 }
+
+.card{
+  width: 780px ;
+}
 .heading{
-       max-width: 700px;
+       max-width: 650px;
        margin-right: 0% ;
     }
     .heading h1{
@@ -43,11 +47,12 @@ color: #000;
     }
     .empty-img {
         width: 400px;
-        height: 400px;
+        /* height: 400px; */
     }
 
      .empty-img img{
 width: 100%;
+margin-left: 15%;
      }
      .summary-container {
   position: relative;
@@ -83,6 +88,10 @@ justify-content: center;
     color: #fff;
     margin-top: 12px;
 }
+.btn1.active-btn {
+    background-color: black;
+    cursor: pointer;
+  }
 .terms {
     text-align: center;
     font-size: 11px;
@@ -112,6 +121,48 @@ justify-content: center;
     font-size: 18px;
     font-weight: 800;
 } 
+
+ .payment-box {
+      /* max-width: 650px; */
+      margin: 50px auto;
+      /* background: #fff; */
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+       display: none;
+    }
+
+    .bank-info {
+      font-weight: 600;
+      margin: 20px 0;
+      color: #000;
+      font-size: 18px;
+    }
+
+    .upload-area {
+      border: 2px dashed #bbb;
+      border-radius: 6px;
+      padding: 40px;
+      text-align: center;
+      color: #555;
+      background:#Fff;
+      transition: border-color 0.3s;
+      cursor: pointer;
+    }
+
+    .upload-area:hover {
+      border-color: #333;
+    }
+
+    .upload-area input {
+      display: none;
+    }
+
+    .upload-area i {
+      font-size: 40px;
+      color: #6c757d;
+      margin-bottom: 10px;
+    }
  </style>
 </head>
 <body>
@@ -242,7 +293,6 @@ justify-content: center;
         <a href="#"><i class="bi bi-book"></i> Viewing History</a>
       </div>
     </div>
-
     <a href="myappointment.html" ><i class="bi bi-calendar-check"></i> My Appointments</a>
     <a href="#"> <i class="bi bi-palette2"></i>My Bidding</a>
     <a href="myOrder.html" class="active"><i class="bi bi-cart"></i> My Orders</a>
@@ -256,7 +306,7 @@ justify-content: center;
         <a href="loan_output.html" ><i class="bi bi-piggy-bank" ></i> Loan</a>
         <a href="payment_page.html"><i class="bi bi-credit-card"></i> Payment</a>
         <a href="refused.html"><i class="bi bi-cash-stack"></i> Refund</a>
-        <a href="#"><i class="bi bi-cash-stack"></i> Deposit</a>
+        <a href="deposit.html"><i class="bi bi-cash-stack"></i> Deposit</a>
       </div>
     </div>
 
@@ -291,151 +341,89 @@ and compete for the best deals in real time!</p></div>
     </div> -->
     <div class="card-body ">
       <div class="row  py-3  ">
-        <div class="col-12 col-md-6 col-sm-6 ">
-   <div class="img-container d-flex align-items-end" 
-       style="background: url('images/car-main.png') center center / cover no-repeat; height: 95%; border-radius: 5px;">
-    <!-- <div class="car-btns d-flex justify-content-between w-100 mb-4 mx-2">
-      <div class="d-flex">
-        <button type="button" class="me-1 media-btn">31 Photos <span><i class="bi bi-camera-fill"></i></span></button>
-        <button type="button" class="media-btn">View Videos <span><i class="bi bi-camera-video-fill"></i></span></button>
-      </div>
-      <div>
-        <button type="button" class="media-btn ">View 360 <span><img src="images/view-icon.png" alt="" width="16"></span></button>
-      </div>
-    </div> -->
-  </div>
-</div>
-            <div class=" col-12 col-md-6 col-sm-6 pt-2 ">
-
-                <p class="cerfied-logo"><img src="images/certified-2.png" alt=""></p>
-       <div class="d-flex justify-content-between align-items-top ">
-        <div class="d-flex flex-column mb-3 text-black">
-            <h3 class=" Gabarito">2018 Perodua </h3>
-            <small class="fw-semibold Gabarito" style="line-height: 1px;">Myvi AV 1.5</small>
-        </div>
-        
-        
-    
-          <!-- <div class="mt-1 icons">
-            <span><i class="bi bi-share me-3"></i></span>
-            <span><i class="bi bi-heart"></i></span>
-        </div>    -->
+      <div class="col-12 d-flex flex-column align-items-center">
+        <div>
+          <h3 class="text-center">
+            Start Bidding with a RM1,500 Dealer Deposit
+          </h3>
+          <div class="empty-img ">
+        <img src="images/couples1.png" alt="">
     </div>
-    <p class="mt-2 para fs-6">68,242 km | Auto | Puchong</p>
-<p class="para-1">More Car Details <span><i class="bi bi-caret-right-fill"></i></span></p>
-
-
-
-<div class="d-flex justify-content-between align-items-center ">
- <div class="mt-2"> <h3 class="fs-3 rate Gabarito">
-    <small >RM</small> 40,550
-  </h3>
-  <p class="para">Rm 450 p.m  8years loan</p></div>
-  <div class="pt-4 para-1">
-  <span class="icons"> <i class="bi bi-search me-2"></i> More About this Car</span>
-</div>
-</div>
-
-
-</div>
+        </div>
+      </div>
       </div>
 <div class="row  mt-4">
     
     <!-- Left Column: Price Details -->
-    <div class="col-md-12 bg-light">
-      <div class="section-title">MORE DETAILS</div>
-      <div class="d-flex justify-content-between mb-2">
-        <span class="label-text">Location <span><i class="bi bi-question-circle-fill"></i></span></span>
-        <span class="value-text">CARGURU Puchong, Selangor</span>
-      </div>
-      <div class="d-flex justify-content-between mb-2">
-        <span class="label-text">Opening Hours</span>
-        <span class="value-text ">9:00 - 19:00 (Monday to Sunday)</span>
-      </div>
-      <div class="d-flex justify-content-between mb-2">
-        <span class="label-text">CARGURU Consultant</span>
-        <span class="value-text ">Vijay R.</span>
-      </div>
-    
-      <div class="d-flex justify-content-between mb-2">
-        <span class="label-text">Contact</span>
-        <span class="value-text">013 713 8819</span>
-      </div>
-    
-    </div>
+ 
 
-    <div class="col-12 ">
-         <div class="section-title bg-light py-1">1. PRICE DETAILS</div>
-            <div class="d-flex justify-content-between ">
-        <span class="label-text">Car Price</span>
-        <span class=" value-text text-black" >RM 40,550</span>
-      </div>
-    </div>
+   
     <!-- Right Column: Order Summary -->
-    <div class="col-md-12">
-      <div class="section-title bg-light py-1"> 2. SERVICES</div>
-
-      <div class="d-flex justify-content-between mb-1" >
-        <span class="label-text">i. Handling Fee (incl. 8% SST) <span><i class="bi bi-question-circle-fill"></i></span></span>
-        <p class="value-text text-black " >RM1,200</p>
-      </div>
-      
-      <div class="d-flex justify-content-between mb-2">
-        <span class="label-text">ii. Insurance</span>
-        <span class="value-text">RM1,000</span>
-      </div>
-      <div class="d-flex justify-content-between mb-2">
-        <span class="label-text">iii. Road Tax</span>
-        <span class="value-text">RM250</span>
-      </div>
-    
-      
+   
+<div class="col-12 px-0">
+         <div class="section-title bg-light py-1  px-1">1. DEALER DEPOSIT</div>
+       
     </div>
-<div class="col-12 ">
-         <div class="section-title bg-light py-1">3. ADD-ON SERVICES (Optional)</div>
-            <div class="d-flex justify-content-between mb-2">
-        <span class="label-text"> <span><input type="checkbox" class="warranty" name="warranty" id=""></span>  i. Extended Warranty ( +2 years )</span>
-        <span class=" value-text text-black" >RM 600</span>
-      </div>
-    </div>
-    <hr>
-    <div class="d-flex justify-content-between align-items-center mb-4">
-      <span class="label-text fw-bold">Grand Total</span>
-      <span class="value-text fw-bold">RM 43,850</span>
-  </div>
+   
 
    <div class="col-md-12 py-3" style="background-color: #fff3de;">
       <!-- <div class="section-title bg-light py-1"> 2. SERVICES</div> -->
 
-      <div class="d-flex justify-content-between mb-1" >
-        <span class="label-text">Booking Fee Payment</span>
-        <p class="value-text text-black " > RM 500</p>
-      </div>
       
       <div class="d-flex justify-content-between mb-2">
-        <span class="label-text">Total Balance</span>
-        <span class="value-text"><span class="p-2 me-2" style="background-color: #ffb700; border-radius: 5px; font-size: 10px;color: #9e3a00;">PENDING PAYMENT</span> RM42,500</span>
+        <span class="label-text">Dealer’s Bidding Deposit</span>
+        <span class="value-text"><span class="p-2 me-2" style="background-color: #ffb700; border-radius: 5px; font-size: 10px;color: #9e3a00;">PENDING PAYMENT</span> RM1,500</span>
       </div>
       <hr>
      
       <div class="d-flex justify-content-between mb-2">
-        <span class="label-text fw-bold">FULL PAYMENT</span>
-        <span class="value-text TOTAL"> RM42,500</span>
+        <span class="label-text fw-bold">BIDDING DEPOSIT</span>
+        <span class="value-text TOTAL"> RM1,500</span>
       </div>
     
       
+    </div>
+    <div class="d-flex justify-content-center mt-4">
+      <p>The bidding deposit is fully refundable if you choose to withdraw before making any successful bids.</p>
     </div>
     </div>
    
 </div>
 <div class="d-flex flex-column justify-content-center align-items-center">
-  <button type="button" class="btn btn1 ms-0" >Pay Now</button>
+<div> 
+  <button type="button" class="btn btn1 ms-0" >I’ll Do it Later</button>
+  <button type="button" class="btn btn1 ms-0"id="payBtn" disabled >Pay Now</button>
+</div> 
   <p class="terms d-flex align-items-center"><span><input type="checkbox" name="terms" id="termsCheck"></span> By Continuing, I agree to CARGURU’s <a href="#" class="text-decoration-none">Terms</a>  &  <a href="#" class="text-decoration-none">Privacy Policy</a>.</p>
 </div>
+
+ <div class="payment-box bg-light mx-3" id="paymentBox">
+    <p class="sub-head">
+      You can proceed to pay online by clicking on the <strong>PAY NOW</strong> button to proceed with the transaction. 
+      Alternatively, you can make your own bank transfer and attach the receipt as proof of transaction on your own. 
+      You can transfer to:
+    </p>
+
+    <div class="bank-info">
+      CARGURU SDN BHD <br>
+      CIMB BANK: <span class="text-dark">1234 5678 9101</span>
+    </div>
+
+    <p>Attach your proof of transaction receipt here.</p>
+
+    <label for="fileUpload" class="upload-area">
+      <i class="bi bi-cloud-upload"></i>
+      <p>Browse File (PDF, PNG, JPG)</p>
+      <small>Drag & drop file here</small>
+      <input type="file" id="fileUpload" accept=".pdf,.png,.jpg,.jpeg">
+    </label>
+  </div>
+
+
 </div>
-<div class="text-end mt-3">
+<!-- <div class="text-end mt-3">
 <span><i class="bi bi-caret-left-fill"></i></span>Back To My Order
-</div>
+</div> -->
     </div>
    
 </div>
@@ -620,6 +608,28 @@ and compete for the best deals in real time!</p></div>
     document.getElementById("desktopSidebar").classList.toggle("collapsed");
   }
 
+    const checkbox = document.getElementById("termsCheck");
+  const payBtn = document.getElementById("payBtn");
+
+   checkbox.addEventListener("change", function () {
+    if (this.checked) {
+      payBtn.disabled = false;
+      payBtn.classList.add("active-btn");
+    } else {
+      payBtn.disabled = true;
+      payBtn.classList.remove("active-btn");
+    }
+  });
+
+ document.getElementById("payBtn").addEventListener("click", function () {
+      const box = document.getElementById("paymentBox");
+      // toggle show/hide
+      if (box.style.display === "none" || box.style.display === "") {
+        box.style.display = "block";
+      } else {
+        box.style.display = "none";
+      }
+    });
 </script>
 
 </body>
