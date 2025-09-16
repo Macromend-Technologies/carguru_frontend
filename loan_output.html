@@ -38,6 +38,10 @@
 #desktopSidebar.collapsed {
   margin-left: -250px; /* hides it by sliding left */
 }
+.main-content {
+  transition: all 0.3s ease;
+}
+
   .main-content .heading{
        max-width: 100%;
        margin-right: 0% ;
@@ -203,7 +207,7 @@ width: 100%;
      <h1 class="">
       My Loan
      </h1>
-     <p>Nothing’s going on here.</p>
+     <p id="loanStatus">Nothing’s going on here.</p>
 
      
     </div>
@@ -407,26 +411,44 @@ width: 100%;
       document.addEventListener("DOMContentLoaded", () => {
   const outputContainer = document.getElementById("outputContainer");
   const emptyImage = document.getElementById("emptyImage");
+  const loanStatus = document.getElementById("loanStatus");
   const summary = localStorage.getItem("loanSummary");
 
   if (summary && summary.trim() !== "") {
     outputContainer.innerHTML += summary; // ✅ keep existing summary
     outputContainer.classList.remove("d-none");
     emptyImage.classList.add("d-none");
+     loanStatus.textContent = "It’s on the way!";
   } else {
     outputContainer.classList.add("d-none");
     emptyImage.classList.remove("d-none");
+     loanStatus.textContent = "Nothing’s going on here.";
   }
 
   // ✅ Close button logic
   document.getElementById("closeSummary")?.addEventListener("click", () => {
     outputContainer.classList.add("d-none");
     emptyImage.classList.remove("d-none");
+    loanStatus.textContent = "Nothing’s going on here.";
   });
 });
-  function toggleDesktopSidebar() {
-    document.getElementById("desktopSidebar").classList.toggle("collapsed");
+  // function toggleDesktopSidebar() {
+  //   document.getElementById("desktopSidebar").classList.toggle("collapsed");
+  // }
+function toggleDesktopSidebar() {
+  const sidebar = document.getElementById("desktopSidebar");
+  const mainContent = document.querySelector(".main-content");
+
+  sidebar.classList.toggle("collapsed");
+
+  if (sidebar.classList.contains("collapsed")) {
+    mainContent.classList.remove("col-lg-9");
+    mainContent.classList.add("col-12");
+  } else {
+    mainContent.classList.remove("col-12");
+    mainContent.classList.add("col-lg-9");
   }
+}
 
  
 
