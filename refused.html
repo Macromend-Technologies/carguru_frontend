@@ -20,7 +20,7 @@
  <link rel="stylesheet" href="loanflow.css">
 
  <style>
-    /* Sidebar hidden by default (collapsed) */
+  /* Sidebar hidden by default (collapsed) */
 #desktopSidebar {
   transition: all 0.3s ease;
   width: 250px;  /* normal width */
@@ -28,6 +28,10 @@
 
 #desktopSidebar.collapsed {
   margin-left: -250px; /* hides it by sliding left */
+}
+.main-content {
+  transition: all 0.3s ease;
+
 }
   .main-content .heading{
        max-width: 100%;
@@ -394,10 +398,19 @@ width: 100%;
 
   <script>
   function toggleDesktopSidebar() {
-    document.getElementById("desktopSidebar").classList.toggle("collapsed");
+  const sidebar = document.getElementById("desktopSidebar");
+  const mainContent = document.querySelector(".main-content");
+
+  sidebar.classList.toggle("collapsed");
+
+  if (sidebar.classList.contains("collapsed")) {
+    mainContent.classList.remove("col-lg-9");
+    mainContent.classList.add("col-12");
+  } else {
+    mainContent.classList.remove("col-12");
+    mainContent.classList.add("col-lg-9");
   }
-
-
+}
 </script>
 
 </body>

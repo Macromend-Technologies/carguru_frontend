@@ -25,6 +25,20 @@
   <link rel="stylesheet" href="loanflow.css">
 
   <style>
+
+      /* Sidebar hidden by default (collapsed) */
+#desktopSidebar {
+  transition: all 0.3s ease;
+  width: 250px;  /* normal width */
+}
+
+#desktopSidebar.collapsed {
+  margin-left: -250px; /* hides it by sliding left */
+}
+.main-content {
+  transition: all 0.3s ease;
+  margin-right: 0% !;
+}
     .carousel-inner1,
     .car-container-carousel-item img {
       height: 100%;
@@ -141,12 +155,15 @@
       gap: 0px !important;
     }
     .availability{
-      font-size: 13px !important;
+      font-size: 12px !important;
       margin-bottom: 60% !important;
     }
     .car-card .bi-alarm-fill{
-      font-size: 0.42rem !important;
+      font-size: 0.40rem !important;
       margin-left: 0.5px;
+    }
+    .clock{
+      font-size:7px !important ;
     }
   </style>
 </head>
@@ -521,7 +538,7 @@
                   ${item.tag === 'bid' ? `
                     <div class="bid-banner position-absolute bottom-0 start-0 w-100 text-white p-2 px-sm-1 py-sm-2" style="background-color: rgba(0,0,0,0.6);">
                       Bid Date: <span class="fw-bold">20 June 2025</span> &nbsp;Time: <span class="fw-bold">8:30PM</span>
-                      <span class="text-white p-1 ms-1 rounded-2 h-50" style="background-color: red;">
+                      <span class="text-white p-1 ms-1 rounded-2 h-50 clock" style="background-color: red;">
                         Notify Me<i class="bi bi-alarm-fill text-white "></i>
                       </span>
                     </div>` :
@@ -583,10 +600,20 @@
 
 
 
+ function toggleDesktopSidebar() {
+  const sidebar = document.getElementById("desktopSidebar");
+  const mainContent = document.querySelector(".main-content");
 
-    function toggleDesktopSidebar() {
-      document.getElementById("desktopSidebar").classList.toggle("collapsed");
-    }
+  sidebar.classList.toggle("collapsed");
+
+  if (sidebar.classList.contains("collapsed")) {
+    mainContent.classList.remove("col-lg-9");
+    mainContent.classList.add("col-12");
+  } else {
+    mainContent.classList.remove("col-12");
+    mainContent.classList.add("col-lg-9");
+  }
+}
 
    
   </script>

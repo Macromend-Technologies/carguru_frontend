@@ -30,6 +30,10 @@
 #desktopSidebar.collapsed {
   margin-left: -250px; /* hides it by sliding left */
 }
+.main-content {
+  transition: all 0.3s ease;
+}
+
   .main-content .heading{
        max-width: 100%;
        margin-right: 0% ;
@@ -218,8 +222,8 @@ justify-content: center;
     </div>
                 </div>
             </div>
-            <div class=" col-12 col-md-12 col-lg-9 main-content">
-<div class="row d-flex flex-column align-items-center">
+            <div class=" col-12 col-md-12 col-lg-9 main-content d-flex justify-content-center">
+<div class="row d-flex flex-column align-items-center justify-content-center">
     <div class="text-center heading mt-5">
      <h1 class="">
         My Appointments
@@ -289,7 +293,7 @@ justify-content: center;
     </main>
 
       <!-- ========== Start footer container ========== -->
- <footer class="footer pt-lg-5 pt-3 fs-6 mt-xl-5">
+ <footer class="footer pt-lg-5 pt-3 fs-6 mt-xl-0">
     <div class="container-fluid px-lg-5 px-3 ">
       <div class="row footer-top-side">
 
@@ -420,9 +424,23 @@ justify-content: center;
   </footer>
 
   <script>
-  function toggleDesktopSidebar() {
-    document.getElementById("desktopSidebar").classList.toggle("collapsed");
+  // function toggleDesktopSidebar() {
+  //   document.getElementById("desktopSidebar").classList.toggle("collapsed");
+  // }
+function toggleDesktopSidebar() {
+  const sidebar = document.getElementById("desktopSidebar");
+  const mainContent = document.querySelector(".main-content");
+
+  sidebar.classList.toggle("collapsed");
+
+  if (sidebar.classList.contains("collapsed")) {
+    mainContent.classList.remove("col-lg-9");
+    mainContent.classList.add("col-12");
+  } else {
+    mainContent.classList.remove("col-12");
+    mainContent.classList.add("col-lg-9");
   }
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   const data = JSON.parse(localStorage.getItem("formData") || "{}");

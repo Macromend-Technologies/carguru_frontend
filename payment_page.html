@@ -20,7 +20,7 @@
  <link rel="stylesheet" href="loanflow.css">
 
  <style>
-    /* Sidebar hidden by default (collapsed) */
+  /* Sidebar hidden by default (collapsed) */
 #desktopSidebar {
   transition: all 0.3s ease;
   width: 250px;  /* normal width */
@@ -28,6 +28,10 @@
 
 #desktopSidebar.collapsed {
   margin-left: -250px; /* hides it by sliding left */
+}
+.main-content {
+  transition: all 0.3s ease;
+  margin-right: 0% !;
 }
   .main-content .heading{
        max-width: 100%;
@@ -262,7 +266,7 @@ width: 100%;
     </main>
 
       <!-- ========== Start footer container ========== -->
- <footer class="footer pt-lg-5 pt-3 fs-6 mt-xl-5">
+ <footer class="footer pt-lg-5 pt-3 fs-6 mt-xl-0">
     <div class="container-fluid px-lg-5 px-3 ">
       <div class="row footer-top-side">
 
@@ -393,10 +397,20 @@ width: 100%;
   </footer>
 
   <script>
-  function toggleDesktopSidebar() {
-    document.getElementById("desktopSidebar").classList.toggle("collapsed");
-  }
+ function toggleDesktopSidebar() {
+  const sidebar = document.getElementById("desktopSidebar");
+  const mainContent = document.querySelector(".main-content");
 
+  sidebar.classList.toggle("collapsed");
+
+  if (sidebar.classList.contains("collapsed")) {
+    mainContent.classList.remove("col-lg-9");
+    mainContent.classList.add("col-12");
+  } else {
+    mainContent.classList.remove("col-12");
+    mainContent.classList.add("col-lg-9");
+  }
+}
 
 </script>
 
